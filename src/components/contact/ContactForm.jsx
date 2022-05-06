@@ -165,13 +165,13 @@ const ContactForm = () => {
 										</Form.Label>
 										<Form.Control
 											id='firstName'
-											minLength={2}
 											maxLength={20}
 											type='text'
 											placeholder='First Name'
-											required
 											onChange={(e) => {
-												setFirstName(e.target.value);
+												setFirstName(
+													e.target.value.trim()
+												);
 											}}
 										/>
 										<span className='validationError'>
@@ -191,13 +191,13 @@ const ContactForm = () => {
 										</Form.Label>
 										<Form.Control
 											id='lastName'
-											minLength={2}
 											maxLength={20}
 											type='text'
 											placeholder='Last Name'
-											required
 											onChange={(e) => {
-												setLastName(e.target.value);
+												setLastName(
+													e.target.value.trim()
+												);
 											}}
 										/>
 										<span className='validationError'>
@@ -220,9 +220,8 @@ const ContactForm = () => {
 											maxLength={30}
 											type='email'
 											placeholder='Email'
-											required
 											onChange={(e) => {
-												setEmail(e.target.value);
+												setEmail(e.target.value.trim());
 											}}
 										/>
 										<span className='validationError'>
@@ -242,12 +241,13 @@ const ContactForm = () => {
 										</Form.Label>
 										<Form.Control
 											id='phone'
-											minLength={10}
 											type='number'
+											maxLength={15}
 											placeholder='Phone'
-											required
 											onChange={(e) => {
-												setPhoneNumber(e.target.value);
+												setPhoneNumber(
+													e.target.value.trim()
+												);
 											}}
 										/>
 										<span className='validationError'>
@@ -268,9 +268,9 @@ const ContactForm = () => {
 										<Form.Control
 											id='message'
 											as='textarea'
+											maxLength={100}
 											placeholder='Messages'
 											rows={3}
-											required
 											onChange={(e) => {
 												setMessage(e.target.value);
 											}}
@@ -286,7 +286,6 @@ const ContactForm = () => {
 											id='captcha'
 											sitekey='6LcL9Q4eAAAAAP1M1GTYoCz_keEU6fNW8zvNWglK'
 											onChange={reCaptcha}
-											// size='compact'
 										/>
 										<span className='validationError'>
 											{captchaError}

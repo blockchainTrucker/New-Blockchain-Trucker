@@ -18,6 +18,7 @@
 		"prism-react-renderer": "^1.2.1",
 		"public-ip": "^5.0.0",
 		"react": "^17.0.2",
+		"react-app-rewired": "^2.2.1",
 		"react-bootstrap": "^2.1.2",
 		"react-bootstrap-icons": "^1.5.0",
 		"react-cookie": "^4.1.1",

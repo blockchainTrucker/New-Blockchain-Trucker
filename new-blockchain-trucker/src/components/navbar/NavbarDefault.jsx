@@ -1,7 +1,7 @@
 // import node module libraries
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
 	Row,
 	Col,
@@ -9,44 +9,20 @@ import {
 	Navbar,
 	Nav,
 	Container,
-	Form,
 	Dropdown,
-	ListGroup,
-	OverlayTrigger,
-	Tooltip,
 } from 'react-bootstrap';
+import Icon from '@mdi/react';
 
 import { useMediaQuery } from 'react-responsive';
-import { v4 as uuid } from 'uuid';
-import publicIp from 'public-ip';
 
-import Icon from '@mdi/react';
-import { mdiGithub, mdiLinkedin } from '@mdi/js';
+import Logo from 'assets/images/brand/logo-nobackground-200.png';
+import { mdiFacebook, mdiInstagram, mdiLinkedin } from '@mdi/js';
 
-// import media files
-// import Logo from "assets/images/brand/logo/logo.svg";
-import logo from '../../assets/images/brand/logo/logo-nobackground-200.png';
-
-import NavDropdownMain from './NavDropdownMain';
+// import data files
+import NavbarDefaultRoutes from 'routes/NavbarDefault';
+import NavDropdownMain from 'components/navbar/NavDropdownMain';
 
 const NavbarDefault = ({ headerstyle, login }) => {
-	useEffect(() => {
-		publicIp.v4().then((ipAddress) => {
-			const url = 'https://blockchain-trucker-api.herokuapp.com/counter';
-			let data = JSON.stringify({
-				ipAddress,
-			});
-
-			let resources = {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: data,
-			};
-			fetch(url, resources);
-		});
-	}, []);
 	const isDesktop = useMediaQuery({
 		query: '(min-width: 1224px)',
 	});
@@ -55,78 +31,6 @@ const NavbarDefault = ({ headerstyle, login }) => {
 	});
 
 	const [expandedMenu, setExpandedMenu] = useState(false);
-
-	const NavbarDefaultRoutes = [
-		{
-			id: uuid(),
-			menuitem: 'Portfolio',
-			link: '#',
-			children: [
-				{
-					id: uuid(),
-					menuitem: 'Portfolio',
-					link: '/portfolio',
-				},
-				{
-					id: uuid(),
-					header: true,
-				},
-				{
-					id: uuid(),
-					header: true,
-					header_text: 'Projects',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Funding Chain',
-					link: '/portfolio/funding-chain',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Decentralized Ventures',
-					link: '/portfolio/decentralized-ventures',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Pizza King',
-					link: '/portfolio/pizza-king',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Video Tutorials',
-					link: '/portfolio/video-tutorials',
-				},
-				{
-					id: uuid(),
-					menuitem: 'CookUni',
-					link: '/portfolio/cookuni',
-				},
-			],
-		},
-		{
-			id: uuid(),
-			menuitem: 'About Me',
-			link: '#',
-			children: [
-				{
-					id: uuid(),
-					menuitem: 'About Me',
-					link: `/about-me`,
-				},
-			],
-		},
-		{
-			id: uuid(),
-			menuitem: 'Contact Me',
-			children: [
-				{
-					id: uuid(),
-					menuitem: 'Contact Me',
-					link: '/contact-me',
-				},
-			],
-		},
-	];
 
 	const QuickMenu = () => {
 		return (
@@ -145,14 +49,14 @@ const NavbarDefault = ({ headerstyle, login }) => {
 				onToggle={(collapsed) => setExpandedMenu(collapsed)}
 				expanded={expandedMenu}
 				expand='lg'
-				className={`${login ? 'bg-white' : ''} navbar p-2 ${
+				className={`${login ? 'bg-white' : ''} navbar p-4 ${
 					headerstyle === 'dark'
 						? 'navbar-dark bg-dark'
-						: 'navbar-default py-2'
+						: 'navbar-default py-1'
 				}`}>
-				<Container fluid className='px-0 ps-2'>
+				<Container fluid className='px-0 ps-0'>
 					<Navbar.Brand as={Link} to='/'>
-						<Image src={logo} />
+						<Image src={Logo} alt='' />
 					</Navbar.Brand>
 					<div
 						className={`navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap ${
@@ -169,7 +73,7 @@ const NavbarDefault = ({ headerstyle, login }) => {
 						<span className='icon-bar middle-bar'></span>
 						<span className='icon-bar bottom-bar'></span>
 					</Navbar.Toggle>
-					<Navbar.Collapse id='basic-navbar-nav'>
+					<Navbar.Collapse id='basic-navbar-nav navbar-middle'>
 						<Nav>
 							{NavbarDefaultRoutes.map((item, index) => {
 								if (item.children === undefined) {
@@ -204,13 +108,19 @@ const NavbarDefault = ({ headerstyle, login }) => {
 									xs={4}
 									className='d-flex align-items-center'>
 									<a
-										href='https://github.com/jwachtel96'
+										href='https://www.facebook.com/DecentralizedVenturesLLC'
 										target='_blank'
 										className='text-muted text-primary-hover me-3  '>
-										<Icon path={mdiGithub} size={1.5} />
+										<Icon path={mdiFacebook} size={1.5} />
 									</a>
 									<a
-										href='https://www.linkedin.com/in/jesse-wachtel/'
+										href='https://www.instagram.com/decentralizedventures/'
+										target='_blank'
+										className='text-muted text-primary-hover me-3  '>
+										<Icon path={mdiInstagram} size={1.5} />
+									</a>
+									<a
+										href='https://www.linkedin.com/company/decentralized-ventures'
 										target='_blank'
 										className='text-muted text-primary-hover me-3'>
 										<Icon path={mdiLinkedin} size={1.5} />

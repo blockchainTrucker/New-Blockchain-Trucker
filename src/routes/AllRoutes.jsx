@@ -1,6 +1,5 @@
 // ** Import from react dom
 import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
 import 'assets/scss/theme.scss';
 
 import Redirect from 'components/portfolio/Redirect';
@@ -28,13 +27,11 @@ export default function AllRoutes(login) {
 				<Route
 					exact
 					path='/portfolio/funding-chain'
-					// element={<Redirect to='https://www.funding-chain.com' />}
 					element={<Redirect to='https://www.funding-chain.com' />}
 				/>
 				<Route
 					exact
 					path='/portfolio/decentralized-ventures'
-					// element={<Redirect to='https://www.funding-chain.com' />}
 					element={
 						<Redirect to='https://www.decentralized-ventures.com' />
 					}

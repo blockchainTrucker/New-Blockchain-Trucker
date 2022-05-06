@@ -7,7 +7,7 @@ import { Link, withRouter } from 'react-router-dom';
 import BlogCard from './BlogCard';
 
 // import data files
-import portfolioData from 'data/portfolio/portfolioData';
+import portfolioData from 'routes/portfolio/portfolioData';
 
 const CookUni = (props) => {
 	return (

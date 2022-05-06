@@ -6,7 +6,7 @@ import { Col, Row, Container } from 'react-bootstrap';
 import BlogCard from './BlogCard';
 
 // import data files
-import portfolioData from 'data/portfolio/portfolioData';
+import portfolioData from 'routes/portfolio/portfolioData';
 
 const BlogCategory = () => {
 	return (

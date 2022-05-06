@@ -1,6 +1,6 @@
 // import node module libraries
 import React, { Fragment } from 'react';
-import { Col, Row, Container, Form, Button } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
 
 // import sub components
 import BlogCard from './BlogCard';
@@ -21,7 +21,7 @@ const BlogCategory = () => {
 							md={12}
 							sm={12}>
 							<div className='text-center mb-5'>
-								<h1 className='display-2 fw-bold'>
+								<h1 className='display-3 fw-bold'>
 									My Portfolio
 								</h1>
 							</div>

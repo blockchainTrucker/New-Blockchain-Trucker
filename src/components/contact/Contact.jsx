@@ -42,7 +42,9 @@ const Contact = () => {
 
 								<p className='fs-4 '>
 									<GeoAlt size={17} className='me-2' />{' '}
-									<a href='https://www.google.com/maps/place/Powhatan,+VA+23139/@37.5418416,-77.9235594,15z/data=!3m1!4b1!4m5!3m4!1s0x89b162a37cb4d533:0xc4520886a0a6bcad!8m2!3d37.5415273!4d-77.9188239'>
+									<a
+										href='https://www.google.com/maps/place/Powhatan,+VA+23139/@37.5418249,-80.1472609,7z/data=!4m5!3m4!1s0x89b162a37cb4d533:0xc4520886a0a6bcad!8m2!3d37.5415273!4d-77.9188239'
+										target='_blank'>
 										Based out of Powhatan, VA
 									</a>
 								</p>

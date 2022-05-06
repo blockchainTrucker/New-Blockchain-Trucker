@@ -7,7 +7,6 @@ const FooterCenter = () => {
 		<div className='py-lg-5 py-5 bg-white'>
 			<Container>
 				<Row className='justify-content-center text-center  '>
-					{/*  Desc  */}
 					<Col lg={8} md={12} sm={12}>
 						<div className='mt-6 mb-1'>
 							<a
@@ -27,7 +26,15 @@ const FooterCenter = () => {
 						</div>
 					</Col>
 					<Col lg={8} md={12} sm={12}>
-						<span>© 2022 Jesse Wachtel. All Rights Reserved</span>
+						<span>
+							© 2022{' '}
+							<a
+								href='https://www.linkedin.com/in/jesse-wachtel'
+								target='_blank'>
+								Jesse Wachtel
+							</a>
+							. All Rights Reserved
+						</span>
 					</Col>
 				</Row>
 			</Container>

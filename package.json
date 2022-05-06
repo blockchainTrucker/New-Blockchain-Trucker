@@ -1,5 +1,5 @@
 {
-	"name": "Blockchain Trucker",
+	"name": "blockchain-trucker",
 	"version": "2.0.1",
 	"dependencies": {
 		"@mdi/js": "^5.9.55",

@@ -127,8 +127,13 @@ const ContactForm = () => {
 			sendForm(firstName, lastName, email, phoneNumber, message)
 				.then((res) => {
 					if (res === 'sent') {
-						navigate('/message-sent');
+						document.getElementById('form').classList = 'hide';
+						document.getElementById('loading').classList =
+							'loading hide';
+						document.getElementById('messages').classList = 'show';
 					} else {
+						document.getElementById('loading').classList =
+							'loading hide';
 						setError('Something went wrong, please try again.');
 					}
 				})

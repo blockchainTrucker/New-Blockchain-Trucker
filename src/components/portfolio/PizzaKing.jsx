@@ -57,10 +57,171 @@ const PizzaKing = (props) => {
 										sm={12}
 										className='mb-2'>
 										{/* Blog Content */}
-										<div
-											dangerouslySetInnerHTML={{
-												__html: item.content,
-											}}></div>
+										<div>
+											<h4>
+												Design Systems for Developers
+												Geeks a modern, clean and
+												accessibility oriented design
+												system for developing fast and
+												powerful web interfaces.
+											</h4>
+											<br />
+											<p>
+												Condimentum leo utipsum euismod
+												feugiatn elntum sapiennonser
+												variusmi elementum necunc
+												elementum velitnon tortor
+												convallis variusa placerat
+												nequhse. Mauris varius
+												ullamcorper tincidsellus egestas
+												innisivel sollicituullam
+												feugiate facilisis ones
+												Suspendisse blandit
+												sedtincinean.
+											</p>
+											<br />
+											<p>
+												Mauris varius ullamcorper
+												tincidsellus egestas innisivel
+												sollicituullam feugiate
+												facilisis ones velleo finibus
+												maximus nequsese sedmattis
+												auspendisse{' '}
+												<u>
+													duimetus ullamcorper
+													faucibuse blandit
+												</u>{' '}
+												sedtincinean.
+											</p>
+											<p>
+												Sint officia nulla deserunt
+												voluptate non amet consequat
+												ipsum tempor. Nulla id cupidatat
+												ipsum occaecat. Aute ad et
+												fugiat velit sunt qui veniam
+												labore elit ipsum commodo
+												proident. Sit tempor consectetur
+												commodo laborum mollit. Enim
+												sint nostrud nisi in ad aliqua
+												laboris ad non.
+											</p>
+										</div>
+
+										<div>
+											<h3>Unordered Lists (Nested)</h3>
+											<br />
+											<ul>
+												<li>
+													Lorem ipsum dolor sit amet
+												</li>
+												<li>
+													Consectetur adipiscing elit
+												</li>
+												<li>
+													Integer molestie lorem at
+													massa
+												</li>
+												<li>
+													Facilisis in pretium nisl
+													aliquet
+												</li>
+												<li>
+													Nulla volutpat aliquam velit
+													<ul>
+														<li>
+															Phasellus iaculis
+															neque
+														</li>
+														<li>
+															Purus sodales
+															ultricies
+														</li>
+														<li>
+															Vestibulum laoreet
+															porttitor sem
+														</li>
+														<li>
+															Ac tristique libero
+															volutpat at
+														</li>
+													</ul>
+												</li>
+												<li>
+													Faucibus porta lacus
+													fringilla vel
+												</li>
+												<li>
+													Aenean sit amet erat nunc
+												</li>
+												<li>Eget porttitor lorem</li>
+											</ul>
+										</div>
+										<div>
+											<h3>Ordered List (Nested)</h3>
+											<ol>
+												<li>
+													Lorem ipsum dolor sit amet
+												</li>
+												<li>
+													Consectetur adipiscing elit
+												</li>
+												<li>
+													Integer molestie lorem at
+													massa
+												</li>
+												<li>
+													Facilisis in pretium nisl
+													aliquet
+												</li>
+												<li>
+													Nulla volutpat aliquam velit
+													<ol>
+														<li>
+															Phasellus iaculis
+															neque
+														</li>
+														<li>
+															Purus sodales
+															ultricies
+														</li>
+														<li>
+															Vestibulum laoreet
+															porttitor sem
+														</li>
+														<li>
+															Ac tristique libero
+															volutpat at
+														</li>
+													</ol>
+												</li>
+												<li>
+													Faucibus porta lacus
+													fringilla vel
+												</li>
+												<li>
+													Aenean sit amet erat nunc
+												</li>
+												<li>Eget porttitor lorem</li>
+											</ol>
+										</div>
+										<div>
+											<h2>Image </h2>
+											<p>
+												Sint officia nulla deserunt
+												voluptate non amet consequat
+												ipsum tempor. Nulla id cupidatat
+												ipsum occaecat. Aute ad et
+												fugiat velit sunt qui veniam
+												labore elit ipsum commodo
+												proident. Sit tempor consectetur
+												commodo laborum mollit. Enim
+												sint nostrud nisi in ad aliqua
+												laboris ad non.
+											</p>
+											<img
+												src='https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg'
+												alt=''></img>
+										</div>
 										<hr className='mt-8 mb-5' />
 										{/* Author */}
 

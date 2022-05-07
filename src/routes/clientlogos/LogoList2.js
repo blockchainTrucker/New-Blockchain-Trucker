@@ -6,7 +6,6 @@ import ReactLogo from 'assets/images/brand/reactjs.png';
 import MongoDBLogo from 'assets/images/brand/mongodb.png';
 import ExpressLogo from 'assets/images/brand/expressjs.png';
 import BootstrapLogo from 'assets/images/brand/bootstrap.png';
-import NetflixLogo from 'assets/images/brand/gray-logo-netflix.svg';
 
 const LogoList2 = [
 	{

@@ -12,8 +12,6 @@ import { mdiCheckCircle } from '@mdi/js';
 import LogoList1 from 'routes/clientlogos/LogoList2';
 
 const MainLanding = () => {
-	const isLaptop = useMediaQuery({ maxWidth: 1024 });
-
 	useEffect(() => {
 		document.title = 'Blockchain Trucker - Home';
 	}, []);
@@ -38,9 +36,7 @@ const MainLanding = () => {
 							<ListGroup
 								bsPrefix='list-unstyled'
 								className='fs-3 text-dark mb-6 fw-medium'>
-								<ListGroup.Item
-									bsPrefix='mb-1'
-									className='d-flex mb-2'>
+								<ListGroup.Item className='d-flex mb-2'>
 									<Icon
 										path={mdiCheckCircle}
 										size={0.9}
@@ -49,9 +45,7 @@ const MainLanding = () => {
 									Equal focus on the frontend and backend
 									design
 								</ListGroup.Item>
-								<ListGroup.Item
-									bsPrefix='mb-1'
-									className='d-flex mb-2'>
+								<ListGroup.Item className='d-flex mb-2'>
 									<Icon
 										path={mdiCheckCircle}
 										size={0.9}
@@ -60,9 +54,7 @@ const MainLanding = () => {
 									Applications designed to interact with
 									blockchains
 								</ListGroup.Item>
-								<ListGroup.Item
-									bsPrefix='mb-1'
-									className='d-flex'>
+								<ListGroup.Item className='d-flex'>
 									<Icon
 										path={mdiCheckCircle}
 										size={0.9}

@@ -21,13 +21,12 @@ const MainLanding = () => {
 	return (
 		<Fragment>
 			<div className='position-relative bg-white'>
-				{/* Image */}
 				<Container>
 					<Row className='align-items-center '>
 						<Col
 							lg={{ span: 7, offset: 2 }}
 							xs={10}
-							className='mt-10 order-md-1 mb-10'>
+							className='mt-lg-10 mt-6 order-md-1 mb-10'>
 							{/* Heading */}
 							<h1 className='display-2 ms-1 mb-5 fw-bold'>
 								<span className='text-primary'>Full Stack</span>{' '}
@@ -41,7 +40,7 @@ const MainLanding = () => {
 								className='fs-3 text-dark mb-6 fw-medium'>
 								<ListGroup.Item
 									bsPrefix='mb-1'
-									className='d-flex'>
+									className='d-flex mb-2'>
 									<Icon
 										path={mdiCheckCircle}
 										size={0.9}
@@ -52,7 +51,7 @@ const MainLanding = () => {
 								</ListGroup.Item>
 								<ListGroup.Item
 									bsPrefix='mb-1'
-									className='d-flex'>
+									className='d-flex mb-2'>
 									<Icon
 										path={mdiCheckCircle}
 										size={0.9}

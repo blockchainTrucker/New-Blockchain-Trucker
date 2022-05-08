@@ -12,26 +12,31 @@ const LogoList2 = [
 		id: uuid(),
 		logoimage: NodejsLogo,
 		link: 'https://nodejs.org/',
+		alt: 'Node.js',
 	},
 	{
 		id: uuid(),
 		logoimage: ReactLogo,
 		link: 'https://reactjs.org/',
+		alt: 'React.js',
 	},
 	{
 		id: uuid(),
 		logoimage: MongoDBLogo,
 		link: 'https://www.mongodb.com',
+		alt: 'MongoDB',
 	},
 	{
 		id: uuid(),
 		logoimage: ExpressLogo,
 		link: 'https://expressjs.com/',
+		alt: 'Express',
 	},
 	{
 		id: uuid(),
 		logoimage: BootstrapLogo,
 		link: 'https://getbootstrap.com/',
+		alt: 'Bootstrap',
 	},
 ];
 

@@ -16,6 +16,9 @@ import CookUni from 'components/portfolio/CookUni';
 //Contact
 import Contact from 'components/contact/Contact';
 
+//About
+import About from 'components/about/About';
+
 export default function AllRoutes(login) {
 	return (
 		<div>
@@ -49,6 +52,8 @@ export default function AllRoutes(login) {
 				<Route exact path='/portfolio/cookuni' element={<CookUni />} />
 				//Contact
 				<Route exact path='/contact-me' element={<Contact />} />
+				//About
+				<Route exact path='/about-me' element={<About />} />
 			</Routes>
 		</div>
 	);

@@ -1,9 +1,9 @@
 // import media files
-import pizzaKing from 'assets/images/portfolio/logos/pizza-king-logo.png';
+import pizzaKing from 'assets/images/pizza-king/pizza-king-home-top.png';
 import fundingChain from 'assets/images/portfolio/logos/funding-chain.png';
 import decentralizedVentures from 'assets/images/portfolio/logos/decentralized-ventures.png';
-import videoTutorials from 'assets/images/portfolio/logos/vtLogo.png';
-import cookUni from 'assets/images/portfolio/logos/cookuniLogo.png';
+import videoTutorials from 'assets/images/video-tutorials/video-tutorials-home-loggedin.png';
+import cookUni from 'assets/images/cookuni/cookuni-home.png';
 
 const blogContent = `<p><h4>Design Systems for Developers Geeks a modern, clean and accessibility oriented design system for developing fast and powerful web interfaces.</h4>
 <br>Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. 

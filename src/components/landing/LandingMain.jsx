@@ -36,7 +36,9 @@ const MainLanding = () => {
 							<ListGroup
 								bsPrefix='list-unstyled'
 								className='fs-3 text-dark mb-6 fw-medium'>
-								<ListGroup.Item className='d-flex mb-2'>
+								<ListGroup.Item
+									bsPrefix='mb-1'
+									className='d-flex mb-2'>
 									<Icon
 										path={mdiCheckCircle}
 										size={0.9}
@@ -45,7 +47,9 @@ const MainLanding = () => {
 									Equal focus on the frontend and backend
 									design
 								</ListGroup.Item>
-								<ListGroup.Item className='d-flex mb-2'>
+								<ListGroup.Item
+									bsPrefix='mb-1'
+									className='d-flex mb-2'>
 									<Icon
 										path={mdiCheckCircle}
 										size={0.9}
@@ -54,7 +58,9 @@ const MainLanding = () => {
 									Applications designed to interact with
 									blockchains
 								</ListGroup.Item>
-								<ListGroup.Item className='d-flex'>
+								<ListGroup.Item
+									bsPrefix='mb-1'
+									className='d-flex'>
 									<Icon
 										path={mdiCheckCircle}
 										size={0.9}
@@ -70,7 +76,7 @@ const MainLanding = () => {
 								<Link
 									to='/portfolio'
 									className='btn btn-primary me-3 mb-3 mb-lg-0'>
-									See Portfolio
+									See My Portfolio
 								</Link>
 								<Link
 									to='/contact-me'
@@ -87,6 +93,24 @@ const MainLanding = () => {
 						logos={LogoList1}
 						limit={5}
 					/>
+					<Row className='justify-content-center'>
+						<Col
+							xl={9}
+							lg={9}
+							md={12}
+							sm={12}
+							className='mb-2 mt-10'>
+							<div className='text-center mb-8 mt-6'>
+								<Link to='/about-me'>
+									<span className='ls-md fs-5 text-primary fw-bold'>
+										FROM TRACTOR TRAILER DRIVER TO WEB
+										DEVELOPER, CLICK HERE TO READ ABOUT MY
+										JOURNEY
+									</span>
+								</Link>
+							</div>
+						</Col>
+					</Row>
 				</Container>
 			</div>
 		</Fragment>

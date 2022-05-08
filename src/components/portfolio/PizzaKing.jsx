@@ -3,250 +3,207 @@ import React, { Fragment } from 'react';
 import { Col, Row, Container, Image, Form, Button } from 'react-bootstrap';
 import { Link, withRouter } from 'react-router-dom';
 
-// import sub components
-import BlogCard from './BlogCard';
+import Icon from '@mdi/react';
+import { mdiGithub, mdiLinkedin } from '@mdi/js';
 
 // import data files
-import portfolioData from 'routes/portfolio/portfolioData';
+import pkHome from '../../assets/images/pizza-king/pizza-king-home.png';
+import pkAccount from '../../assets/images/pizza-king/pizza-king-account.png';
+import pkRegistration from '../../assets/images/pizza-king/pizza-king-registration.png';
+import pkSignin from '../../assets/images/pizza-king/pizza-king-signin.png';
+import pkCheckout from '../../assets/images/pizza-king/pizza-king-checkout.png';
 
 const PizzaKing = (props) => {
 	return (
 		<Fragment>
 			<div className='py-4 py-lg-8 pb-14 bg-white '>
 				<Container>
-					{portfolioData
-						.filter(function (dataSource) {
-							return dataSource.title === 'Pizza King';
-						})
-						.map((item, index) => (
-							<Fragment key={index}>
-								<Row className='justify-content-center'>
-									<Col
-										xl={8}
-										lg={8}
-										md={12}
-										sm={12}
-										className='mb-2'>
-										<div className='text-center mb-4'>
-											<h1 className='display-3 fw-bold mb-4'>
-												{item.title}
-											</h1>
-										</div>
-									</Col>
-								</Row>
-								<Row className='justify-content-center'>
-									{/* Image */}
-									<Col
-										xl={8}
-										lg={8}
-										md={12}
-										sm={12}
-										className='mb-6'>
-										<Image
-											src={item.image}
-											alt=''
-											className='img-fluid rounded-3'
-										/>
-									</Col>
-								</Row>
-								<Row className='justify-content-center'>
-									<Col
-										xl={8}
-										lg={8}
-										md={12}
-										sm={12}
-										className='mb-2'>
-										{/* Blog Content */}
-										<div>
-											<h4>
-												Design Systems for Developers
-												Geeks a modern, clean and
-												accessibility oriented design
-												system for developing fast and
-												powerful web interfaces.
-											</h4>
-											<br />
-											<p>
-												Condimentum leo utipsum euismod
-												feugiatn elntum sapiennonser
-												variusmi elementum necunc
-												elementum velitnon tortor
-												convallis variusa placerat
-												nequhse. Mauris varius
-												ullamcorper tincidsellus egestas
-												innisivel sollicituullam
-												feugiate facilisis ones
-												Suspendisse blandit
-												sedtincinean.
-											</p>
-											<br />
-											<p>
-												Mauris varius ullamcorper
-												tincidsellus egestas innisivel
-												sollicituullam feugiate
-												facilisis ones velleo finibus
-												maximus nequsese sedmattis
-												auspendisse{' '}
-												<u>
-													duimetus ullamcorper
-													faucibuse blandit
-												</u>{' '}
-												sedtincinean.
-											</p>
-											<p>
-												Sint officia nulla deserunt
-												voluptate non amet consequat
-												ipsum tempor. Nulla id cupidatat
-												ipsum occaecat. Aute ad et
-												fugiat velit sunt qui veniam
-												labore elit ipsum commodo
-												proident. Sit tempor consectetur
-												commodo laborum mollit. Enim
-												sint nostrud nisi in ad aliqua
-												laboris ad non.
-											</p>
-										</div>
-
-										<div>
-											<h3>Unordered Lists (Nested)</h3>
-											<br />
-											<ul>
-												<li>
-													Lorem ipsum dolor sit amet
-												</li>
-												<li>
-													Consectetur adipiscing elit
-												</li>
-												<li>
-													Integer molestie lorem at
-													massa
-												</li>
-												<li>
-													Facilisis in pretium nisl
-													aliquet
-												</li>
-												<li>
-													Nulla volutpat aliquam velit
-													<ul>
-														<li>
-															Phasellus iaculis
-															neque
-														</li>
-														<li>
-															Purus sodales
-															ultricies
-														</li>
-														<li>
-															Vestibulum laoreet
-															porttitor sem
-														</li>
-														<li>
-															Ac tristique libero
-															volutpat at
-														</li>
-													</ul>
-												</li>
-												<li>
-													Faucibus porta lacus
-													fringilla vel
-												</li>
-												<li>
-													Aenean sit amet erat nunc
-												</li>
-												<li>Eget porttitor lorem</li>
-											</ul>
-										</div>
-										<div>
-											<h3>Ordered List (Nested)</h3>
-											<ol>
-												<li>
-													Lorem ipsum dolor sit amet
-												</li>
-												<li>
-													Consectetur adipiscing elit
-												</li>
-												<li>
-													Integer molestie lorem at
-													massa
-												</li>
-												<li>
-													Facilisis in pretium nisl
-													aliquet
-												</li>
-												<li>
-													Nulla volutpat aliquam velit
-													<ol>
-														<li>
-															Phasellus iaculis
-															neque
-														</li>
-														<li>
-															Purus sodales
-															ultricies
-														</li>
-														<li>
-															Vestibulum laoreet
-															porttitor sem
-														</li>
-														<li>
-															Ac tristique libero
-															volutpat at
-														</li>
-													</ol>
-												</li>
-												<li>
-													Faucibus porta lacus
-													fringilla vel
-												</li>
-												<li>
-													Aenean sit amet erat nunc
-												</li>
-												<li>Eget porttitor lorem</li>
-											</ol>
-										</div>
-										<div>
-											<h2>Image </h2>
-											<p>
-												Sint officia nulla deserunt
-												voluptate non amet consequat
-												ipsum tempor. Nulla id cupidatat
-												ipsum occaecat. Aute ad et
-												fugiat velit sunt qui veniam
-												labore elit ipsum commodo
-												proident. Sit tempor consectetur
-												commodo laborum mollit. Enim
-												sint nostrud nisi in ad aliqua
-												laboris ad non.
-											</p>
-											<img
-												src='https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg'
-												alt=''></img>
-										</div>
-										<hr className='mt-8 mb-5' />
-										{/* Author */}
-
-										{/* Subscribe to Newsletter */}
-										<div className='py-12'>
-											<div className='text-center mb-6'>
-												<h2 className='display-4 fw-bold'>
-													Sign up for our Newsletter
-												</h2>
-												<p className='mb-0 lead'>
-													Join our newsletter and get
-													resources, curated content,
-													and design inspiration
-													delivered straight to your
-													inbox.
-												</p>
-											</div>
-										</div>
-									</Col>
-								</Row>
-							</Fragment>
-						))}
+					<Fragment>
+						<Row className='justify-content-center'>
+							<Col
+								xl={12}
+								lg={12}
+								md={12}
+								sm={12}
+								className='mb-5'>
+								<div className='text-center'>
+									<h1 className='display-3 fw-bold'>
+										Pizza King
+									</h1>
+								</div>
+								<div className='text-center'>
+									<Icon
+										path={mdiGithub}
+										size={1}
+										className='text-muted'
+									/>{' '}
+									<a href='https://github.com/jwachtel96/Pizza-King'>
+										<span>
+											https://github.com/jwachtel96/Pizza-King
+										</span>
+									</a>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							{/* Image */}
+							<Col
+								xl={3}
+								lg={4}
+								md={6}
+								sm={8}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={pkHome}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+							<Col xl={4} lg={4} md={12} sm={12} className='mb-2'>
+								{/* Blog Content */}
+								<div>
+									<br />
+									<p className='py-5 '>
+										The Pizza King app was my final project
+										for my Full Stack Developer bootcamp. I
+										made it using React.js for the frontend,
+										and Node.js with MongoDB for the
+										backend. Since I chose to create a pizza
+										resturant app, I decided to set up the
+										layout for a good user experience on
+										mobile devices. All of the CSS is
+										custom.
+									</p>
+									<p>
+										The home and menu pages are the only two
+										pages that guest users can access. The
+										Menu component uses cookies to store the
+										cart data as an array. The cart icon in
+										the navigation bar displays how many
+										items are in the cart using the length
+										of the cart.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col
+								xl={5}
+								lg={5}
+								md={12}
+								sm={12}
+								className='mb-2 py-xl-5'>
+								{/* Blog Content */}
+								<div>
+									<p>
+										When the user clicks the Review Order
+										button, they are routed to the login
+										page. If the user does not have an
+										account set up yet, there is a link to
+										the registration page. Both pages are
+										similar in layout and functionality.
+										They have full client-side as well as
+										server-side and database validation.
+										User context is kept using the state.
+										Password encryption and validation is
+										completed using Bcrypt. The user context
+										is then encoded on the backend with JSON
+										Web Token and sent to the frontend as a
+										cookie.
+									</p>
+								</div>
+							</Col>
+							<Col
+								xl={4}
+								lg={4}
+								md={6}
+								sm={8}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={pkAccount}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+								<div>
+									<p>
+										When login is completed, the user is
+										routed to the My Account page. On this
+										page, the user can review and remove
+										items from the cart, continue to
+										checkout, or review the past three
+										orders and choose to order them again.
+										There is client-side validation as well
+										as server-side and database validation
+										to ensure empty orders are not placed.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col
+								xl={4}
+								lg={4}
+								md={6}
+								sm={8}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={pkRegistration}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+							<Col
+								xl={4}
+								lg={4}
+								md={6}
+								sm={8}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={pkSignin}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+								{/* Blog Content */}
+								<div>
+									<p>
+										Once the order was successfully created,
+										the user will be routed to the Order
+										Placed page. The new order will then
+										show on their My Account page.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							{/* Image */}
+							<Col
+								xl={4}
+								lg={4}
+								md={6}
+								sm={8}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={pkCheckout}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+					</Fragment>
 				</Container>
-
-				{/* Related Post */}
 			</div>
 		</Fragment>
 	);

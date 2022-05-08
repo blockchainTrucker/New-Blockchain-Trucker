@@ -15,12 +15,12 @@ import PropTypes from 'prop-types';
 import { Row, Col, Image } from 'react-bootstrap';
 
 const LogosTopHeadingInverseDark = ({ logos, title, limit }) => {
-	const LogoImage = ({ logo, link }) => {
+	const LogoImage = ({ logo, link, alt }) => {
 		return (
 			<Col>
 				<div className='mb-4'>
 					<a href={link} target='_blank'>
-						<Image src={logo} alt='' />
+						<Image src={logo} alt={alt} />
 					</a>
 				</div>
 			</Col>
@@ -36,6 +36,7 @@ const LogosTopHeadingInverseDark = ({ logos, title, limit }) => {
 						key={index}
 						logo={logo.logoimage}
 						link={logo.link}
+						alt={logo.alt}
 					/>
 				));
 		} else {
@@ -47,9 +48,11 @@ const LogosTopHeadingInverseDark = ({ logos, title, limit }) => {
 
 	return (
 		<Row className='mt-10'>
-			<Col xl={{ offset: 1, span: 10 }} md={12} xs={12}>
+			<Col xl={12} md={12} xs={12}>
 				<div className='text-center mb-6 px-md-8'>
-					<span className='ls-md'>{title}</span>
+					<span className='ls-md fs-5 text-primary fw-bold'>
+						{title}
+					</span>
 				</div>
 				<Row className='text-center'>
 					<LogosList />

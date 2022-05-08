@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
 
 // import sub components
-import BlogCard from './BlogCard';
+import BlogCard from './ProjectCard';
 
 // import data files
 import portfolioData from 'routes/portfolio/portfolioData';

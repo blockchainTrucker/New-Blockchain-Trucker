@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.66505f88.css",
-    "main.js": "/static/js/main.77d9e190.js",
+    "main.css": "/static/css/main.2696839a.css",
+    "main.js": "/static/js/main.8c066d0c.js",
     "static/js/787.58d6f25e.chunk.js": "/static/js/787.58d6f25e.chunk.js",
+    "static/media/cookuni-home.png": "/static/media/cookuni-home.dda02077c79d45d2380b.png",
     "static/media/feather.svg?sdxovp": "/static/media/feather.f780c210ecac82116260.svg",
-    "static/media/cookuniLogo.png": "/static/media/cookuniLogo.494522bbf579cac2eacc.png",
+    "static/media/video-tutorials-home-loggedin.png": "/static/media/video-tutorials-home-loggedin.968171f235f2431de02a.png",
     "static/media/loading.gif": "/static/media/loading.45dec5c5c911393f54ca.gif",
-    "static/media/vtLogo.png": "/static/media/vtLogo.a5e093e14d284df2d4cb.png",
     "static/media/feather.woff?sdxovp": "/static/media/feather.eb9822a3be07c5110df9.woff",
     "static/media/feather.ttf?sdxovp": "/static/media/feather.b2469c88d8944b230519.ttf",
+    "static/media/pizza-king-home-top.png": "/static/media/pizza-king-home-top.82d5992af4fbb140fdab.png",
     "static/media/decentralized-ventures.png": "/static/media/decentralized-ventures.b027540fa133a284c906.png",
-    "static/media/pizza-king-logo.png": "/static/media/pizza-king-logo.7a674521aead6802a78b.png",
     "static/media/funding-chain.png": "/static/media/funding-chain.60d8cdba9ddb1e0f9f23.png",
     "static/media/dots-pattern.svg": "/static/media/dots-pattern.58f3b03e401a0591814f.svg",
-    "static/media/gray-logo-netflix.svg": "/static/media/gray-logo-netflix.5b0aff628289b0ac23e64681e4140e5d.svg",
     "index.html": "/index.html",
-    "main.66505f88.css.map": "/static/css/main.66505f88.css.map",
-    "main.77d9e190.js.map": "/static/js/main.77d9e190.js.map",
+    "main.2696839a.css.map": "/static/css/main.2696839a.css.map",
+    "main.8c066d0c.js.map": "/static/js/main.8c066d0c.js.map",
     "787.58d6f25e.chunk.js.map": "/static/js/787.58d6f25e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.66505f88.css",
-    "static/js/main.77d9e190.js"
+    "static/css/main.2696839a.css",
+    "static/js/main.8c066d0c.js"
   ]
 }

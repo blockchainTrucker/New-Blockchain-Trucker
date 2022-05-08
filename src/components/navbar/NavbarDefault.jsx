@@ -152,7 +152,7 @@ const NavbarDefault = ({ headerstyle, login }) => {
 				}`}>
 				<Container fluid className='px-0 ps-2'>
 					<Navbar.Brand as={Link} to='/'>
-						<Image src={logo} />
+						<Image src={logo} alt='Blockchain Trucker Logo' />
 					</Navbar.Brand>
 					<div
 						className={`navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap ${

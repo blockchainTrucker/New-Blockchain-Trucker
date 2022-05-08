@@ -13,11 +13,12 @@ $black: #000 !default;
 
 $grays: () !default;
 $primary: #54b03c !default;
-$secondary: #e96344 !default;
+$secondary: #e96545 !default;
 $success: #19cb98 !default;
 $info: #29baf9 !default;
 $warning: #ffaa46 !default;
 $danger: #e53f3c !default;
+$kingsland: #211e47 !default;
 $light: $gray-100 !default;
 $dark: $gray-900 !default;
 
@@ -62,6 +63,7 @@ $theme-colors: (
 	'dark-danger': $dark-danger,
 	'dark-success': $dark-success,
 	'dark-secondary': $dark-secondary,
+	'kingsland': $kingsland,
 );
 
 $colors: (
@@ -224,7 +226,7 @@ $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px // xxl: 1320px,,,,,,,,,,,,,,,,,
+	xl: 1140px // xxl: 1320px,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 // scss-docs-end container-max-widths
 

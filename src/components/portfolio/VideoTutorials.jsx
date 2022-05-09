@@ -23,7 +23,7 @@ const PizzaKing = (props) => {
 			<div className='py-4 py-lg-8 pb-14 bg-white '>
 				<Container>
 					<Fragment>
-						<Row className='justify-content-center'>
+						<Row className='justify-content-center pb-5'>
 							<Col
 								xl={12}
 								lg={12}
@@ -31,7 +31,7 @@ const PizzaKing = (props) => {
 								sm={12}
 								className='pb-5'>
 								<div className='text-center'>
-									<h1 className='display-3 fw-bold'>
+									<h1 className='display-4 fw-bold'>
 										Video Tutorials
 									</h1>
 								</div>

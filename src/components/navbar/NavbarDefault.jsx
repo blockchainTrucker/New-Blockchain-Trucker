@@ -102,7 +102,7 @@ const NavbarDefault = ({ headerstyle, login }) => {
 
 				{
 					id: uuid(),
-					menuitem: 'Web Development',
+					menuitem: 'Examples',
 					link: '#',
 					children: [
 						{

@@ -30,7 +30,7 @@ const PizzaKing = (props) => {
 								xs={10}
 								className='pb-5'>
 								<div className='text-center'>
-									<h1 className='display-3 fw-bold'>
+									<h1 className='display-4 fw-bold'>
 										Pizza King
 									</h1>
 								</div>

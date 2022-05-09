@@ -64,61 +64,53 @@ const NavbarDefault = ({ headerstyle, login }) => {
 			children: [
 				{
 					id: uuid(),
-					header: true,
-					header_text: 'All',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Portfolio',
+					menuitem: 'All',
 					link: '/portfolio',
 				},
 				{
 					id: uuid(),
-					header: true,
+					menuitem: 'Projects',
+					link: '#',
+					children: [
+						{
+							id: uuid(),
+							menuitem: 'Funding Chain',
+							link: '/portfolio/funding-chain',
+						},
+						{
+							id: uuid(),
+							menuitem: 'Decentralized Ventures',
+							link: '/portfolio/decentralized-ventures',
+						},
+						{
+							id: uuid(),
+							menuitem: 'Pizza King',
+							link: '/portfolio/pizza-king',
+						},
+						{
+							id: uuid(),
+							menuitem: 'Video Tutorials',
+							link: '/portfolio/video-tutorials',
+						},
+						{
+							id: uuid(),
+							menuitem: 'CookUni',
+							link: '/portfolio/cookuni',
+						},
+					],
 				},
+
 				{
 					id: uuid(),
-					header: true,
-					header_text: 'Projects',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Funding Chain',
-					link: '/portfolio/funding-chain',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Decentralized Ventures',
-					link: '/portfolio/decentralized-ventures',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Pizza King',
-					link: '/portfolio/pizza-king',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Video Tutorials',
-					link: '/portfolio/video-tutorials',
-				},
-				{
-					id: uuid(),
-					menuitem: 'CookUni',
-					link: '/portfolio/cookuni',
-				},
-				{
-					id: uuid(),
-					header: true,
-				},
-				{
-					id: uuid(),
-					header: true,
-					header_text: 'Examples',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Hashing',
-					link: '/portfolio/hashing',
+					menuitem: 'Web Development',
+					link: '#',
+					children: [
+						{
+							id: uuid(),
+							menuitem: 'Hashing',
+							link: '/portfolio/hashing',
+						},
+					],
 				},
 			],
 		},

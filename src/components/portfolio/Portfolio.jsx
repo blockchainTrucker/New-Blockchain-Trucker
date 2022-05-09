@@ -1,17 +1,15 @@
 // import node module libraries
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
-
-// import sub components
-import BlogCard from './ProjectCard';
-
-// import data files
+import ProjectCard from './ProjectCard';
 import portfolioData from 'routes/portfolio/portfolioData';
 
 const BlogCategory = () => {
+	useEffect(() => {
+		document.title = 'Blockchain Trucker - Portfolio';
+	}, []);
 	return (
 		<Fragment>
-			{/* Page header */}
 			<div className='pt-9 pb-9 bg-white'>
 				<Container>
 					<Row>
@@ -29,7 +27,6 @@ const BlogCategory = () => {
 					</Row>
 				</Container>
 			</div>
-
 			{/* Page Content */}
 			<div className='pb-12 bg-white'>
 				<Container>
@@ -42,7 +39,7 @@ const BlogCategory = () => {
 								sm={12}
 								key={index}
 								className='d-flex'>
-								<BlogCard item={item} />
+								<ProjectCard item={item} />
 							</Col>
 						))}
 					</Row>

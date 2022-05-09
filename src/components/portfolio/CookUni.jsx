@@ -1,255 +1,235 @@
 // import node module libraries
-import React, { Fragment } from 'react';
-import { Col, Row, Container, Image, Form, Button } from 'react-bootstrap';
-import { Link, withRouter } from 'react-router-dom';
+import React, { Fragment, useEffect } from 'react';
+import { Col, Row, Container, Image } from 'react-bootstrap';
 
-// import sub components
-import BlogCard from './ProjectCard';
+import Icon from '@mdi/react';
+import { mdiGithub } from '@mdi/js';
 
 // import data files
-import portfolioData from 'routes/portfolio/portfolioData';
+import cuHome from '../../assets/images/cookuni/cookuni-home.png';
+import recipes from '../../assets/images/cookuni/cookuni-recipes.png';
+import details from '../../assets/images/cookuni/cookuni-recipe-details.png';
+import signin from '../../assets/images/cookuni/cookuni-signin.png';
+import registration from '../../assets/images/cookuni/cookuni-reg.png';
+import account from '../../assets/images/cookuni/cookuni-account.png';
+import addRecipe from '../../assets/images/cookuni/cookuni-add-recipe.png';
 
-const CookUni = (props) => {
+const PizzaKing = (props) => {
+	useEffect(() => {
+		document.title = 'Blockchain Trucker - CookUni';
+	}, []);
 	return (
 		<Fragment>
 			<div className='py-4 py-lg-8 pb-14 bg-white '>
 				<Container>
-					{portfolioData
-						.filter(function (dataSource) {
-							return dataSource.title === 'CookUni';
-						})
-						.map((item, index) => (
-							<Fragment key={index}>
-								<Row className='justify-content-center'>
-									<Col
-										xl={8}
-										lg={8}
-										md={12}
-										sm={12}
-										className='mb-2'>
-										<div className='text-center mb-4'>
-											<h1 className='display-3 fw-bold mb-4'>
-												{item.title}
-											</h1>
-										</div>
-									</Col>
-								</Row>
-								<Row className='justify-content-center'>
-									{/* Image */}
-									<Col
-										xl={8}
-										lg={8}
-										md={12}
-										sm={12}
-										className='mb-6'>
-										<Image
-											src={item.image}
-											alt=''
-											className='img-fluid rounded-3'
-										/>
-									</Col>
-								</Row>
-								<Row className='justify-content-center'>
-									<Col
-										xl={8}
-										lg={8}
-										md={12}
-										sm={12}
-										className='mb-2'>
-										{/* Blog Content */}
-										<div>
-											<h4>
-												Design Systems for Developers
-												Geeks a modern, clean and
-												accessibility oriented design
-												system for developing fast and
-												powerful web interfaces.
-											</h4>
-											<br />
-											<p>
-												Condimentum leo utipsum euismod
-												feugiatn elntum sapiennonser
-												variusmi elementum necunc
-												elementum velitnon tortor
-												convallis variusa placerat
-												nequhse. Mauris varius
-												ullamcorper tincidsellus egestas
-												innisivel sollicituullam
-												feugiate facilisis ones
-												Suspendisse blandit
-												sedtincinean.
-											</p>
-											<br />
-											<p>
-												Mauris varius ullamcorper
-												tincidsellus egestas innisivel
-												sollicituullam feugiate
-												facilisis ones velleo finibus
-												maximus nequsese sedmattis
-												auspendisse{' '}
-												<u>
-													duimetus ullamcorper
-													faucibuse blandit
-												</u>{' '}
-												sedtincinean.
-											</p>
-											<p>
-												Sint officia nulla deserunt
-												voluptate non amet consequat
-												ipsum tempor. Nulla id cupidatat
-												ipsum occaecat. Aute ad et
-												fugiat velit sunt qui veniam
-												labore elit ipsum commodo
-												proident. Sit tempor consectetur
-												commodo laborum mollit. Enim
-												sint nostrud nisi in ad aliqua
-												laboris ad non.
-											</p>
-										</div>
-
-										<div>
-											<h3>Unordered Lists (Nested)</h3>
-											<br />
-											<ul>
-												<li>
-													Lorem ipsum dolor sit amet
-												</li>
-												<li>
-													Consectetur adipiscing elit
-												</li>
-												<li>
-													Integer molestie lorem at
-													massa
-												</li>
-												<li>
-													Facilisis in pretium nisl
-													aliquet
-												</li>
-												<li>
-													Nulla volutpat aliquam velit
-													<ul>
-														<li>
-															Phasellus iaculis
-															neque
-														</li>
-														<li>
-															Purus sodales
-															ultricies
-														</li>
-														<li>
-															Vestibulum laoreet
-															porttitor sem
-														</li>
-														<li>
-															Ac tristique libero
-															volutpat at
-														</li>
-													</ul>
-												</li>
-												<li>
-													Faucibus porta lacus
-													fringilla vel
-												</li>
-												<li>
-													Aenean sit amet erat nunc
-												</li>
-												<li>Eget porttitor lorem</li>
-											</ul>
-										</div>
-										<div>
-											<h3>Ordered List (Nested)</h3>
-											<ol>
-												<li>
-													Lorem ipsum dolor sit amet
-												</li>
-												<li>
-													Consectetur adipiscing elit
-												</li>
-												<li>
-													Integer molestie lorem at
-													massa
-												</li>
-												<li>
-													Facilisis in pretium nisl
-													aliquet
-												</li>
-												<li>
-													Nulla volutpat aliquam velit
-													<ol>
-														<li>
-															Phasellus iaculis
-															neque
-														</li>
-														<li>
-															Purus sodales
-															ultricies
-														</li>
-														<li>
-															Vestibulum laoreet
-															porttitor sem
-														</li>
-														<li>
-															Ac tristique libero
-															volutpat at
-														</li>
-													</ol>
-												</li>
-												<li>
-													Faucibus porta lacus
-													fringilla vel
-												</li>
-												<li>
-													Aenean sit amet erat nunc
-												</li>
-												<li>Eget porttitor lorem</li>
-											</ol>
-										</div>
-										<div>
-											<h2>Image </h2>
-											<p>
-												Sint officia nulla deserunt
-												voluptate non amet consequat
-												ipsum tempor. Nulla id cupidatat
-												ipsum occaecat. Aute ad et
-												fugiat velit sunt qui veniam
-												labore elit ipsum commodo
-												proident. Sit tempor consectetur
-												commodo laborum mollit. Enim
-												sint nostrud nisi in ad aliqua
-												laboris ad non.
-											</p>
-											<img
-												src='https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg'
-												alt=''></img>
-										</div>
-										<hr className='mt-8 mb-5' />
-										{/* Author */}
-
-										{/* Subscribe to Newsletter */}
-										<div className='py-12'>
-											<div className='text-center mb-6'>
-												<h2 className='display-4 fw-bold'>
-													Sign up for our Newsletter
-												</h2>
-												<p className='mb-0 lead'>
-													Join our newsletter and get
-													resources, curated content,
-													and design inspiration
-													delivered straight to your
-													inbox.
-												</p>
-											</div>
-										</div>
-									</Col>
-								</Row>
-							</Fragment>
-						))}
+					<Fragment>
+						<Row className='justify-content-center'>
+							<Col
+								xl={12}
+								lg={12}
+								md={12}
+								sm={12}
+								className='mb-10'>
+								<div className='text-center'>
+									<h1 className='display-3 fw-bold'>
+										CookUni
+									</h1>
+								</div>
+								<div className='text-center'>
+									<a href='https://github.com/jwachtel96/CookUni'>
+										<Icon path={mdiGithub} size={1} />{' '}
+										<span>
+											<u>
+												Click here to see the repository
+											</u>
+										</span>
+									</a>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col
+								xl={10}
+								lg={10}
+								md={10}
+								sm={10}
+								xs={10}
+								className='mb-2 mb-10'>
+								<div>
+									<p>
+										The CookUni app was my module 4 project
+										and it's focus was the frontend. This
+										was our first big project and my first
+										attempt at making a website. I used,
+										Sammy.js, and Handlebars for the
+										frontend and Firebase for the database.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col
+								xl={5}
+								lg={5}
+								md={10}
+								sm={10}
+								xs={10}
+								className='mb-2 py-xl-10 py-lg-7'>
+								<div>
+									<p>
+										The Home page was created as a landing
+										page. From here the user can login,
+										register, or view the recipes.
+									</p>
+								</div>
+							</Col>
+							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
+								<Image
+									src={cuHome}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
+								<Image
+									src={recipes}
+									alt=''
+									className='img-fluid rounded-3 mb-2'
+								/>
+							</Col>
+							<Col
+								xl={5}
+								lg={5}
+								md={10}
+								sm={10}
+								xs={10}
+								className='mb-2 py-xl-10 py-lg-7'>
+								<div>
+									<p>
+										When the user reaches the Recipes page,
+										a query is sent to Firebase, and the
+										recipes are then displayed using the
+										Handlebars template.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col xl={5} lg={5} md={10} sm={10} className='mb-2'>
+								<div className='text-center'>
+									<p>
+										The Details page shows the instructions
+										for the recipe.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
+								<Image
+									src={details}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col xl={10} lg={10} md={10} sm={10}>
+								<div className='text-center'>
+									<p>
+										The Sign In and Registration pages both
+										have frontend validation.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={signin}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={registration}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col
+								xl={5}
+								lg={5}
+								md={10}
+								sm={10}
+								className='mb-2 py-xl-10 py-lg-7'>
+								{/* Blog Content */}
+								<div>
+									<p>
+										Once the user is registered, a new user
+										is created in the database. The Account
+										page displays the user data as well as
+										any recipes they have created. The user
+										has the option to delete an existing
+										recipe or create a new one.
+									</p>
+								</div>
+							</Col>
+							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
+								<Image
+									src={account}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
+								<Image
+									src={addRecipe}
+									alt=''
+									className='img-fluid rounded-3 mb-2'
+								/>
+							</Col>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='py-xl-10 py-lg-7'>
+								{/* Blog Content */}
+								<div>
+									<p>
+										The Add a Recipe page has frontend
+										validation prior to sending the data to
+										Firebase.
+									</p>
+								</div>
+							</Col>
+						</Row>
+					</Fragment>
 				</Container>
-
-				{/* Related Post */}
 			</div>
 		</Fragment>
 	);
 };
 
-export default CookUni;
+export default PizzaKing;

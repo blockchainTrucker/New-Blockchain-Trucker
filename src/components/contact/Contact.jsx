@@ -1,6 +1,5 @@
-// import node module libraries
-import { Link } from 'react-router-dom';
-import { Col, Row, Image, Container } from 'react-bootstrap';
+import { useEffect } from 'react';
+import { Col, Row, Container } from 'react-bootstrap';
 
 // import MDI icons
 
@@ -11,6 +10,9 @@ import { Telephone, EnvelopeOpen, GeoAlt } from 'react-bootstrap-icons';
 import ContactForm from './ContactForm';
 
 const Contact = () => {
+	useEffect(() => {
+		document.title = 'Blockchain Trucker - Contact Me';
+	}, []);
 	return (
 		<Container fluid className='bg-white'>
 			<Row className='align-items-center lg-min-vh-100'>

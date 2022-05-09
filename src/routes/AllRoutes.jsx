@@ -12,6 +12,7 @@ import Portfolio from 'components/portfolio/Portfolio';
 import PizzaKing from 'components/portfolio/PizzaKing';
 import VideoTutorials from 'components/portfolio/VideoTutorials';
 import CookUni from 'components/portfolio/CookUni';
+import Hashing from 'components/portfolio/Hashing';
 
 //Contact
 import Contact from 'components/contact/Contact';
@@ -49,6 +50,7 @@ export default function AllRoutes(login) {
 					path='/portfolio/video-tutorials'
 					element={<VideoTutorials />}
 				/>
+				<Route exact path='/portfolio/hashing' element={<Hashing />} />
 				<Route exact path='/portfolio/cookuni' element={<CookUni />} />
 				//Contact
 				<Route exact path='/contact-me' element={<Contact />} />

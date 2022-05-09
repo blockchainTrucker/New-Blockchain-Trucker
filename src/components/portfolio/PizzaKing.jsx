@@ -1,10 +1,9 @@
 // import node module libraries
-import React, { Fragment } from 'react';
-import { Col, Row, Container, Image, Form, Button } from 'react-bootstrap';
-import { Link, withRouter } from 'react-router-dom';
+import React, { Fragment, useEffect } from 'react';
+import { Col, Row, Container, Image } from 'react-bootstrap';
 
 import Icon from '@mdi/react';
-import { mdiGithub, mdiLinkedin } from '@mdi/js';
+import { mdiGithub } from '@mdi/js';
 
 // import data files
 import pkHome from '../../assets/images/pizza-king/pizza-king-home.png';
@@ -14,6 +13,9 @@ import pkSignin from '../../assets/images/pizza-king/pizza-king-signin.png';
 import pkCheckout from '../../assets/images/pizza-king/pizza-king-checkout.png';
 
 const PizzaKing = (props) => {
+	useEffect(() => {
+		document.title = 'Blockchain Trucker - Pizza King';
+	}, []);
 	return (
 		<Fragment>
 			<div className='py-4 py-lg-8 pb-14 bg-white '>
@@ -25,21 +27,19 @@ const PizzaKing = (props) => {
 								lg={12}
 								md={12}
 								sm={12}
-								className='mb-5'>
+								className='mb-10'>
 								<div className='text-center'>
 									<h1 className='display-3 fw-bold'>
 										Pizza King
 									</h1>
 								</div>
 								<div className='text-center'>
-									<Icon
-										path={mdiGithub}
-										size={1}
-										className='text-muted'
-									/>{' '}
 									<a href='https://github.com/jwachtel96/Pizza-King'>
+										<Icon path={mdiGithub} size={1} />{' '}
 										<span>
-											https://github.com/jwachtel96/Pizza-King
+											<u>
+												Click here to see the repository
+											</u>
 										</span>
 									</a>
 								</div>
@@ -64,7 +64,7 @@ const PizzaKing = (props) => {
 								{/* Blog Content */}
 								<div>
 									<br />
-									<p className='py-5 '>
+									<p className='py-5'>
 										The Pizza King app was my final project
 										for my Full Stack Developer bootcamp. I
 										made it using React.js for the frontend,

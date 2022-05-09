@@ -1,5 +1,5 @@
 // import node module libraries
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image, Form, Button } from 'react-bootstrap';
 import { Link, withRouter } from 'react-router-dom';
 import FrameworkLogos from 'components/landing/FrameworkLogos';
@@ -7,6 +7,9 @@ import FrameworkLogos from 'components/landing/FrameworkLogos';
 import LogoList1 from 'routes/clientlogos/LogoList2';
 
 const About = (props) => {
+	useEffect(() => {
+		document.title = 'Blockchain Trucker - About Me';
+	}, []);
 	return (
 		<Fragment>
 			<div className='py-4 py-lg-8 pb-14 bg-white '>

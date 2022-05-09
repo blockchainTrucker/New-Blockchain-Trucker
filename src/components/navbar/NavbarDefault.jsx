@@ -64,6 +64,11 @@ const NavbarDefault = ({ headerstyle, login }) => {
 			children: [
 				{
 					id: uuid(),
+					header: true,
+					header_text: 'All',
+				},
+				{
+					id: uuid(),
 					menuitem: 'Portfolio',
 					link: '/portfolio',
 				},
@@ -100,6 +105,20 @@ const NavbarDefault = ({ headerstyle, login }) => {
 					id: uuid(),
 					menuitem: 'CookUni',
 					link: '/portfolio/cookuni',
+				},
+				{
+					id: uuid(),
+					header: true,
+				},
+				{
+					id: uuid(),
+					header: true,
+					header_text: 'Examples',
+				},
+				{
+					id: uuid(),
+					menuitem: 'Hashing',
+					link: '/portfolio/hashing',
 				},
 			],
 		},

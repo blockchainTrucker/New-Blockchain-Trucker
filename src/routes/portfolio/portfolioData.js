@@ -4,6 +4,7 @@ import fundingChain from 'assets/images/portfolio/logos/funding-chain.png';
 import decentralizedVentures from 'assets/images/portfolio/logos/decentralized-ventures.png';
 import videoTutorials from 'assets/images/video-tutorials/video-tutorials-home-loggedin.png';
 import cookUni from 'assets/images/cookuni/cookuni-home.png';
+import bcrypt from 'assets/images/bcrypt/bcrypt1.png';
 
 const blogContent = `<p><h4>Design Systems for Developers Geeks a modern, clean and accessibility oriented design system for developing fast and powerful web interfaces.</h4>
 <br>Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. 
@@ -70,6 +71,15 @@ const portfolioData = [
 		details:
 			'Module 4 frontend project at Kingsland University using Sammy and Handlebars.',
 		link: '/portfolio/cookuni',
+	},
+	{
+		id: 6,
+		image: bcrypt,
+		category: 'Example',
+		title: 'Hashing Example',
+		details:
+			'An example of using Bcrypt to hash a password and then compare it in an API.',
+		link: '/portfolio/hashing',
 	},
 ];
 

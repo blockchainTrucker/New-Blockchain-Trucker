@@ -2,9 +2,8 @@
 import React from 'react';
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
-const BlogCard = ({ item }) => {
+const ProjectCard = ({ item }) => {
 	const CategoryColors = (category) => {
 		switch (category) {
 			case 'School Project':
@@ -47,9 +46,4 @@ const BlogCard = ({ item }) => {
 	);
 };
 
-// Typechecking With PropTypes
-BlogCard.propTypes = {
-	item: PropTypes.object.isRequired,
-};
-
-export default BlogCard;
+export default ProjectCard;

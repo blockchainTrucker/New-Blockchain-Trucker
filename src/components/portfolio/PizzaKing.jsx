@@ -23,11 +23,12 @@ const PizzaKing = (props) => {
 					<Fragment>
 						<Row className='justify-content-center'>
 							<Col
-								xl={12}
-								lg={12}
-								md={12}
-								sm={12}
-								className='mb-10'>
+								xl={10}
+								lg={10}
+								md={10}
+								sm={10}
+								xs={10}
+								className='pb-5'>
 								<div className='text-center'>
 									<h1 className='display-3 fw-bold'>
 										Pizza King
@@ -45,24 +46,50 @@ const PizzaKing = (props) => {
 								</div>
 							</Col>
 						</Row>
+						<Row className='justify-content-center'>
+							<Col
+								xl={8}
+								lg={8}
+								md={10}
+								sm={10}
+								xs={10}
+								className='mb-10'>
+								<p className='py-5'>
+									The Pizza King app was my final project for
+									my Full Stack Developer bootcamp. I made it
+									using React.js for the frontend, and Node.js
+									with MongoDB for the backend. Since I chose
+									to create a pizza resturant app, I decided
+									to set up the layout for a good user
+									experience on mobile devices. All of the CSS
+									is custom.
+								</p>
+							</Col>
+						</Row>
 						<Row className='justify-content-center mb-10'>
 							{/* Image */}
-
-							<Col xl={4} lg={4} md={12} sm={12} className='mb-2'>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-2'>
+								<Image
+									src={pkHome}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-2'>
 								{/* Blog Content */}
 								<div>
-									<br />
-									<p className='py-5'>
-										The Pizza King app was my final project
-										for my Full Stack Developer bootcamp. I
-										made it using React.js for the frontend,
-										and Node.js with MongoDB for the
-										backend. Since I chose to create a pizza
-										resturant app, I decided to set up the
-										layout for a good user experience on
-										mobile devices. All of the CSS is
-										custom.
-									</p>
 									<p>
 										The home and menu pages are the only two
 										pages that guest users can access. The
@@ -74,26 +101,14 @@ const PizzaKing = (props) => {
 									</p>
 								</div>
 							</Col>
-							<Col
-								xl={3}
-								lg={4}
-								md={6}
-								sm={8}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={pkHome}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
 						</Row>
 						<Row className='justify-content-center mb-10'>
 							<Col
 								xl={5}
 								lg={5}
-								md={12}
-								sm={12}
+								md={5}
+								sm={10}
+								xs={10}
 								className='mb-2 py-xl-5'>
 								{/* Blog Content */}
 								<div>
@@ -116,10 +131,10 @@ const PizzaKing = (props) => {
 								</div>
 							</Col>
 							<Col
-								xl={4}
-								lg={4}
-								md={6}
-								sm={8}
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
 								xs={10}
 								className='mb-6'>
 								<Image
@@ -130,7 +145,13 @@ const PizzaKing = (props) => {
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+							<Col
+								xl={8}
+								lg={8}
+								md={10}
+								sm={10}
+								xs={10}
+								className='mb-2'>
 								<div>
 									<p>
 										When login is completed, the user is
@@ -148,25 +169,19 @@ const PizzaKing = (props) => {
 						</Row>
 						<Row className='justify-content-center mb-10'>
 							<Col
-								xl={4}
-								lg={4}
-								md={6}
-								sm={8}
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
 								xs={10}
-								className='mb-6'>
+								className='mb-2'>
 								<Image
 									src={pkRegistration}
 									alt=''
 									className='img-fluid rounded-3'
 								/>
 							</Col>
-							<Col
-								xl={4}
-								lg={4}
-								md={6}
-								sm={8}
-								xs={10}
-								className='mb-6'>
+							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
 								<Image
 									src={pkSignin}
 									alt=''
@@ -175,7 +190,13 @@ const PizzaKing = (props) => {
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+							<Col
+								xl={8}
+								lg={8}
+								md={8}
+								sm={10}
+								xs={10}
+								className='mb-2'>
 								{/* Blog Content */}
 								<div>
 									<p>
@@ -189,13 +210,7 @@ const PizzaKing = (props) => {
 						</Row>
 						<Row className='justify-content-center'>
 							{/* Image */}
-							<Col
-								xl={4}
-								lg={4}
-								md={6}
-								sm={8}
-								xs={10}
-								className='mb-6'>
+							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
 								<Image
 									src={pkCheckout}
 									alt=''

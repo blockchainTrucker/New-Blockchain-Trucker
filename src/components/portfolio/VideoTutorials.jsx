@@ -29,7 +29,7 @@ const PizzaKing = (props) => {
 								lg={12}
 								md={12}
 								sm={12}
-								className='mb-10'>
+								className='pb-5'>
 								<div className='text-center'>
 									<h1 className='display-3 fw-bold'>
 										Video Tutorials

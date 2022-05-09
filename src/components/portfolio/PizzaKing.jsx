@@ -47,19 +47,7 @@ const PizzaKing = (props) => {
 						</Row>
 						<Row className='justify-content-center mb-10'>
 							{/* Image */}
-							<Col
-								xl={3}
-								lg={4}
-								md={6}
-								sm={8}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={pkHome}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
+
 							<Col xl={4} lg={4} md={12} sm={12} className='mb-2'>
 								{/* Blog Content */}
 								<div>
@@ -85,6 +73,19 @@ const PizzaKing = (props) => {
 										of the cart.
 									</p>
 								</div>
+							</Col>
+							<Col
+								xl={3}
+								lg={4}
+								md={6}
+								sm={8}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={pkHome}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
 							</Col>
 						</Row>
 						<Row className='justify-content-center mb-10'>

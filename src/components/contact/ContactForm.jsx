@@ -148,7 +148,7 @@ const ContactForm = () => {
 
 	return (
 		<div>
-			<div className='px-4 py-8 py-xl-0'>
+			<div className='py-8 py-xl-0'>
 				{/* form section */}
 				<div id='form'>
 					<Container>
@@ -186,7 +186,7 @@ const ContactForm = () => {
 								</Col>
 
 								{/* Last Name */}
-								<Col md={6} sm={12}>
+								<Col md={6} sm={12} xs={12}>
 									<Form.Group className='mb-3'>
 										<Form.Label>
 											Last Name:
@@ -212,7 +212,7 @@ const ContactForm = () => {
 								</Col>
 
 								{/* Email */}
-								<Col md={6} sm={12}>
+								<Col md={6} sm={12} xs={12}>
 									<Form.Group className='mb-3'>
 										<Form.Label>
 											Email:
@@ -236,7 +236,7 @@ const ContactForm = () => {
 								</Col>
 
 								{/* Phone Number */}
-								<Col md={6} sm={12}>
+								<Col md={6} sm={12} xs={12}>
 									<Form.Group className='mb-3'>
 										<Form.Label>
 											Phone Number:
@@ -262,7 +262,7 @@ const ContactForm = () => {
 								</Col>
 
 								{/* Messages */}
-								<Col md={12} sm={12}>
+								<Col md={12} sm={12} xs={12}>
 									<Form.Group className='mb-3'>
 										<Form.Label>
 											Message:
@@ -285,7 +285,7 @@ const ContactForm = () => {
 										</span>
 									</Form.Group>
 								</Col>
-								<Col>
+								<Col md={12} sm={12} xs={12}>
 									<Form.Group className='mb-3'>
 										<ReCAPTCHA
 											id='captcha'
@@ -299,7 +299,7 @@ const ContactForm = () => {
 								</Col>
 
 								{/* button */}
-								<Col md={12} sm={12}>
+								<Col md={12} sm={12} xs={12}>
 									<Button
 										variant='primary'
 										type='submit'

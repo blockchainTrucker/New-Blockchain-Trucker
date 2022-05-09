@@ -3,7 +3,7 @@ import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
 
 import Icon from '@mdi/react';
-import { mdiGithub } from '@mdi/js';
+import { mdiGithub, mdiArrowUpBoldCircle } from '@mdi/js';
 
 // import data files
 import cuHome from '../../assets/images/cookuni/cookuni-home.png';
@@ -218,6 +218,20 @@ const PizzaKing = (props) => {
 										Firebase.
 									</p>
 								</div>
+							</Col>
+						</Row>
+						<Row className='text-center py-10 text-primary'>
+							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
+								<a href=''>
+									{' '}
+									<Icon
+										path={mdiArrowUpBoldCircle}
+										size={2}
+										onClick={() => {
+											window.scrollTo(0, 0);
+										}}
+									/>{' '}
+								</a>
 							</Col>
 						</Row>
 					</Fragment>

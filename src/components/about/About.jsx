@@ -3,7 +3,8 @@ import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image, Form, Button } from 'react-bootstrap';
 import { Link, withRouter } from 'react-router-dom';
 import FrameworkLogos from 'components/landing/FrameworkLogos';
-// import data files
+import Icon from '@mdi/react';
+import { mdiArrowUpBoldCircle } from '@mdi/js';
 import LogoList1 from 'routes/clientlogos/LogoList2';
 
 const About = (props) => {
@@ -221,6 +222,20 @@ const About = (props) => {
 										Want to chat? Click here
 									</Link>
 								</div>
+							</Col>
+						</Row>
+						<Row className='text-center py-10 text-primary'>
+							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
+								<a href=''>
+									{' '}
+									<Icon
+										path={mdiArrowUpBoldCircle}
+										size={2}
+										onClick={() => {
+											window.scrollTo(0, 0);
+										}}
+									/>{' '}
+								</a>
 							</Col>
 						</Row>
 					</Fragment>

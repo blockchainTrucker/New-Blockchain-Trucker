@@ -2,7 +2,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
 import Icon from '@mdi/react';
-import { mdiGithub } from '@mdi/js';
+import { mdiGithub, mdiArrowUpBoldCircle } from '@mdi/js';
 import vtHome from '../../assets/images/video-tutorials/video-tutorials-home-loggedout.png';
 import vtHome2 from '../../assets/images/video-tutorials/video-tutorials-home-loggedin.png';
 import vtReg from '../../assets/images/video-tutorials/video-tutorials-reg.png';
@@ -323,6 +323,20 @@ const PizzaKing = (props) => {
 									alt=''
 									className='img-fluid rounded-3'
 								/>
+							</Col>
+						</Row>
+						<Row className='text-center py-10 text-primary'>
+							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
+								<a href=''>
+									{' '}
+									<Icon
+										path={mdiArrowUpBoldCircle}
+										size={2}
+										onClick={() => {
+											window.scrollTo(0, 0);
+										}}
+									/>{' '}
+								</a>
 							</Col>
 						</Row>
 					</Fragment>

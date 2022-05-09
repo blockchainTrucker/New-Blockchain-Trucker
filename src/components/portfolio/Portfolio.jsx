@@ -10,7 +10,7 @@ const BlogCategory = () => {
 	}, []);
 	return (
 		<Fragment>
-			<div className='pt-9 pb-9 bg-white'>
+			<div className='pt-9 pb-5 bg-white'>
 				<Container>
 					<Row>
 						<Col
@@ -18,8 +18,8 @@ const BlogCategory = () => {
 							xl={{ span: 8, offset: 2 }}
 							md={12}
 							sm={12}>
-							<div className='text-center mb-5'>
-								<h1 className='display-3 fw-bold'>
+							<div className='text-center mb-4'>
+								<h1 className='display-4 fw-bold'>
 									My Portfolio
 								</h1>
 							</div>

@@ -15,7 +15,7 @@ const Contact = () => {
 	}, []);
 	return (
 		<Container fluid className='bg-white'>
-			<Row className='align-items-center lg-min-vh-100'>
+			<Row className='align-items-center'>
 				<Col lg={6} md={12} sm={12}>
 					<div className='px-xl-20 px-md-8 px-4 py-8 py-lg-0 pb-lg-20'>
 						<div>
@@ -58,7 +58,7 @@ const Contact = () => {
 				{/* right side form section with background color */}
 				<Col
 					lg={6}
-					className='d-lg-flex align-items-center w-lg-50 min-vh-lg-125 position-fixed-lg bg-cover bg-light top-0 right-0'>
+					className='d-lg-flex align-items-center w-lg-50 min-vh-lg-100 position-fixed-lg bg-cover bg-light top-0 right-0'>
 					<ContactForm />
 				</Col>
 			</Row>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2696839a.css",
-    "main.js": "/static/js/main.e700ce7d.js",
+    "main.js": "/static/js/main.c0c159ae.js",
     "static/js/787.58d6f25e.chunk.js": "/static/js/787.58d6f25e.chunk.js",
     "static/media/cookuni-account.png": "/static/media/cookuni-account.1b471d037747787944a5.png",
     "static/media/cookuni-recipes.png": "/static/media/cookuni-recipes.7a7ad8a9f166815dc927.png",
@@ -38,11 +38,11 @@
     "static/media/dots-pattern.svg": "/static/media/dots-pattern.58f3b03e401a0591814f.svg",
     "index.html": "/index.html",
     "main.2696839a.css.map": "/static/css/main.2696839a.css.map",
-    "main.e700ce7d.js.map": "/static/js/main.e700ce7d.js.map",
+    "main.c0c159ae.js.map": "/static/js/main.c0c159ae.js.map",
     "787.58d6f25e.chunk.js.map": "/static/js/787.58d6f25e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2696839a.css",
-    "static/js/main.e700ce7d.js"
+    "static/js/main.c0c159ae.js"
   ]
 }

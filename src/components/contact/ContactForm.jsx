@@ -318,7 +318,7 @@ const ContactForm = () => {
 				</div>
 			</div>
 			<Container id='messages' className='hide'>
-				<Row className='align-items-center mx-auto lg-min-vh-100'>
+				<Row className='align-items-center mx-auto'>
 					<Col
 						md={{ span: 12, offset: 5 }}
 						sm={{ span: 12, offset: 5 }}>

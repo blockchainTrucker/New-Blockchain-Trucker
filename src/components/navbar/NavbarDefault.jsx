@@ -107,8 +107,13 @@ const NavbarDefault = ({ headerstyle, login }) => {
 					children: [
 						{
 							id: uuid(),
-							menuitem: 'Hashing',
+							menuitem: ' Password Hashing',
 							link: '/portfolio/hashing',
+						},
+						{
+							id: uuid(),
+							menuitem: 'Etherium Wallet',
+							link: '/portfolio/ethers',
 						},
 					],
 				},

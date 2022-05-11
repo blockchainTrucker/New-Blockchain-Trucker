@@ -25,23 +25,19 @@ const ProjectCard = ({ item }) => {
 					src={item.image}
 					className='rounded-top-md img-fluid'
 				/>
+
+				{/* Card body  */}
+				<Card.Body>
+					<span
+						className={`fs-5 fw-semi-bold d-block mb-3 text-${CategoryColors(
+							item.category
+						)}`}>
+						{item.category}
+					</span>
+					<h3 className='text-inherit'>{item.title}</h3>
+					<p className='text-inherit'> {item.details} </p>
+				</Card.Body>
 			</Link>
-			{/* Card body  */}
-			<Card.Body>
-				<Link
-					to={`${item.link}`}
-					className={`fs-5 fw-semi-bold d-block mb-3 text-${CategoryColors(
-						item.category
-					)}`}>
-					{item.category}
-				</Link>
-				<h3>
-					<Link to={`${item.link}`} className='text-inherit'>
-						{item.title}
-					</Link>
-				</h3>
-				<p> {item.details} </p>
-			</Card.Body>
 		</Card>
 	);
 };

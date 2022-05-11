@@ -2,16 +2,15 @@
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
 import Header from '../../functions/Header';
-
 import BackToTop from '../../functions/BackToTop';
-import bcrypt1 from '../../assets/images/bcrypt/bcrypt1.png';
-import bcrypt2 from '../../assets/images/bcrypt/bcrypt2.png';
-import bcrypt3 from '../../assets/images/bcrypt/bcrypt3.png';
-import bcrypt4 from '../../assets/images/bcrypt/bcrypt4.png';
-
-const PizzaKing = (props) => {
+import create from '../../assets/images/ethers/create.jpg';
+import load from '../../assets/images/ethers/load.jpg';
+import recover from '../../assets/images/ethers/recover.jpg';
+import balance from '../../assets/images/ethers/balance.jpg';
+import send from '../../assets/images/ethers/send.jpg';
+const Ethers = (props) => {
 	useEffect(() => {
-		document.title = 'Blockchain Trucker - Hashing with Bcrypt';
+		document.title = 'Blockchain Trucker - Etherium Wallet Example';
 	}, []);
 	return (
 		<Fragment>
@@ -19,8 +18,8 @@ const PizzaKing = (props) => {
 				<Container>
 					<Fragment>
 						<Header
-							title='Hashing Example with Bcrypt'
-							github='https://github.com/jwachtel96/Pizza-King/tree/master/api'
+							title='Etherium Wallet Using Ethers.js'
+							github='https://github.com/jwachtel96/Assignments/tree/main/ethereum-wallet-ethersjs'
 						/>
 						<Row className='justify-content-center'>
 							<Col
@@ -29,17 +28,94 @@ const PizzaKing = (props) => {
 								md={10}
 								sm={10}
 								xs={10}
-								className='mb-2 mb-10 text-center'>
+								className='mb-2'>
 								<div>
 									<p>
-										This example shows the way I used Bcrypt
-										to hash and compare passwords in my
-										Pizza King API.
+										In this example, I used Ethers.js within
+										a single page application to create a
+										simple Etherium wallet that uses
+										encrypted keystore files. The wallet is
+										capable of creating a new wallet,
+										loading an existing wallet from a file,
+										recovering a wallet using the mnemonic
+										phrase, showing the balance of a wallet,
+										and sending Etherium tokens.
 									</p>
 								</div>
 							</Col>
 						</Row>
-						<Row className='justify-content-center'>
+						<Row className='justify-content-center mb-10'>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={create}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={load}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={recover}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={recover}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col
+								xl={5}
+								lg={5}
+								md={5}
+								sm={10}
+								xs={10}
+								className='mb-6'>
+								<Image
+									src={balance}
+									alt=''
+									className='img-fluid rounded-3'
+								/>
+							</Col>
+						</Row>
+						{/* <Row className='justify-content-center'>
 							<Col
 								xl={10}
 								lg={10}
@@ -56,34 +132,7 @@ const PizzaKing = (props) => {
 								</div>
 							</Col>
 						</Row>
-						<Row className='justify-content-center mb-10'>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={bcrypt3}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={bcrypt2}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
+
 						<Row className='justify-content-center mb-10'>
 							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
 								<Image
@@ -139,7 +188,7 @@ const PizzaKing = (props) => {
 									className='img-fluid rounded-3'
 								/>
 							</Col>
-						</Row>
+						</Row> */}
 						<BackToTop />
 					</Fragment>
 				</Container>
@@ -148,4 +197,4 @@ const PizzaKing = (props) => {
 	);
 };
 
-export default PizzaKing;
+export default Ethers;

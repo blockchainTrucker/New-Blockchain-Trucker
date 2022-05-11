@@ -2,7 +2,7 @@
 import { Routes, Route } from 'react-router-dom';
 import 'assets/scss/theme.scss';
 
-import Redirect from 'components/portfolio/Redirect';
+import Redirect from 'functions/Redirect';
 
 // Landing
 import MainLanding from 'components/landing/LandingMain';
@@ -13,6 +13,7 @@ import PizzaKing from 'components/portfolio/PizzaKing';
 import VideoTutorials from 'components/portfolio/VideoTutorials';
 import CookUni from 'components/portfolio/CookUni';
 import Hashing from 'components/portfolio/Hashing';
+import Ethers from 'components/portfolio/Ethers';
 
 //Contact
 import Contact from 'components/contact/Contact';
@@ -52,6 +53,7 @@ export default function AllRoutes(login) {
 				/>
 				<Route exact path='/portfolio/hashing' element={<Hashing />} />
 				<Route exact path='/portfolio/cookuni' element={<CookUni />} />
+				<Route exact path='/portfolio/ethers' element={<Ethers />} />
 				//Contact
 				<Route exact path='/contact-me' element={<Contact />} />
 				//About

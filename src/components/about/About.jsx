@@ -1,11 +1,10 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
-import { Col, Row, Container, Image, Form, Button } from 'react-bootstrap';
-import { Link, withRouter } from 'react-router-dom';
+import { Col, Row, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import FrameworkLogos from 'components/landing/FrameworkLogos';
-import Icon from '@mdi/react';
-import { mdiArrowUpBoldCircle } from '@mdi/js';
 import LogoList1 from 'routes/clientlogos/LogoList2';
+import BackToTop from '../../functions/BackToTop';
 
 const About = (props) => {
 	useEffect(() => {
@@ -224,20 +223,25 @@ const About = (props) => {
 								</div>
 							</Col>
 						</Row>
-						<Row className='text-center py-10 text-primary'>
+						{/* <Row className='text-center pt-10'>
 							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
 								<a href=''>
-									{' '}
 									<Icon
 										path={mdiArrowUpBoldCircle}
 										size={2}
 										onClick={() => {
 											window.scrollTo(0, 0);
 										}}
-									/>{' '}
+									/>
 								</a>
 							</Col>
 						</Row>
+						<Row className='text-center'>
+							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
+								<span>Back to Top</span>
+							</Col>
+						</Row> */}
+						<BackToTop />
 					</Fragment>
 				</Container>
 

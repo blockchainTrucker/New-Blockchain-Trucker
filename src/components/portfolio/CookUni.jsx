@@ -1,9 +1,8 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
-
-import Icon from '@mdi/react';
-import { mdiGithub, mdiArrowUpBoldCircle } from '@mdi/js';
+import Header from '../../functions/Header';
+import BackToTop from '../../functions/BackToTop';
 
 // import data files
 import cuHome from '../../assets/images/cookuni/cookuni-home.png';
@@ -23,25 +22,10 @@ const PizzaKing = (props) => {
 			<div className='py-4 py-lg-8 pb-14 bg-white '>
 				<Container>
 					<Fragment>
-						<Row className='justify-content-center pb-5'>
-							<Col xl={10} lg={10} md={10} sm={10} xs={10}>
-								<div className='text-center'>
-									<h1 className='display-4 fw-bold'>
-										CookUni
-									</h1>
-								</div>
-								<div className='text-center'>
-									<a href='https://github.com/jwachtel96/CookUni'>
-										<Icon path={mdiGithub} size={1} />{' '}
-										<span>
-											<u>
-												Click here to see the repository
-											</u>
-										</span>
-									</a>
-								</div>
-							</Col>
-						</Row>
+						<Header
+							title='CookUni'
+							github='https://github.com/jwachtel96/CookUni'
+						/>
 						<Row className='justify-content-center'>
 							<Col
 								xl={10}
@@ -220,20 +204,7 @@ const PizzaKing = (props) => {
 								</div>
 							</Col>
 						</Row>
-						<Row className='text-center py-10 text-primary'>
-							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
-								<a href=''>
-									{' '}
-									<Icon
-										path={mdiArrowUpBoldCircle}
-										size={2}
-										onClick={() => {
-											window.scrollTo(0, 0);
-										}}
-									/>{' '}
-								</a>
-							</Col>
-						</Row>
+						<BackToTop />
 					</Fragment>
 				</Container>
 			</div>

@@ -1,8 +1,10 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
-import Icon from '@mdi/react';
-import { mdiGithub, mdiArrowUpBoldCircle } from '@mdi/js';
+import Header from '../../functions/Header';
+
+import BackToTop from '../../functions/BackToTop';
+
 import pkHome from '../../assets/images/pizza-king/pizza-king-home.png';
 import pkAccount from '../../assets/images/pizza-king/pizza-king-account.png';
 import pkRegistration from '../../assets/images/pizza-king/pizza-king-registration.png';
@@ -18,31 +20,10 @@ const PizzaKing = (props) => {
 			<div className='py-4 py-lg-8 pb-14 bg-white '>
 				<Container>
 					<Fragment>
-						<Row className='justify-content-center'>
-							<Col
-								xl={10}
-								lg={10}
-								md={10}
-								sm={10}
-								xs={10}
-								className='pb-5'>
-								<div className='text-center'>
-									<h1 className='display-4 fw-bold'>
-										Pizza King
-									</h1>
-								</div>
-								<div className='text-center'>
-									<a href='https://github.com/jwachtel96/Pizza-King'>
-										<Icon path={mdiGithub} size={1} />{' '}
-										<span>
-											<u>
-												Click here to see the repository
-											</u>
-										</span>
-									</a>
-								</div>
-							</Col>
-						</Row>
+						<Header
+							title='Pizza King'
+							github='https://github.com/jwachtel96/Pizza-King'
+						/>
 						<Row className='justify-content-center'>
 							<Col
 								xl={8}
@@ -51,7 +32,7 @@ const PizzaKing = (props) => {
 								sm={10}
 								xs={10}
 								className='mb-10'>
-								<p className='py-5'>
+								<p>
 									The Pizza King app was my final project for
 									my Full Stack Developer bootcamp. I made it
 									using React.js for the frontend, and Node.js
@@ -215,20 +196,7 @@ const PizzaKing = (props) => {
 								/>
 							</Col>
 						</Row>
-						<Row className='text-center py-10 text-primary'>
-							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
-								<a href=''>
-									{' '}
-									<Icon
-										path={mdiArrowUpBoldCircle}
-										size={2}
-										onClick={() => {
-											window.scrollTo(0, 0);
-										}}
-									/>{' '}
-								</a>
-							</Col>
-						</Row>
+						<BackToTop />
 					</Fragment>
 				</Container>
 			</div>

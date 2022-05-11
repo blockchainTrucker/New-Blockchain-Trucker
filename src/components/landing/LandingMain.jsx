@@ -22,8 +22,10 @@ const MainLanding = () => {
 				<Container>
 					<Row className='align-items-center '>
 						<Col
-							lg={{ span: 7, offset: 2 }}
-							xs={10}
+							xl={{ span: 7, offset: 2 }}
+							lg={{ span: 8, offset: 1 }}
+							sm={{ span: 8, offset: 1 }}
+							xs={{ span: 11 }}
 							className='mt-lg-10 mt-6 order-md-1 mb-10'>
 							{/* Heading */}
 							<h1 className='display-2 ms-1 mb-5 fw-bold'>

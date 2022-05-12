@@ -1,13 +1,13 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
-import Header from '../../functions/Header';
-import BackToTop from '../../functions/BackToTop';
-import create from '../../assets/images/ethers/create.jpg';
-import load from '../../assets/images/ethers/load.jpg';
-import recover from '../../assets/images/ethers/recover.jpg';
-import balance from '../../assets/images/ethers/balance.jpg';
-import send from '../../assets/images/ethers/send.jpg';
+import Header from '../../../functions/Header';
+import BackToTop from '../../../functions/BackToTop';
+import create from '../../../assets/images/ethers/create.jpg';
+import load from '../../../assets/images/ethers/load.jpg';
+import recover from '../../../assets/images/ethers/recover.jpg';
+import balance from '../../../assets/images/ethers/balance.jpg';
+import send from '../../../assets/images/ethers/send.jpg';
 const Ethers = (props) => {
 	useEffect(() => {
 		document.title = 'Blockchain Trucker - Etherium Wallet Example';

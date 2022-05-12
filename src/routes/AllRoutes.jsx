@@ -9,11 +9,11 @@ import MainLanding from 'components/landing/LandingMain';
 
 //Portfolio
 import Portfolio from 'components/portfolio/Portfolio';
-import PizzaKing from 'components/portfolio/PizzaKing';
-import VideoTutorials from 'components/portfolio/VideoTutorials';
-import CookUni from 'components/portfolio/CookUni';
-import Hashing from 'components/portfolio/Hashing';
-import Ethers from 'components/portfolio/Ethers';
+import PizzaKing from 'components/portfolio/school-projects/PizzaKing';
+import VideoTutorials from 'components/portfolio/school-projects/VideoTutorials';
+import CookUni from 'components/portfolio/school-projects/CookUni';
+import Hashing from 'components/portfolio/examples/Hashing';
+import Ethers from 'components/portfolio/examples/Ethers';
 
 //Contact
 import Contact from 'components/contact/Contact';

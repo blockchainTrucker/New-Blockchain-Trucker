@@ -1,19 +1,19 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
-import Header from '../../functions/Header';
+import Header from '../../../functions/Header';
 
-import BackToTop from '../../functions/BackToTop';
-import vtHome from '../../assets/images/video-tutorials/video-tutorials-home-loggedout.png';
-import vtHome2 from '../../assets/images/video-tutorials/video-tutorials-home-loggedin.png';
-import vtReg from '../../assets/images/video-tutorials/video-tutorials-reg.png';
-import vtSignin from '../../assets/images/video-tutorials/video-tutorials-signin.png';
-import vtSearch from '../../assets/images/video-tutorials/video-tutorials-search.png';
-import vtDetails from '../../assets/images/video-tutorials/video-tutorials-details-unsubscribed.png';
-import vtDetails2 from '../../assets/images/video-tutorials/video-tutorials-details-subscribed.png';
-import vtAccount from '../../assets/images/video-tutorials/video-tutorials-account.png';
-import vtEdit from '../../assets/images/video-tutorials/video-tutorials-edit.png';
-import vtCreate from '../../assets/images/video-tutorials/video-tutorials-create.png';
+import BackToTop from '../../../functions/BackToTop';
+import vtHome from '../../../assets/images/video-tutorials/video-tutorials-home-loggedout.png';
+import vtHome2 from '../../../assets/images/video-tutorials/video-tutorials-home-loggedin.png';
+import vtReg from '../../../assets/images/video-tutorials/video-tutorials-reg.png';
+import vtSignin from '../../../assets/images/video-tutorials/video-tutorials-signin.png';
+import vtSearch from '../../../assets/images/video-tutorials/video-tutorials-search.png';
+import vtDetails from '../../../assets/images/video-tutorials/video-tutorials-details-unsubscribed.png';
+import vtDetails2 from '../../../assets/images/video-tutorials/video-tutorials-details-subscribed.png';
+import vtAccount from '../../../assets/images/video-tutorials/video-tutorials-account.png';
+import vtEdit from '../../../assets/images/video-tutorials/video-tutorials-edit.png';
+import vtCreate from '../../../assets/images/video-tutorials/video-tutorials-create.png';
 
 const PizzaKing = (props) => {
 	useEffect(() => {

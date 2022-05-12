@@ -7,7 +7,7 @@ import MongoDBLogo from 'assets/images/brand/mongodb.png';
 import ExpressLogo from 'assets/images/brand/expressjs.png';
 import BootstrapLogo from 'assets/images/brand/bootstrap.png';
 
-const LogoList2 = [
+const LogoList = [
 	{
 		id: uuid(),
 		logoimage: NodejsLogo,
@@ -40,4 +40,4 @@ const LogoList2 = [
 	},
 ];
 
-export default LogoList2;
+export default LogoList;

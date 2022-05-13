@@ -125,7 +125,7 @@ const PizzaKing = (props) => {
 								</div>
 							</Col>
 						</Row>
-						<Row className='justify-content-center mb-10'>
+						<Row className='justify-content-center'>
 							<Col
 								xl={5}
 								lg={5}

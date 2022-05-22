@@ -3,7 +3,7 @@ import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import FrameworkLogos from 'components/landing/FrameworkLogos';
-import LogoList from 'routes/clientlogos/logoList';
+import LogoList from 'routes/frameworkLogos/logoList';
 import BackToTop from 'components/functions/BackToTop';
 
 const About = (props) => {

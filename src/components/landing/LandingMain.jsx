@@ -9,7 +9,7 @@ import FrameworkLogos from 'components/landing/FrameworkLogos';
 import Icon from '@mdi/react';
 import { mdiCheckCircle } from '@mdi/js';
 
-import LogoList1 from 'routes/clientlogos/logoList';
+import LogoList1 from 'routes/frameworkLogos/logoList';
 
 const MainLanding = () => {
 	useEffect(() => {

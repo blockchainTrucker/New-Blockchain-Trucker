@@ -14,6 +14,7 @@ import VideoTutorials from 'components/portfolio/school-projects/VideoTutorials'
 import CookUni from 'components/portfolio/school-projects/CookUni';
 import Hashing from 'components/portfolio/examples/Hashing';
 import Ethers from 'components/portfolio/examples/Ethers';
+import HungerGames from 'components/portfolio/examples/HungerGames';
 
 //Contact
 import Contact from 'components/contact/Contact';
@@ -54,6 +55,11 @@ export default function AllRoutes(login) {
 				<Route exact path='/portfolio/hashing' element={<Hashing />} />
 				<Route exact path='/portfolio/cookuni' element={<CookUni />} />
 				<Route exact path='/portfolio/ethers' element={<Ethers />} />
+				<Route
+					exact
+					path='/portfolio/hunger-games'
+					element={<HungerGames />}
+				/>
 				//Contact
 				<Route exact path='/contact-me' element={<Contact />} />
 				//About

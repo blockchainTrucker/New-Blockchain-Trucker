@@ -6,26 +6,7 @@ import videoTutorials from 'assets/images/video-tutorials/video-tutorials-home-l
 import cookUni from 'assets/images/cookuni/cookuni-home.png';
 import bcrypt from 'assets/images/bcrypt/bcrypt1.png';
 import ethers from 'assets/images/ethers/welcome.jpg';
-
-const blogContent = `<p><h4>Design Systems for Developers Geeks a modern, clean and accessibility oriented design system for developing fast and powerful web interfaces.</h4>
-<br>Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. 
-Mauris varius ullamcorper tincidsellus egestas innisivel sollicituullam feugiate facilisis ones Suspendisse blandit sedtincinean.<br>
-Mauris varius ullamcorper tincidsellus egestas innisivel sollicituullam feugiate facilisis ones velleo finibus maximus nequsese sedmattis auspendisse<u>
-duimetus ullamcorper faucibuse blandit</u>sedtincinean.</p></div><br><hr><br><blockquote style="text-align: center;">
-<h2 style="color: rgb(117, 79, 254);">"Failure will never overtake me if my determination to succeed is strong enough."</h2><footer>
-<cite title="Source Title">Og Mandino</cite></footer></blockquote><br><hr><br><div><p>Condimentum leo utipsum euismod feugiatn elntum 
-<strong>sapiennonser variusmi elementum </strong>necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. 
-Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.</p>
-<p>Sint officia nulla deserunt voluptate non amet consequat ipsum tempor. Nulla id cupidatat ipsum occaecat. Aute ad et fugiat velit sunt qui veniam labore elit ipsum commodo proident. 
-Sit tempor consectetur commodo laborum mollit. Enim sint nostrud nisi in ad aliqua laboris ad non.</p></div><div><h3>Unordered Lists (Nested)</h3><br><ul><li>Lorem ipsum dolor sit amet</li>
-<li>Consectetur adipiscing elit</li><li>Integer molestie lorem at massa</li><li>Facilisis in pretium nisl aliquet</li><li>Nulla volutpat aliquam velit<ul><li>Phasellus iaculis neque</li>
-<li>Purus sodales ultricies</li><li>Vestibulum laoreet porttitor sem</li><li>Ac tristique libero volutpat at</li></ul></li><li>Faucibus porta lacus fringilla vel</li><li>Aenean sit amet erat nunc</li>
-<li>Eget porttitor lorem</li></ul></div><div><h3>Ordered List (Nested)</h3><ol><li>Lorem ipsum dolor sit amet</li><li>Consectetur adipiscing elit</li><li>Integer molestie lorem at massa</li>
-<li>Facilisis in pretium nisl aliquet</li><li>Nulla volutpat aliquam velit<ol><li>Phasellus iaculis neque</li><li>Purus sodales ultricies</li><li>Vestibulum laoreet porttitor sem</li>
-<li>Ac tristique libero volutpat at</li></ol></li><li>Faucibus porta lacus fringilla vel</li><li>Aenean sit amet erat nunc</li><li>Eget porttitor lorem</li></ol></div><div><h2>Image </h2>
-<p>Sint officia nulla deserunt voluptate non amet consequat ipsum tempor. Nulla id cupidatat ipsum occaecat. Aute ad et fugiat velit sunt qui veniam labore elit ipsum commodo proident. 
-Sit tempor consectetur commodo laborum mollit. Enim sint nostrud nisi in ad aliqua laboris ad non.</p>
-<img src="https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg" alt=""  style="width:100%">`;
+import hgames from 'assets/images/hunger-games/hunger-games.jpg';
 
 const portfolioData = [
 	{
@@ -75,6 +56,15 @@ const portfolioData = [
 	},
 	{
 		id: 6,
+		image: hgames,
+		category: 'Example',
+		title: 'Hunger Games Solidity Example',
+		details:
+			'A simple example of a timed game that selects a random winner using Solidity.',
+		link: '/portfolio/hunger-games',
+	},
+	{
+		id: 7,
 		image: bcrypt,
 		category: 'Example',
 		title: 'Hashing Example',
@@ -83,7 +73,7 @@ const portfolioData = [
 		link: '/portfolio/hashing',
 	},
 	{
-		id: 7,
+		id: 8,
 		image: ethers,
 		category: 'Example',
 		title: 'Etherium Wallet Using Ethers.js',

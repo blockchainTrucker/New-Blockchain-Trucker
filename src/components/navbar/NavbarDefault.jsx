@@ -107,6 +107,11 @@ const NavbarDefault = ({ headerstyle, login }) => {
 					children: [
 						{
 							id: uuid(),
+							menuitem: ' Hunger Games',
+							link: '/portfolio/hunger-games',
+						},
+						{
+							id: uuid(),
 							menuitem: ' Password Hashing',
 							link: '/portfolio/hashing',
 						},

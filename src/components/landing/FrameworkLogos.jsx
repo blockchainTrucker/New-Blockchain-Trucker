@@ -1,16 +1,3 @@
-/******************************************************
-Component : Logo with Top Heading and Inverse Dark Logo
-*******************************************************
-
-Availalble Parameters
-
-logos        : Required, list of the logos in JSON format
-title        : Optional, title to show logo section title
-limit        : Optional, default -1 i.e. show all logo, if you want to limit N number of logos you can specific with thisparameter
-
-*/
-
-// import node module libraries
 import PropTypes from 'prop-types';
 import { Row, Col, Image } from 'react-bootstrap';
 
@@ -47,9 +34,9 @@ const LogosTopHeadingInverseDark = ({ logos, title, limit }) => {
 	};
 
 	return (
-		<Row className='mt-10'>
-			<Col xl={12} md={12} xs={12}>
-				<div className='text-center mb-6 px-md-8'>
+		<Row className='mt-5'>
+			<Col xl={12} lg={12} md={12} s={12} xs={12}>
+				<div className='text-center mb-5 px-md-8'>
 					<span className='ls-md fs-5 text-primary fw-bold'>
 						{title}
 					</span>

@@ -1,6 +1,6 @@
 // import node module libraries
 import { BrowserRouter as Router } from 'react-router-dom';
-import ScrollToTop from 'functions/ScrollToTop';
+import ScrollToTop from 'components/functions/ScrollToTop';
 import NavbarDefault from 'components/navbar/NavbarDefault';
 import Footer from 'components/footers/FooterCenter';
 import AllRoutes from 'routes/AllRoutes';

@@ -1,9 +1,9 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
-import Header from '../../../functions/Header';
+import Header from '../../functions/Header';
 
-import BackToTop from '../../../functions/BackToTop';
+import BackToTop from '../../functions/BackToTop';
 import vtHome from '../../../assets/images/video-tutorials/video-tutorials-home-loggedout.png';
 import vtHome2 from '../../../assets/images/video-tutorials/video-tutorials-home-loggedin.png';
 import vtReg from '../../../assets/images/video-tutorials/video-tutorials-reg.png';

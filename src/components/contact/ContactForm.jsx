@@ -1,5 +1,4 @@
 import { Col, Row, Form, Button, Image, Container } from 'react-bootstrap';
-import { FormSelect } from 'components/contact/FormSelect';
 import loading from 'assets/images/loading/loading.gif';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useState, useEffect } from 'react';
@@ -75,11 +74,11 @@ const ContactForm = () => {
 		}
 		if (nameRegex.test(lastName)) {
 			lastGood = true;
-			setFirstNameError('');
+			setLastNameError('');
 			document.getElementById('lastName').className = 'clearError';
 		} else {
 			lastGood = false;
-			setFirstNameError('Enter last name');
+			setLastNameError('Enter last name');
 			document.getElementById('lastName').className = 'error';
 		}
 		if (phoneRegex.test(phoneNumber)) {

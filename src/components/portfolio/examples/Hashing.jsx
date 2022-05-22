@@ -1,13 +1,13 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
-import Header from '../../../functions/Header';
+import Header from 'components/functions/Header';
 
-import BackToTop from '../../../functions/BackToTop';
-import bcrypt1 from '../../../assets/images/bcrypt/bcrypt1.png';
-import bcrypt2 from '../../../assets/images/bcrypt/bcrypt2.png';
-import bcrypt3 from '../../../assets/images/bcrypt/bcrypt3.png';
-import bcrypt4 from '../../../assets/images/bcrypt/bcrypt4.png';
+import BackToTop from 'components/functions/BackToTop';
+import bcrypt1 from 'assets/images/bcrypt/bcrypt1.png';
+import bcrypt2 from 'assets/images/bcrypt/bcrypt2.png';
+import bcrypt3 from 'assets/images/bcrypt/bcrypt3.png';
+import bcrypt4 from 'assets/images/bcrypt/bcrypt4.png';
 
 const PizzaKing = (props) => {
 	useEffect(() => {

@@ -1,8 +1,8 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
-import Header from '../../../functions/Header';
-import BackToTop from '../../../functions/BackToTop';
+import Header from '../../functions/Header';
+import BackToTop from '../../functions/BackToTop';
 
 // import data files
 import cuHome from '../../../assets/images/cookuni/cookuni-home.png';

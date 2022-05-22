@@ -18,7 +18,7 @@ const MainLanding = () => {
 
 	return (
 		<Fragment>
-			<div className='position-relative bg-white'>
+			<div className='bg-white'>
 				<Container>
 					<Row className='align-items-center '>
 						<Col
@@ -93,9 +93,9 @@ const MainLanding = () => {
 					<FrameworkLogos
 						title='BELOW ARE THE FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH'
 						logos={LogoList1}
-						limit={5}
+						limit={6}
 					/>
-					<Row className='justify-content-center'>
+					<Row className='justify-content-center mt-5'>
 						<Col
 							xl={9}
 							lg={9}

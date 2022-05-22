@@ -6,6 +6,7 @@ import ReactLogo from 'assets/images/brand/reactjs.png';
 import MongoDBLogo from 'assets/images/brand/mongodb.png';
 import ExpressLogo from 'assets/images/brand/expressjs.png';
 import BootstrapLogo from 'assets/images/brand/bootstrap.png';
+import SolidityLogo from 'assets/images/brand/solidity.png';
 
 const LogoList = [
 	{
@@ -37,6 +38,12 @@ const LogoList = [
 		logoimage: BootstrapLogo,
 		link: 'https://getbootstrap.com/',
 		alt: 'Bootstrap',
+	},
+	{
+		id: uuid(),
+		logoimage: SolidityLogo,
+		link: 'https://soliditylang.org/',
+		alt: 'Solidity',
 	},
 ];
 

@@ -1,9 +1,9 @@
 // import node module libraries
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
-import Header from '../../../functions/Header';
+import Header from '../../functions/Header';
 
-import BackToTop from '../../../functions/BackToTop';
+import BackToTop from '../../functions/BackToTop';
 
 import pkHome from '../../../assets/images/pizza-king/pizza-king-home.png';
 import pkAccount from '../../../assets/images/pizza-king/pizza-king-account.png';

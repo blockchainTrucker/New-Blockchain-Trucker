@@ -3,8 +3,8 @@ import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import FrameworkLogos from 'components/landing/FrameworkLogos';
-import LogoList1 from 'routes/clientlogos/logoList';
-import BackToTop from '../../functions/BackToTop';
+import LogoList from 'routes/clientlogos/logoList';
+import BackToTop from 'components/functions/BackToTop';
 
 const About = (props) => {
 	useEffect(() => {
@@ -16,7 +16,7 @@ const About = (props) => {
 				<Container>
 					<Fragment>
 						<Row className='justify-content-center'>
-							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+							<Col xl={9} lg={9} md={12} sm={12} className='mb-2'>
 								<div className='text-center mb-4'>
 									<h1 className='display-4 fw-bold mb-4'>
 										About Me
@@ -25,7 +25,7 @@ const About = (props) => {
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+							<Col xl={9} lg={9} md={12} sm={12}>
 								<div>
 									<p>
 										My name is Jesse Wachtel and I recently
@@ -55,15 +55,19 @@ const About = (props) => {
 										that uses smart contracts.
 									</p>
 								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center'>
+							<Col xl={9} lg={9} md={12} sm={12} className='mb-2'>
 								<FrameworkLogos
 									title='BELOW ARE THE FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH'
-									logos={LogoList1}
-									limit={5}
+									logos={LogoList}
+									limit={6}
 								/>
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+							<Col xl={9} lg={9} md={12} sm={12} className='mb-2'>
 								<div>
 									<p>
 										You may be wondering why I chose the
@@ -126,6 +130,7 @@ const About = (props) => {
 								xs={12}
 								className='mb-2 fw-bold  px-5'>
 								<ul>
+									<li>Smart Contracts</li>
 									<li>JSON Web Token</li>
 									<li>Encryption</li>
 									<li>Hashing</li>
@@ -143,7 +148,8 @@ const About = (props) => {
 								xs={12}
 								className='mb-2 fw-bold px-5'>
 								<ul>
-									<li>REST API</li>
+									<li>DApps</li>
+									<li>API Development</li>
 									<li>Templating</li>
 									<li>Cookies</li>
 									<li>SCSS</li>
@@ -154,7 +160,7 @@ const About = (props) => {
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+							<Col xl={9} lg={9} md={12} sm={12} className='mb-2'>
 								<div>
 									<p>
 										My professional life began when I joined
@@ -206,7 +212,7 @@ const About = (props) => {
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={8} lg={8} md={12} sm={12} className='mb-2'>
+							<Col xl={9} lg={9} md={12} sm={12} className='mb-2'>
 								<div className='mb-8 mb-lg-0'>
 									<Link
 										to='/portfolio'
@@ -221,29 +227,9 @@ const About = (props) => {
 								</div>
 							</Col>
 						</Row>
-						{/* <Row className='text-center pt-10'>
-							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
-								<a href=''>
-									<Icon
-										path={mdiArrowUpBoldCircle}
-										size={2}
-										onClick={() => {
-											window.scrollTo(0, 0);
-										}}
-									/>
-								</a>
-							</Col>
-						</Row>
-						<Row className='text-center'>
-							<Col xl={12} lg={12} md={12} sm={12} xs={12}>
-								<span>Back to Top</span>
-							</Col>
-						</Row> */}
 						<BackToTop />
 					</Fragment>
 				</Container>
-
-				{/* Related Post */}
 			</div>
 		</Fragment>
 	);

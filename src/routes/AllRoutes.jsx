@@ -2,7 +2,7 @@
 import { Routes, Route } from 'react-router-dom';
 import 'assets/scss/theme.scss';
 
-import Redirect from 'functions/Redirect';
+import Redirect from 'components/functions/Redirect';
 
 // Landing
 import MainLanding from 'components/landing/LandingMain';

@@ -74,7 +74,8 @@ const NavbarDefault = ({ headerstyle, login }) => {
 						<Image src={logo} alt='Blockchain Trucker Logo' />
 					</Navbar.Brand>
 					<div
-						className={`navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap
+						className={`navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap ${
+							login
 								? isDesktop || isLaptop
 									? 'd-none'
 									: 'd-flex'

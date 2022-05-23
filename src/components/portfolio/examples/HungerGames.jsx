@@ -10,7 +10,7 @@ import hg4 from '../../../assets/images/hunger-games/hunger-games-4.jpg';
 import hg5 from '../../../assets/images/hunger-games/hunger-games-5.jpg';
 const Ethers = (props) => {
 	useEffect(() => {
-		document.title = 'Blockchain Trucker - Etherium Wallet Example';
+		document.title = 'Blockchain Trucker - Hunger Games';
 	}, []);
 	return (
 		<Fragment>

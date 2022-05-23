@@ -9,25 +9,16 @@ import {
 	Navbar,
 	Nav,
 	Container,
-	Form,
 	Dropdown,
-	ListGroup,
-	OverlayTrigger,
-	Tooltip,
 } from 'react-bootstrap';
 
 import { useMediaQuery } from 'react-responsive';
-import { v4 as uuid } from 'uuid';
 import publicIp from 'public-ip';
-
 import Icon from '@mdi/react';
 import { mdiGithub, mdiLinkedin } from '@mdi/js';
-
-// import media files
-// import Logo from "assets/images/brand/logo/logo.svg";
 import logo from 'assets/images/brand/logo/logo-nobackground-200.png';
-
 import NavDropdownMain from './NavDropdownMain';
+import NavbarDefaultRoutes from 'routes/navbar/navbarDefaultRoutes';
 
 const NavbarDefault = ({ headerstyle, login }) => {
 	useEffect(() => {
@@ -56,99 +47,6 @@ const NavbarDefault = ({ headerstyle, login }) => {
 
 	const [expandedMenu, setExpandedMenu] = useState(false);
 
-	const NavbarDefaultRoutes = [
-		{
-			id: uuid(),
-			menuitem: 'Portfolio',
-			link: '#',
-			children: [
-				{
-					id: uuid(),
-					menuitem: 'All',
-					link: '/portfolio',
-				},
-				{
-					id: uuid(),
-					menuitem: 'Projects',
-					link: '#',
-					children: [
-						{
-							id: uuid(),
-							menuitem: 'Funding Chain',
-							link: '/portfolio/funding-chain',
-						},
-						{
-							id: uuid(),
-							menuitem: 'Decentralized Ventures',
-							link: '/portfolio/decentralized-ventures',
-						},
-						{
-							id: uuid(),
-							menuitem: 'Pizza King',
-							link: '/portfolio/pizza-king',
-						},
-						{
-							id: uuid(),
-							menuitem: 'Video Tutorials',
-							link: '/portfolio/video-tutorials',
-						},
-						{
-							id: uuid(),
-							menuitem: 'CookUni',
-							link: '/portfolio/cookuni',
-						},
-					],
-				},
-
-				{
-					id: uuid(),
-					menuitem: 'Examples',
-					link: '#',
-					children: [
-						{
-							id: uuid(),
-							menuitem: ' Hunger Games',
-							link: '/portfolio/hunger-games',
-						},
-						{
-							id: uuid(),
-							menuitem: ' Password Hashing',
-							link: '/portfolio/hashing',
-						},
-						{
-							id: uuid(),
-							menuitem: 'Etherium Wallet',
-							link: '/portfolio/ethers',
-						},
-					],
-				},
-			],
-		},
-		{
-			id: uuid(),
-			menuitem: 'About Me',
-			link: '#',
-			children: [
-				{
-					id: uuid(),
-					menuitem: 'About Me',
-					link: `/about-me`,
-				},
-			],
-		},
-		{
-			id: uuid(),
-			menuitem: 'Contact Me',
-			children: [
-				{
-					id: uuid(),
-					menuitem: 'Contact Me',
-					link: '/contact-me',
-				},
-			],
-		},
-	];
-
 	const QuickMenu = () => {
 		return (
 			<Fragment>
@@ -170,14 +68,13 @@ const NavbarDefault = ({ headerstyle, login }) => {
 					headerstyle === 'dark'
 						? 'navbar-dark bg-dark'
 						: 'navbar-default py-2'
-				}`}>
+				} `}>
 				<Container fluid className='px-0 ps-2'>
 					<Navbar.Brand as={Link} to='/'>
 						<Image src={logo} alt='Blockchain Trucker Logo' />
 					</Navbar.Brand>
 					<div
-						className={`navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap ${
-							login
+						className={`navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap
 								? isDesktop || isLaptop
 									? 'd-none'
 									: 'd-flex'
@@ -244,18 +141,6 @@ const NavbarDefault = ({ headerstyle, login }) => {
 			</Navbar>
 		</Fragment>
 	);
-};
-
-// Specifies the default values for props
-NavbarDefault.defaultProps = {
-	headerstyle: 'navbar-default',
-	login: false,
-};
-
-// Typechecking With PropTypes
-NavbarDefault.propTypes = {
-	headerstyle: PropTypes.string,
-	login: PropTypes.bool,
 };
 
 export default NavbarDefault;

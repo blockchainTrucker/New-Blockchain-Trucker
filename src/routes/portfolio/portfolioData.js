@@ -60,7 +60,7 @@ const portfolioData = [
 		category: 'Example',
 		title: 'Hunger Games Solidity Example',
 		details:
-			'A simple example of a timed game that selects a random winner using Solidity.',
+			'An example of a timed game that selects a random winner using Solidity.',
 		link: '/portfolio/hunger-games',
 	},
 	{

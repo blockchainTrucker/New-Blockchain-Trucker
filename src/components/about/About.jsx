@@ -137,7 +137,8 @@ const About = (props) => {
 									<li>Validation</li>
 									<li>Sanitization</li>
 									<li>CORS</li>
-									<li>AWS Amplify</li>
+									<li>Truffle</li>
+									<li>Unit Testing</li>
 								</ul>
 							</Col>
 							<Col
@@ -155,6 +156,7 @@ const About = (props) => {
 									<li>SCSS</li>
 									<li>CSS</li>
 									<li>HTML</li>
+									<li>AWS Amplify</li>
 									<li>Heroku</li>
 								</ul>
 							</Col>

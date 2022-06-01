@@ -52,7 +52,10 @@ const About = (props) => {
 											Funding Chain
 										</a>
 										. It will be a crowd funding platform
-										that uses smart contracts.
+										that uses smart contracts. I am also
+										working on my Blockchain Developer
+										certification and expext to be complete
+										by the Fall.
 									</p>
 								</div>
 							</Col>
@@ -126,17 +129,17 @@ const About = (props) => {
 								xl={3}
 								lg={3}
 								md={3}
-								sm={3}
+								sm={12}
 								xs={12}
-								className='mb-2 fw-bold  px-5'>
+								className='fw-bold px-5'>
 								<ul>
 									<li>Smart Contracts</li>
+									<li>DApps</li>
 									<li>JSON Web Token</li>
 									<li>Encryption</li>
 									<li>Hashing</li>
 									<li>Validation</li>
 									<li>Sanitization</li>
-									<li>CORS</li>
 									<li>Truffle</li>
 									<li>Unit Testing</li>
 								</ul>
@@ -145,12 +148,12 @@ const About = (props) => {
 								xl={3}
 								lg={3}
 								md={3}
-								sm={3}
+								sm={12}
 								xs={12}
 								className='mb-2 fw-bold px-5'>
 								<ul>
-									<li>DApps</li>
 									<li>API Development</li>
+									<li>CORS</li>
 									<li>Templating</li>
 									<li>Cookies</li>
 									<li>SCSS</li>

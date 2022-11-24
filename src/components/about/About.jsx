@@ -45,17 +45,20 @@ const About = (props) => {
 											Decentralized Ventures
 										</a>
 										, and have started working on my first
-										decentralized platform called{' '}
+										DApp called{' '}
 										<a
 											href='https://www.funding-chain.com'
 											target='_blank'>
 											Funding Chain
 										</a>
 										. It will be a crowd funding platform
-										that uses smart contracts. I am also
-										working on my Blockchain Developer
-										certification and expext to be complete
-										by the Fall.
+										that uses smart contracts to collect and
+										distribute contributions. I have a test
+										version currently deployed fpr this
+										project and expect it to go live in the
+										summer of 2023. I am also working on my
+										Blockchain Developer certification and
+										expext to be complete by early winter.
 									</p>
 								</div>
 							</Col>
@@ -135,13 +138,16 @@ const About = (props) => {
 								<ul>
 									<li>Smart Contracts</li>
 									<li>DApps</li>
+									<li>Remix</li>
+									<li>Truffle/Ganache</li>
+									<li>Unit Testing</li>
 									<li>JSON Web Token</li>
+									<li>Reusable Code</li>
+									<li>User Management</li>
 									<li>Encryption</li>
 									<li>Hashing</li>
 									<li>Validation</li>
 									<li>Sanitization</li>
-									<li>Truffle</li>
-									<li>Unit Testing</li>
 								</ul>
 							</Col>
 							<Col
@@ -153,7 +159,9 @@ const About = (props) => {
 								className='mb-2 fw-bold px-5'>
 								<ul>
 									<li>API Development</li>
-									<li>CORS</li>
+									<li>Database Design</li>
+									<li>Express</li>
+									<li>Webpack</li>
 									<li>Templating</li>
 									<li>Cookies</li>
 									<li>SCSS</li>
@@ -161,6 +169,7 @@ const About = (props) => {
 									<li>HTML</li>
 									<li>AWS Amplify</li>
 									<li>Heroku</li>
+									<li>Atlas</li>
 								</ul>
 							</Col>
 						</Row>

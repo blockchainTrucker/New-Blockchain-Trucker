@@ -24,8 +24,8 @@ const Contact = () => {
 							</h1>
 							<p className='lead justify text-dark'>
 								Fill in the form and I will get in touch with
-								you as soon as possible. Or feel free to send me
-								a call, text, or email.
+								you as soon as possible. Or you can feel free to
+								call, text, or email me.
 							</p>
 							<div className='mt-8'>
 								<p className='fs-4'>

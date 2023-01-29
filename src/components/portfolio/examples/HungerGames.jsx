@@ -235,13 +235,15 @@ const Ethers = (props) => {
 						</Row>
 						<Row className='justify-content-center mb-10'>
 							<Col md={10}>
-								<CopyBlock
-									wrapLongLines={false}
-									text={hungerGamesCode}
-									language={'jsx'}
-									showLineNumbers={false}
-									theme={dracula}
-								/>
+								<div className='pop'>
+									<CopyBlock
+										wrapLongLines={false}
+										text={hungerGamesCode}
+										language={'jsx'}
+										showLineNumbers={false}
+										theme={dracula}
+									/>
+								</div>
 							</Col>
 						</Row>
 						<BackToTop />

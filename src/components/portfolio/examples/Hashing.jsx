@@ -44,12 +44,14 @@ const PasswordHashing = (props) => {
 						</Row>
 						<Row className='justify-content-center'>
 							<Col md={10}>
-								<CopyBlock
-									text={hashingExample}
-									language={'jsx'}
-									showLineNumbers={false}
-									theme={dracula}
-								/>
+								<div className='pop'>
+									<CopyBlock
+										text={hashingExample}
+										language={'jsx'}
+										showLineNumbers={false}
+										theme={dracula}
+									/>
+								</div>
 							</Col>
 						</Row>
 						<Row className='my-5'>

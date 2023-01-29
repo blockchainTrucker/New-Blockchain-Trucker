@@ -48,93 +48,131 @@ const EthereumWallet = (props) => {
 							</Col>
 						</Row>
 						<Row className='justify-content-center mb-10'>
+							<h3 className='text-center mb-3'>
+								Create Wallet Route
+							</h3>
 							<Col md={10} className='mb-6'>
-								<Col className='mx-auto mb-3' md={6}>
+								<Col className='mx-auto mb-4' md={6}>
 									<ModalImage
+										className='corners pop'
 										small={create}
 										large={create}
-										// alt={chain.title}
+										alt={
+											"Image of the Send route's frontend"
+										}
 										imageBackgroundColor='white'
 									/>
 								</Col>
-								<CopyBlock
-									text={walletCreate}
-									language={'jsx'}
-									showLineNumbers={false}
-									theme={dracula}
-								/>
+								<div className='pop'>
+									<CopyBlock
+										text={walletCreate}
+										language={'jsx'}
+										showLineNumbers={false}
+										theme={dracula}
+									/>
+								</div>
 							</Col>
 						</Row>
 						<Row className='justify-content-center mb-10'>
+							<h3 className='text-center mb-3'>
+								Load Wallet Route
+							</h3>
 							<Col md={10} className='mb-6'>
-								<Col className='mx-auto mb-3' md={6}>
+								<Col className='mx-auto mb-4' md={6}>
 									<ModalImage
+										className='corners pop'
 										small={load}
 										large={load}
-										// alt={chain.title}
+										alt={
+											"Image of the Load route's frontend"
+										}
 										imageBackgroundColor='white'
 									/>
 								</Col>
-								<CopyBlock
-									text={walletLoad}
-									language={'jsx'}
-									showLineNumbers={false}
-									theme={dracula}
-								/>
+								<div className='pop'>
+									<CopyBlock
+										text={walletLoad}
+										language={'jsx'}
+										showLineNumbers={false}
+										theme={dracula}
+									/>
+								</div>
 							</Col>
 						</Row>
 						<Row className='justify-content-center mb-10'>
+							<h3 className='text-center mb-3'>
+								Recover Wallet Route
+							</h3>
 							<Col md={10} className='mb-6'>
-								<Col className='mx-auto mb-3' md={6}>
+								<Col className='mx-auto mb-4' md={6}>
 									<ModalImage
+										className='corners pop'
 										small={recover}
 										large={recover}
-										// alt={chain.title}
+										alt={
+											"Image of the Recover route's frontend"
+										}
 										imageBackgroundColor='white'
 									/>
 								</Col>
-								<CopyBlock
-									text={walletRecover}
-									language={'jsx'}
-									showLineNumbers={false}
-									theme={dracula}
-								/>
+								<div className='pop'>
+									<CopyBlock
+										text={walletRecover}
+										language={'jsx'}
+										showLineNumbers={false}
+										theme={dracula}
+									/>
+								</div>
 							</Col>
 						</Row>
 						<Row className='justify-content-center mb-10'>
+							<h3 className='text-center mb-3'>
+								Wallet Balances Route
+							</h3>
 							<Col md={10} className='mb-6'>
-								<Col className='mx-auto mb-3' md={6}>
+								<Col className='mx-auto mb-4' md={6}>
 									<ModalImage
+										className='corners pop'
 										small={balance}
 										large={balance}
-										// alt={chain.title}
+										alt={
+											"Image of the Balance route's frontend"
+										}
 										imageBackgroundColor='white'
 									/>
 								</Col>
-								<CopyBlock
-									text={walletBalances}
-									language={'jsx'}
-									showLineNumbers={false}
-									theme={dracula}
-								/>
+								<div className='pop'>
+									<CopyBlock
+										text={walletBalances}
+										language={'jsx'}
+										showLineNumbers={false}
+										theme={dracula}
+									/>
+								</div>
 							</Col>
 						</Row>
 						<Row className='justify-content-center mb-3'>
+							<h3 className='text-center mb-3'>Send Route</h3>
 							<Col md={10} className='mb-6'>
-								<Col className='mx-auto mb-3' md={6}>
+								<Col className='mx-auto mb-4' md={6}>
 									<ModalImage
+										className='corners pop'
 										small={send}
 										large={send}
-										// alt={chain.title}
+										alt={
+											"Image of the Send route's frontend"
+										}
 										imageBackgroundColor='white'
 									/>
 								</Col>
-								<CopyBlock
-									text={walletSend}
-									language={'jsx'}
-									showLineNumbers={false}
-									theme={dracula}
-								/>
+								<div className='pop'>
+									<CopyBlock
+										text={walletSend}
+										language={'jsx'}
+										showLineNumbers={false}
+										theme={dracula}
+									/>
+								</div>
 							</Col>
 						</Row>
 						<Row>

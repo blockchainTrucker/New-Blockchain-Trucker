@@ -3,11 +3,11 @@ import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
 import Header from '../../functions/Header';
 import BackToTop from '../../functions/BackToTop';
-import create from '../../../assets/images/ethers/create.jpg';
-import load from '../../../assets/images/ethers/load.jpg';
-import recover from '../../../assets/images/ethers/recover.jpg';
-import balance from '../../../assets/images/ethers/balance.jpg';
-import send from '../../../assets/images/ethers/send.jpg';
+import create from 'assets/images/ethereumWallet/create.jpg';
+import load from 'assets/images/ethereumWallet/load.jpg';
+import recover from 'assets/images/ethereumWallet/recover.jpg';
+import balance from 'assets/images/ethereumWallet/balance.jpg';
+import send from 'assets/images/ethereumWallet/send.jpg';
 import { CopyBlock, dracula } from 'react-code-blocks';
 import {
 	walletCreate,
@@ -22,6 +22,7 @@ const EthereumWallet = (props) => {
 	useEffect(() => {
 		document.title = 'Blockchain Trucker - Etherium Wallet Example';
 	}, []);
+
 	return (
 		<Fragment>
 			<div className='py-4 py-lg-8 pb-14 bg-white '>
@@ -41,17 +42,7 @@ const EthereumWallet = (props) => {
 								className='mb-2'>
 								<div>
 									<p>
-										In this example, I used Ethers.js within
-										an Embedded JavaScript single page
-										application to create a simple Etherium
-										wallet that uses encrypted keystore
-										files. The wallet is capable of creating
-										a new wallet, loading an existing wallet
-										from a file, recovering a wallet using
-										the mnemonic phrase, showing the balance
-										of a wallet, and sending Etherium
-										tokens. Below is the code for each route
-										and an image of that route's frontend.
+										{`In this example, I used Ethers.js within an Embedded JavaScript single page application to create a simple Etherium wallet that uses encrypted keystore files. The wallet is capable of creating a new wallet, loading an existing wallet from a file, recovering a wallet using the mnemonic phrase, showing the balance of a wallet, and sending Etherium tokens. Below is the code for each route and an image of that route's frontend.`}
 									</p>
 								</div>
 							</Col>

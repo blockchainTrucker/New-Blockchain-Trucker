@@ -5,7 +5,7 @@ import decentralizedVentures from 'assets/images/portfolio/logos/decentralized-v
 import videoTutorials from 'assets/images/video-tutorials/video-tutorials-home-loggedin.png';
 import cookUni from 'assets/images/cookuni/cookuni-home.png';
 import bcrypt from 'assets/images/bcrypt/bcrypt1.png';
-import ethers from 'assets/images/ethers/welcome.jpg';
+import ethers from 'assets/images/ethereumWallet/welcome.jpg';
 import hgames from 'assets/images/hunger-games/hunger-games.jpg';
 
 const portfolioData = [
@@ -79,7 +79,7 @@ const portfolioData = [
 		title: 'Etherium Wallet Using Ethers.js',
 		details:
 			'A single page application where you can create, recover, and use an Etherium wallet.',
-		link: '/portfolio/ethers',
+		link: '/portfolio/ethereum-wallet',
 	},
 ];
 

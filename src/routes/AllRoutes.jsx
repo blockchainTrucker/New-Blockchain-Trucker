@@ -13,7 +13,7 @@ import PizzaKing from 'components/portfolio/school-projects/PizzaKing.jsx';
 import VideoTutorials from 'components/portfolio/school-projects/VideoTutorials.jsx';
 import CookUni from 'components/portfolio/school-projects/CookUni.jsx';
 import Hashing from 'components/portfolio/examples/Hashing.jsx';
-import Ethers from 'components/portfolio/examples/EthereumWallet.jsx';
+import EthereumWallet from 'components/portfolio/examples/EthereumWallet.jsx';
 import HungerGames from 'components/portfolio/examples/HungerGames.jsx';
 
 //Contact
@@ -54,7 +54,11 @@ export default function AllRoutes(login) {
 				/>
 				<Route exact path='/portfolio/hashing' element={<Hashing />} />
 				<Route exact path='/portfolio/cookuni' element={<CookUni />} />
-				<Route exact path='/portfolio/ethers' element={<Ethers />} />
+				<Route
+					exact
+					path='/portfolio/ethereum-wallet'
+					element={<EthereumWallet />}
+				/>
 				<Route
 					exact
 					path='/portfolio/hunger-games'

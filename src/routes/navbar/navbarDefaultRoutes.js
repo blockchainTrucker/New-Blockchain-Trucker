@@ -62,7 +62,7 @@ const NavbarDefaultRoutes = [
 					{
 						id: uuid(),
 						menuitem: 'Etherium Wallet',
-						link: '/portfolio/ethers',
+						link: '/portfolio/ethereum-wallet',
 					},
 				],
 			},

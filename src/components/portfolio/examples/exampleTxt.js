@@ -254,8 +254,8 @@ export const walletCreate = `app.post('/create', (req, res) => {
 				}
 			);
 		});
-	}
-});`;
+	   }
+ });`;
 
 export const walletLoad = `app.post('/load', (req, res) => {
 	let filename = req.body.filename;
@@ -291,8 +291,8 @@ export const walletLoad = `app.post('/load', (req, res) => {
 					error: err.message,
 				});
 			});
-	});
-});`;
+	    });
+ });`;
 export const walletRecover = `app.post('/recover', (req, res) => {
 	let mnemonic = req.body.mnemonic;
 	let password = req.body.password;
@@ -321,9 +321,9 @@ export const walletRecover = `app.post('/recover', (req, res) => {
 					error: undefined,
 				});
 			}
-		});
-	});
-});`;
+		  });
+	    });
+ });`;
 
 export const walletBalances = `app.post('/balance', (req, res) => {
 	let filename = req.body.filename;
@@ -366,8 +366,8 @@ export const walletBalances = `app.post('/balance', (req, res) => {
 					error: error.message,
 				});
 			});
-	});
-});`;
+	    });
+ });`;
 
 export const walletSend = `app.post('/send', (req, res) => {
 	let recipient = req.body.recipient;
@@ -398,8 +398,7 @@ export const walletSend = `app.post('/send', (req, res) => {
 	let gasPrice = 6;
 	let gas = 21000;
 
-	wallet
-		.sendTransaction({
+	wallet.sendTransaction({
 			to: recipient,
 			value: ethers.utils.parseEther(amount, gasPrice),
 			gasLimit: gas * gasPrice,
@@ -416,4 +415,5 @@ export const walletSend = `app.post('/send', (req, res) => {
 				error: err.message,
 			});
 		});
-});`;
+	});
+ });`;

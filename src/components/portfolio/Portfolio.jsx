@@ -4,7 +4,7 @@ import { Col, Row, Container } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
 import portfolioData from 'routes/portfolio/portfolioData';
 
-const BlogCategory = () => {
+const Portfolio = () => {
 	useEffect(() => {
 		document.title = 'Blockchain Trucker - Portfolio';
 	}, []);
@@ -30,7 +30,7 @@ const BlogCategory = () => {
 			{/* Page Content */}
 			<div className='pb-12 bg-white'>
 				<Container>
-					<Row>
+					<Row className='justify-content-center'>
 						{portfolioData.map((item, index) => (
 							<Col
 								xl={4}
@@ -49,4 +49,4 @@ const BlogCategory = () => {
 	);
 };
 
-export default BlogCategory;
+export default Portfolio;

@@ -5,7 +5,7 @@ import { Col, Row, Container } from 'react-bootstrap';
 export default function BackToTop() {
 	return (
 		<Container>
-			<Row className='text-center pt-10 text-primary'>
+			<Row className='text-center text-primary'>
 				<Col xl={12} lg={12} md={12} sm={12} xs={12}>
 					<Icon
 						className='pointer'

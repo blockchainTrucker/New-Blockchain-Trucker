@@ -8,13 +8,13 @@ import Redirect from 'components/functions/Redirect';
 import MainLanding from 'components/landing/LandingMain';
 
 //Portfolio
-import Portfolio from 'components/portfolio/Portfolio';
-import PizzaKing from 'components/portfolio/school-projects/PizzaKing';
-import VideoTutorials from 'components/portfolio/school-projects/VideoTutorials';
-import CookUni from 'components/portfolio/school-projects/CookUni';
-import Hashing from 'components/portfolio/examples/Hashing';
-import Ethers from 'components/portfolio/examples/Ethers';
-import HungerGames from 'components/portfolio/examples/HungerGames';
+import Portfolio from 'components/portfolio/Portfolio.jsx';
+import PizzaKing from 'components/portfolio/school-projects/PizzaKing.jsx';
+import VideoTutorials from 'components/portfolio/school-projects/VideoTutorials.jsx';
+import CookUni from 'components/portfolio/school-projects/CookUni.jsx';
+import Hashing from 'components/portfolio/examples/Hashing.jsx';
+import Ethers from 'components/portfolio/examples/EthereumWallet.jsx';
+import HungerGames from 'components/portfolio/examples/HungerGames.jsx';
 
 //Contact
 import Contact from 'components/contact/Contact';

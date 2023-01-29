@@ -3,6 +3,8 @@ import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
 import Header from '../../functions/Header';
 import BackToTop from '../../functions/BackToTop';
+import { CopyBlock, dracula } from 'react-code-blocks';
+import { hungerGamesCode } from './exampleTxt';
 import hg1 from '../../../assets/images/hunger-games/hunger-games-1.jpg';
 import hg2 from '../../../assets/images/hunger-games/hunger-games-2.jpg';
 import hg3 from '../../../assets/images/hunger-games/hunger-games-3.jpg';
@@ -215,74 +217,30 @@ const Ethers = (props) => {
 								</div>
 							</Col>
 						</Row>
-						<Row className='justify-content-center mb-10'>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={hg1}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={hg2}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
-						<Row className='justify-content-center mb-10'>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={hg3}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={hg4}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
 						<Row className='justify-content-center'>
 							<Col
-								xl={5}
-								lg={5}
-								md={5}
+								xl={10}
+								lg={10}
+								md={10}
 								sm={10}
 								xs={10}
-								className='mb-6'>
-								<Image
-									src={hg5}
-									alt=''
-									className='img-fluid rounded-3'
+								className='mb-2'>
+								<div>
+									<p>
+										Below is the my solution to the problem
+										written in Solidity.
+									</p>
+								</div>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-10'>
+							<Col md={10}>
+								<CopyBlock
+									wrapLongLines={false}
+									text={hungerGamesCode}
+									language={'jsx'}
+									showLineNumbers={false}
+									theme={dracula}
 								/>
 							</Col>
 						</Row>

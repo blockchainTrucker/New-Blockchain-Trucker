@@ -2,14 +2,16 @@
 import React, { Fragment, useEffect } from 'react';
 import { Col, Row, Container, Image } from 'react-bootstrap';
 import Header from '../../functions/Header';
-
+import ModalImage from 'react-modal-image';
 import BackToTop from '../../functions/BackToTop';
-
-import pkHome from '../../../assets/images/pizza-king/pizza-king-home.png';
+import { CopyBlock, dracula } from 'react-code-blocks';
+import pkHome from '../../../assets/images/pizza-king/pizzaKingHomeLarge.jpg';
+import pkMenu from '../../../assets/images/pizza-king/pizzaKingMenuLarge.jpg';
 import pkAccount from '../../../assets/images/pizza-king/pizza-king-account.png';
-import pkRegistration from '../../../assets/images/pizza-king/pizza-king-registration.png';
-import pkSignin from '../../../assets/images/pizza-king/pizza-king-signin.png';
+import pkRegistration from '../../../assets/images/pizza-king/PizzaKingSignupLarge.jpg';
+import pkSignin from '../../../assets/images/pizza-king/PizzaKingSigninLarge.jpg';
 import pkCheckout from '../../../assets/images/pizza-king/pizza-king-checkout.png';
+import { menuExample, cartExample, registrationExample } from './projectTxt';
 
 const PizzaKing = (props) => {
 	useEffect(() => {
@@ -26,69 +28,80 @@ const PizzaKing = (props) => {
 						/>
 						<Row className='justify-content-center'>
 							<Col
-								xl={8}
-								lg={8}
+								xl={10}
+								lg={10}
 								md={10}
-								sm={10}
-								xs={10}
-								className='mb-10'>
+								sm={12}
+								xs={12}
+								className='mb-3'>
 								<p>
-									The Pizza King app was my final project for
-									my Full Stack Developer bootcamp. I made it
-									using React.js for the frontend, and Node.js
-									with MongoDB for the backend. Since I chose
-									to create a pizza resturant app, I decided
-									to set up the layout for a good user
-									experience on mobile devices. All of the CSS
-									is custom.
+									{
+										"The Pizza King app was my final project for my Full Stack Developer bootcamp. It was my first React application and the first time I used MongoDB in an application. I hadn't taught myself Bootstrap yet when I made this application, but I did continue to expand my knowledge base with CSS on this project. The backend is a Node.js environment with an Express server."
+									}
+								</p>
+								<p>
+									{
+										'Throughout this example, I will show images of the frontend of the section being discussed as well as the relevant code.'
+									}
+								</p>
+								<p>
+									{
+										'The home and menu pages are the only pages that guest users can access. Since this was my first time using React, I did not know how to transfer state or hoist so the Menu component uses cookies to store the cart data as an array. The cart icon in the navigation bar displays how many items are in the cart using the length of the cart.'
+									}
 								</p>
 							</Col>
 						</Row>
-						<Row className='justify-content-center mb-10'>
-							{/* Image */}
+						<Row className='justify-content-center mb-5'>
 							<Col
-								xl={5}
-								lg={5}
+								className='mx-3'
+								xl={3}
+								lg={3}
 								md={5}
-								sm={10}
-								xs={10}
-								className='mb-2'>
-								<Image
-									src={pkHome}
-									alt=''
-									className='img-fluid rounded-3'
+								sm={12}
+								xs={12}>
+								<ModalImage
+									className='pop corners'
+									small={pkHome}
+									large={pkHome}
+									alt='Pizza King homepage'
 								/>
 							</Col>
 							<Col
-								xl={5}
-								lg={5}
+								className='mx-3'
+								xl={3}
+								lg={3}
 								md={5}
-								sm={10}
-								xs={10}
-								className='mb-2'>
-								{/* Blog Content */}
-								<div>
-									<p>
-										The home and menu pages are the only two
-										pages that guest users can access. The
-										Menu component uses cookies to store the
-										cart data as an array. The cart icon in
-										the navigation bar displays how many
-										items are in the cart using the length
-										of the cart.
-									</p>
-								</div>
+								sm={12}
+								xs={12}>
+								<ModalImage
+									className='pop corners'
+									small={pkMenu}
+									large={pkMenu}
+									alt='Pizza King menu '
+								/>
 							</Col>
 						</Row>
-						<Row className='justify-content-center mb-10'>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-2 py-xl-5'>
-								{/* Blog Content */}
+						<Row className='justify-content-center mb-5'>
+							<Col xl={10} lg={10} md={10} sm={12} xs={12}>
+								<CopyBlock
+									text={menuExample}
+									language={'jsx'}
+									showLineNumbers={false}
+									theme={dracula}
+									customStyle={{
+										height: '400px',
+										overflowY: 'scroll',
+										margin: '0px 0.75rem',
+										borderRadius: '5px',
+										boxShadow:
+											'1px 2px 3px rgba(0,0,0,0.35)',
+										fontSize: '0.75rem',
+									}}
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-3'>
+							<Col xl={10} lg={10} md={10} sm={12} xs={12}>
 								<div>
 									<p>
 										When the user clicks the Review Order
@@ -108,28 +121,64 @@ const PizzaKing = (props) => {
 									</p>
 								</div>
 							</Col>
+						</Row>
+						<Row className='justify-content-center mb-5'>
 							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={pkAccount}
-									alt=''
-									className='img-fluid rounded-3'
+								className='mx-3'
+								xl={4}
+								lg={4}
+								md={4}
+								sm={12}
+								xs={12}>
+								<ModalImage
+									className='pop corners'
+									small={pkSignin}
+									large={pkSignin}
+									alt='Pizza King homepage'
+								/>
+							</Col>
+							<Col
+								className='mx-3'
+								xl={4}
+								lg={4}
+								md={4}
+								sm={12}
+								xs={12}>
+								<ModalImage
+									className='pop corners'
+									small={pkRegistration}
+									large={pkRegistration}
+									alt='Pizza King menu '
+								/>
+							</Col>
+						</Row>
+						<Row className='justify-content-center mb-5'>
+							<Col xl={10} lg={10} md={10} sm={12} xs={12}>
+								<CopyBlock
+									text={registrationExample}
+									language={'jsx'}
+									showLineNumbers={false}
+									theme={dracula}
+									customStyle={{
+										height: '400px',
+										overflowY: 'scroll',
+										margin: '0px 0.75rem',
+										borderRadius: '5px',
+										boxShadow:
+											'1px 2px 3px rgba(0,0,0,0.35)',
+										fontSize: '0.75rem',
+									}}
 								/>
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
 							<Col
-								xl={8}
-								lg={8}
+								xl={10}
+								lg={10}
 								md={10}
-								sm={10}
-								xs={10}
-								className='mb-2'>
+								sm={12}
+								xs={12}
+								className='mb-3'>
 								<div>
 									<p>
 										When login is completed, the user is
@@ -145,37 +194,55 @@ const PizzaKing = (props) => {
 								</div>
 							</Col>
 						</Row>
-						<Row className='justify-content-center mb-10'>
+						<Row className='justify-content-center mb-5'>
 							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-2'>
-								<Image
-									src={pkRegistration}
-									alt=''
-									className='img-fluid rounded-3'
+								className='mx-3'
+								xl={7}
+								lg={7}
+								md={7}
+								sm={12}
+								xs={12}>
+								<ModalImage
+									className='pop corners'
+									small={pkAccount}
+									large={pkAccount}
+									alt='Pizza King homepage'
 								/>
 							</Col>
-							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
-								<Image
-									src={pkSignin}
-									alt=''
-									className='img-fluid rounded-3'
+						</Row>
+						<Row className='justify-content-center mb-5'>
+							<Col
+								className='mx-3'
+								xl={10}
+								lg={10}
+								md={10}
+								sm={12}
+								xs={12}>
+								<CopyBlock
+									text={cartExample}
+									language={'jsx'}
+									showLineNumbers={false}
+									theme={dracula}
+									customStyle={{
+										height: '400px',
+										overflowY: 'scroll',
+										margin: '0px 0.75rem',
+										borderRadius: '5px',
+										boxShadow:
+											'1px 2px 3px rgba(0,0,0,0.35)',
+										fontSize: '0.75rem',
+									}}
 								/>
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
 							<Col
-								xl={8}
-								lg={8}
-								md={8}
-								sm={10}
-								xs={10}
-								className='mb-2'>
-								{/* Blog Content */}
+								xl={10}
+								lg={10}
+								md={10}
+								sm={12}
+								xs={12}
+								className='mb-3'>
 								<div>
 									<p>
 										Once the order was successfully created,
@@ -186,15 +253,21 @@ const PizzaKing = (props) => {
 								</div>
 							</Col>
 						</Row>
-						<Row className='justify-content-center'>
-							{/* Image */}
-							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
-								<Image
-									src={pkCheckout}
-									alt=''
-									className='img-fluid rounded-3'
+						<Row className='justify-content-center mb-5'>
+							<Col xl={6} lg={6} md={6} sm={12} xs={12}>
+								<ModalImage
+									className='pop corners'
+									small={pkCheckout}
+									large={pkCheckout}
+									alt='Pizza King homepage'
 								/>
 							</Col>
+						</Row>
+						<Row>
+							<Header
+								description='Click here to view the full repository'
+								github='https://github.com/jwachtel96/Pizza-King'
+							/>
 						</Row>
 						<BackToTop />
 					</Fragment>

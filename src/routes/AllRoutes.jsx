@@ -1,5 +1,5 @@
 // ** Import from react dom
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import 'assets/scss/theme.scss';
 
 import Redirect from 'components/functions/Redirect';
@@ -68,6 +68,8 @@ export default function AllRoutes(login) {
 				<Route exact path='/contact-me' element={<Contact />} />
 				//About
 				<Route exact path='/about-me' element={<About />} />
+				//Catch
+				<Route path='*' element={<Navigate to='/' replace />} />
 			</Routes>
 		</div>
 	);

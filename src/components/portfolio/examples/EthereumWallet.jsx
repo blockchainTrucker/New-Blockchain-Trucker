@@ -8,7 +8,7 @@ import load from 'assets/images/ethereumWallet/load.jpg';
 import recover from 'assets/images/ethereumWallet/recover.jpg';
 import balance from 'assets/images/ethereumWallet/balance.jpg';
 import send from 'assets/images/ethereumWallet/send.jpg';
-import { CopyBlock, dracula, nord } from 'react-code-blocks';
+import { CopyBlock, dracula } from 'react-code-blocks';
 import {
 	walletCreate,
 	walletLoad,

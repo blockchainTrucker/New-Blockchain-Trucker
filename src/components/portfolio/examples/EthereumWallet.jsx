@@ -15,7 +15,8 @@ import {
 	walletRecover,
 	walletBalances,
 	walletSend,
-} from './exampleTxt';
+	ewTxt1,
+} from '../../../data/exampleTxt';
 import ModalImage from 'react-modal-image';
 
 const EthereumWallet = (props) => {
@@ -41,9 +42,7 @@ const EthereumWallet = (props) => {
 								xs={10}
 								className='mb-2'>
 								<div>
-									<p>
-										{`In this example, I used Ethers.js within an Embedded JavaScript single page application to create a simple Etherium wallet that uses encrypted keystore files. The wallet is capable of creating a new wallet, loading an existing wallet from a file, recovering a wallet using the mnemonic phrase, showing the balance of a wallet, and sending Etherium tokens. Below is the code for each route and an image of that route's frontend.`}
-									</p>
+									<p>{ewTxt1}</p>
 								</div>
 							</Col>
 						</Row>
@@ -58,7 +57,7 @@ const EthereumWallet = (props) => {
 										small={create}
 										large={create}
 										alt={
-											"Image of the Send route's frontend"
+											"Image of the Create route's frontend"
 										}
 										imageBackgroundColor='white'
 									/>

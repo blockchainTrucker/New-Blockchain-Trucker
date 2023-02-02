@@ -14,7 +14,7 @@ import {
 	hashingTxt4,
 	hashingTxt5,
 	hashingTxt6,
-} from './exampleTxt';
+} from '../../../data/exampleTxt';
 
 const PasswordHashing = (props) => {
 	useEffect(() => {

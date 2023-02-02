@@ -417,3 +417,5 @@ export const walletSend = `app.post('/send', (req, res) => {
 		});
 	});
  });`;
+
+export const ewTxt1 = `In this example, I used Ethers.js within an Embedded JavaScript single page application to create a simple Etherium wallet that uses encrypted keystore files. The wallet is capable of creating a new wallet, loading an existing wallet from a file, recovering a wallet using the mnemonic phrase, showing the balance of a wallet, and sending Etherium tokens. Below is the code for each route and an image of that route's frontend.`;

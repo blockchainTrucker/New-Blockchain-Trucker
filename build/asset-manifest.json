@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c9633eeb.css",
-    "main.js": "/static/js/main.933b0ec2.js",
+    "main.js": "/static/js/main.e6c2b041.js",
     "react-syntax-highlighter/refractor-core-import.js": "/static/js/react-syntax-highlighter/refractor-core-import.f2461969.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js",
@@ -158,6 +158,8 @@
     "static/media/cookuni-recipes.png": "/static/media/cookuni-recipes.7a7ad8a9f166815dc927.png",
     "static/media/cookuni-home.png": "/static/media/cookuni-home.dda02077c79d45d2380b.png",
     "static/media/cookuni-recipe-details.png": "/static/media/cookuni-recipe-details.d64672889dfeb52bb0fb.png",
+    "static/media/fsCert.jpg": "/static/media/fsCert.b55024ae47053dc1d9b3.jpg",
+    "static/media/blockchainCert.jpg": "/static/media/blockchainCert.1e2ec52b4a198b75c248.jpg",
     "static/media/cookuni-reg.png": "/static/media/cookuni-reg.9c2362c66889f11835eb.png",
     "static/media/pizzaKingHomeLarge.jpg": "/static/media/pizzaKingHomeLarge.25c1bf78b15c121ab48a.jpg",
     "static/media/cookuni-signin.png": "/static/media/cookuni-signin.e77726e1ea1e945a63a0.png",
@@ -170,17 +172,12 @@
     "static/media/video-tutorials-details-subscribed.png": "/static/media/video-tutorials-details-subscribed.66e659ada0f840cfea27.png",
     "static/media/PizzaKingSignupLarge.jpg": "/static/media/PizzaKingSignupLarge.393790ce464de7b8bcfb.jpg",
     "static/media/loading.gif": "/static/media/loading.45dec5c5c911393f54ca.gif",
-    "static/media/hunger-games-2.jpg": "/static/media/hunger-games-2.a125af209e9505025e33.jpg",
     "static/media/balance.jpg": "/static/media/balance.74e8bf96b35bda0ca430.jpg",
     "static/media/PizzaKingSigninLarge.jpg": "/static/media/PizzaKingSigninLarge.b30e5f05d011424a0040.jpg",
-    "static/media/hunger-games-3.jpg": "/static/media/hunger-games-3.1ad50db5b2f919de5c33.jpg",
     "static/media/pizza-king-checkout.png": "/static/media/pizza-king-checkout.f6c6c4f76599179025ae.png",
-    "static/media/hunger-games-4.jpg": "/static/media/hunger-games-4.14a1b517bb7c57863b26.jpg",
     "static/media/feather.woff?sdxovp": "/static/media/feather.eb9822a3be07c5110df9.woff",
     "static/media/feather.ttf?sdxovp": "/static/media/feather.b2469c88d8944b230519.ttf",
-    "static/media/hunger-games-1.jpg": "/static/media/hunger-games-1.fca7e02603732b71690e.jpg",
     "static/media/welcome.jpg": "/static/media/welcome.f47b6fa4ec8e9a71ca20.jpg",
-    "static/media/hunger-games-5.jpg": "/static/media/hunger-games-5.476501552263b828d04e.jpg",
     "static/media/hunger-games.jpg": "/static/media/hunger-games.a230f5b9b53e4aa66b82.jpg",
     "static/media/load.jpg": "/static/media/load.2dfc15aa2659f43791ab.jpg",
     "static/media/pizza-king-account.png": "/static/media/pizza-king-account.c354003dad5627a82541.png",
@@ -200,7 +197,7 @@
     "static/media/dots-pattern.svg": "/static/media/dots-pattern.58f3b03e401a0591814f.svg",
     "index.html": "/index.html",
     "main.c9633eeb.css.map": "/static/css/main.c9633eeb.css.map",
-    "main.933b0ec2.js.map": "/static/js/main.933b0ec2.js.map",
+    "main.e6c2b041.js.map": "/static/js/main.e6c2b041.js.map",
     "refractor-core-import.f2461969.chunk.js.map": "/static/js/react-syntax-highlighter/refractor-core-import.f2461969.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js.map",
@@ -356,6 +353,6 @@
   },
   "entrypoints": [
     "static/css/main.c9633eeb.css",
-    "static/js/main.933b0ec2.js"
+    "static/js/main.e6c2b041.js"
   ]
 }

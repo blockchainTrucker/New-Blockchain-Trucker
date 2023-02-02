@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom';
 import FrameworkLogos from 'components/landing/FrameworkLogos';
 import LogoList from 'routes/frameworkLogos/logoList';
 import BackToTop from 'components/functions/BackToTop';
+import ModalImage from 'react-modal-image';
+import fsCert from 'assets/images/about/fsCert.jpg';
+import blockchainCert from 'assets/images/about/blockchainCert.jpg';
 
-const About = (props) => {
+const About = () => {
 	useEffect(() => {
 		document.title = 'Blockchain Trucker - About Me';
 	}, []);
@@ -16,7 +19,7 @@ const About = (props) => {
 				<Container>
 					<Fragment>
 						<Row className='justify-content-center'>
-							<Col xl={9} lg={9} md={12} sm={12} className='mb-2'>
+							<Col className='mb-2'>
 								<div className='text-center mb-4'>
 									<h1 className='display-4 fw-bold mb-4'>
 										About Me
@@ -25,20 +28,24 @@ const About = (props) => {
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={9} lg={9} md={12} sm={12}>
+							<Col xl={10} lg={10} md={10} sm={12} xs={12}>
 								<div>
 									<p>
-										My name is Jesse Wachtel and I recently
-										received my Full Stack Developer
-										certification from{' '}
+										My name is Jesse Wachtel. Over the past
+										two years, I have been working to
+										complete the Zero to Blockchain program
+										at{' '}
 										<a href='https://kingslanduniversity.com/zero-to-blockchain-developer-program/'>
 											Kingsland University
-										</a>{' '}
-										by completing their nine month bootcamp.
-										The bootcamp was JavaScript focused and
-										had an extra emphasis on the MERN stack.
-										Since graduation, I began my own
-										business,{' '}
+										</a>
+										. The program was split into two parts.
+										The first part was a nine month Full
+										Stack Developer bootcamp. It was
+										JavaScript focused and had an emphasis
+										on the MERN stack. I received my
+										certification as a Full Stack Developer
+										in December of 2021. After graduating, I
+										began my own business,{' '}
 										<a
 											href='https://www.decentralized-ventures.com'
 											target='_blank'>
@@ -53,18 +60,66 @@ const About = (props) => {
 										</a>
 										. It will be a crowd funding platform
 										that uses smart contracts to collect and
-										distribute contributions. I have a test
-										version currently deployed fpr this
-										project and expect it to go live in the
-										summer of 2023. I am also working on my
-										Blockchain Developer certification and
-										expext to be complete by early winter.
+										distribute contributions. I began
+										working on my Blockchain Engineer
+										certification while building{' '}
+										<a
+											href='https://www.funding-chain.com'
+											target='_blank'>
+											Funding Chain
+										</a>{' '}
+										and have incorporated some of what I
+										learned from school into it. The
+										Blockchain Engineer portion of the
+										program covered a wide range of topics
+										such as cryptography and elliptic
+										curves, public and private blockchain
+										devopment, mining, DApp development,
+										smart contract development including
+										ERC20 and ERC721. There was an emphasis
+										on the Ethereum blockchain. There were
+										two advanced projects required in order
+										to graduate, a DApp that deployed smart
+										contracts and a custom blockchain
+										network. I received my certification as
+										a Blockchain Engineer in January of
+										2023.
 									</p>
 								</div>
 							</Col>
 						</Row>
+						<Row className='justify-content-center mb-3'>
+							<Col
+								className='mx-3 mt-3'
+								xl={3}
+								lg={3}
+								md={3}
+								sm={12}
+								xs={12}>
+								<ModalImage
+									className='pop corners'
+									small={fsCert}
+									large={fsCert}
+									alt='Pizza King homepage'
+								/>
+							</Col>
+							<Col
+								className='mx-3 mt-3'
+								xl={3}
+								lg={3}
+								md={3}
+								sm={12}
+								xs={12}>
+								<ModalImage
+									className='pop corners'
+									small={blockchainCert}
+									large={blockchainCert}
+									alt='Pizza King menu '
+								/>
+							</Col>
+						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={9} lg={9} md={12} sm={12} className='mb-2'>
+							<Col xl={9} lg={9} md={12} sm={12}>
 								<FrameworkLogos
 									title='BELOW ARE THE FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH'
 									logos={LogoList}
@@ -94,35 +149,17 @@ const About = (props) => {
 										<a href='https://kingslanduniversity.com/zero-to-blockchain-developer-program/'>
 											Kingsland University
 										</a>{' '}
-										came into the picture. They had a Zero
-										to Blockchain program that was split
-										into two parts, Full Stack Developer and
-										Blockchain Developer. I started the
-										blockchain portion in February 2022.
-										During that portion, I am studying how
-										to create public and private blockchains
-										as well as how to create DApps and write
-										smart contracts using Solidity. I am
-										also enrolled at the Ira A. Fulton
-										Schools of Engineering at Arizona State
-										University and will begin working
-										towards my undergraduate degree in
-										Graphic Information Technology.
+										came into the picture.
 									</p>
 								</div>
 							</Col>
 						</Row>
-						<Row className='justify-content-center'>
-							<Col
-								xl={12}
-								lg={12}
-								md={12}
-								sm={12}
-								className='mb-2'>
+						<Row>
+							<Col className='mb-2'>
 								<div className='text-center mb-2'>
 									<span className='ls-md fs-5 text-primary fw-bold'>
-										THESE ARE SOME OF THE OTHER SKILLS I'VE
-										DEVELOPED OVER THE PAST YEAR
+										BELOW ARE SOME OF THE OTHER SKILLS I
+										HAVE DEVELOPED
 									</span>
 								</div>
 							</Col>
@@ -132,9 +169,9 @@ const About = (props) => {
 								xl={3}
 								lg={3}
 								md={3}
-								sm={12}
-								xs={12}
-								className='fw-bold px-5'>
+								sm={5}
+								xs={6}
+								className='fw-bold justify-content-center px-7'>
 								<ul>
 									<li>Smart Contracts</li>
 									<li>DApps</li>
@@ -154,8 +191,8 @@ const About = (props) => {
 								xl={3}
 								lg={3}
 								md={3}
-								sm={12}
-								xs={12}
+								sm={5}
+								xs={6}
 								className='mb-2 fw-bold px-5'>
 								<ul>
 									<li>API Development</li>

@@ -4,12 +4,8 @@ import { Col, Row, Container, Image } from 'react-bootstrap';
 import Header from '../../functions/Header';
 import BackToTop from '../../functions/BackToTop';
 import { CopyBlock, dracula } from 'react-code-blocks';
-import { hungerGamesCode } from './exampleTxt';
-import hg1 from '../../../assets/images/hunger-games/hunger-games-1.jpg';
-import hg2 from '../../../assets/images/hunger-games/hunger-games-2.jpg';
-import hg3 from '../../../assets/images/hunger-games/hunger-games-3.jpg';
-import hg4 from '../../../assets/images/hunger-games/hunger-games-4.jpg';
-import hg5 from '../../../assets/images/hunger-games/hunger-games-5.jpg';
+import { hungerGamesCode } from 'data/exampleTxt';
+
 const Ethers = (props) => {
 	useEffect(() => {
 		document.title = 'Blockchain Trucker - Hunger Games';

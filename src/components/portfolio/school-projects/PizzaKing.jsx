@@ -5,13 +5,23 @@ import Header from '../../functions/Header';
 import ModalImage from 'react-modal-image';
 import BackToTop from '../../functions/BackToTop';
 import { CopyBlock, dracula } from 'react-code-blocks';
-import pkHome from '../../../assets/images/pizza-king/pizzaKingHomeLarge.jpg';
-import pkMenu from '../../../assets/images/pizza-king/pizzaKingMenuLarge.jpg';
-import pkAccount from '../../../assets/images/pizza-king/pizza-king-account.png';
-import pkRegistration from '../../../assets/images/pizza-king/PizzaKingSignupLarge.jpg';
-import pkSignin from '../../../assets/images/pizza-king/PizzaKingSigninLarge.jpg';
-import pkCheckout from '../../../assets/images/pizza-king/pizza-king-checkout.png';
-import { menuExample, cartExample, registrationExample } from './projectTxt';
+import pkHome from 'assets/images/pizza-king/pizzaKingHomeLarge.jpg';
+import pkMenu from 'assets/images/pizza-king/pizzaKingMenuLarge.jpg';
+import pkAccount from 'assets/images/pizza-king/pizza-king-account.png';
+import pkRegistration from 'assets/images/pizza-king/PizzaKingSignupLarge.jpg';
+import pkSignin from 'assets/images/pizza-king/PizzaKingSigninLarge.jpg';
+import pkCheckout from 'assets/images/pizza-king/pizza-king-checkout.png';
+import {
+	menuExample,
+	cartExample,
+	registrationExample,
+	pkTxt1,
+	pkTxt2,
+	pkTxt3,
+	pkTxt4,
+	pkTxt5,
+	pkTxt6,
+} from 'data/projectTxt';
 
 const PizzaKing = (props) => {
 	useEffect(() => {
@@ -34,21 +44,9 @@ const PizzaKing = (props) => {
 								sm={12}
 								xs={12}
 								className='mb-3'>
-								<p>
-									{
-										"The Pizza King app was my final project for my Full Stack Developer bootcamp. It was my first React application and the first time I used MongoDB in an application. I hadn't taught myself Bootstrap yet when I made this application, but I did continue to expand my knowledge base with CSS on this project. The backend is a Node.js environment with an Express server."
-									}
-								</p>
-								<p>
-									{
-										'Throughout this example, I will show images of the frontend of the section being discussed as well as the relevant code.'
-									}
-								</p>
-								<p>
-									{
-										'The home and menu pages are the only pages that guest users can access. Since this was my first time using React, I did not know how to transfer state or hoist so the Menu component uses cookies to store the cart data as an array. The cart icon in the navigation bar displays how many items are in the cart using the length of the cart.'
-									}
-								</p>
+								<p>{pkTxt1}</p>
+								<p>{pkTxt2}</p>
+								<p>{pkTxt3}</p>
 							</Col>
 						</Row>
 						<Row className='justify-content-center mb-5'>
@@ -103,22 +101,7 @@ const PizzaKing = (props) => {
 						<Row className='justify-content-center mb-3'>
 							<Col xl={10} lg={10} md={10} sm={12} xs={12}>
 								<div>
-									<p>
-										When the user clicks the Review Order
-										button, they are routed to the login
-										page. If the user does not have an
-										account set up yet, there is a link to
-										the registration page. Both pages are
-										similar in layout and functionality.
-										They have full client-side as well as
-										server-side and database validation.
-										User context is kept using the state.
-										Password encryption and validation is
-										completed using Bcrypt. The user context
-										is then encoded on the backend with JSON
-										Web Token and sent to the frontend as a
-										cookie.
-									</p>
+									<p>{pkTxt4}</p>
 								</div>
 							</Col>
 						</Row>
@@ -180,17 +163,7 @@ const PizzaKing = (props) => {
 								xs={12}
 								className='mb-3'>
 								<div>
-									<p>
-										When login is completed, the user is
-										routed to the My Account page. On this
-										page, the user can review and remove
-										items from the cart, continue to
-										checkout, or review the past three
-										orders and choose to order them again.
-										There is client-side validation as well
-										as server-side and database validation
-										to ensure empty orders are not placed.
-									</p>
+									<p>{pkTxt5}</p>
 								</div>
 							</Col>
 						</Row>
@@ -244,12 +217,7 @@ const PizzaKing = (props) => {
 								xs={12}
 								className='mb-3'>
 								<div>
-									<p>
-										Once the order was successfully created,
-										the user will be routed to the Order
-										Placed page. The new order will then
-										show on their My Account page.
-									</p>
+									<p>{pkTxt6}</p>
 								</div>
 							</Col>
 						</Row>

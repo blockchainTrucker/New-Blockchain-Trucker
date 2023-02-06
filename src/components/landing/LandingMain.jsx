@@ -24,8 +24,9 @@ const MainLanding = () => {
 						<Col
 							xl={{ span: 7, offset: 2 }}
 							lg={{ span: 8, offset: 1 }}
-							sm={{ span: 8, offset: 1 }}
-							xs={{ span: 11 }}
+							md={{ span: 11, offset: 1 }}
+							sm={{ span: 12 }}
+							xs={{ span: 12 }}
 							className='mt-lg-10 mt-6 order-md-1 mb-10'>
 							{/* Heading */}
 							<h1 className='display-2 ms-1 mb-5 fw-bold'>
@@ -91,7 +92,7 @@ const MainLanding = () => {
 
 					{/* Trusted By logo */}
 					<FrameworkLogos
-						title='BELOW ARE THE FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH'
+						title='BELOW ARE THE ENVIRONMENTS FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH'
 						logos={LogoList1}
 						limit={6}
 					/>

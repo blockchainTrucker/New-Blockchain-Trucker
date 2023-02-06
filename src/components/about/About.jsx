@@ -121,14 +121,14 @@ const About = () => {
 						<Row className='justify-content-center'>
 							<Col xl={9} lg={9} md={12} sm={12}>
 								<FrameworkLogos
-									title='BELOW ARE THE FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH'
+									title='BELOW ARE THE ENVIRONMENTS FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH'
 									logos={LogoList}
 									limit={6}
 								/>
 							</Col>
 						</Row>
 						<Row className='justify-content-center'>
-							<Col xl={9} lg={9} md={12} sm={12} className='mb-2'>
+							<Col xl={9} lg={9} md={12} sm={12}>
 								<div>
 									<p>
 										You may be wondering why I chose the

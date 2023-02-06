@@ -36,12 +36,12 @@ const LogosTopHeadingInverseDark = ({ logos, title, limit }) => {
 	return (
 		<Row className='mt-5'>
 			<Col xl={12} lg={12} md={12} s={12} xs={12}>
-				<div className='text-center mb-3 px-md-8'>
+				<div className='text-center mb-3'>
 					<span className='ls-md fs-5 text-primary fw-bold'>
 						{title}
 					</span>
 				</div>
-				<Row className='text-center'>
+				<Row className='text-center mb-3'>
 					<LogosList />
 				</Row>
 			</Col>

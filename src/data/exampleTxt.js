@@ -16,15 +16,12 @@ export const hashingTxt2 =
 	'Hashing is used in many fields, such as data indexing, data integrity, and digital signature. The most commonly used Hash functions are MD5, SHA1, SHA256 and SHA3. The most secure and recommended for password hashing are Bcrypt, Scrypt, Argon2 and PBKDF2.';
 
 export const hashingTxt3 =
-	'Bcrypt is a widely used and well-regarded password hashing algorithm. It is considered to be one of the best choices for hashing passwords because it is designed to be slow and computationally expensive, making it difficult for an attacker to crack hashed passwords through a brute force attack. Additionally, it uses a unique salt for each password and automatically handles the process of salting and hashing the password, which helps protect against attacks that use precomputed tables such as rainbow tables.';
+	'Bcrypt is a widely used and well-regarded password hashing algorithm. It is considered to be one of the best choices for hashing passwords because it is designed to be slow and computationally expensive, making it difficult for an attacker to crack hashed passwords through a brute force attack. Additionally, it uses a unique salt for each password and automatically handles the process of salting and hashing the password, which helps protect against attacks that use precomputed tables such as rainbow tables. Therefore, even if the same password is used, the resulting hash will be different each time because of the unique salt used for each password.';
 
 export const hashingTxt4 =
-	'Because Bcrypt uses a unique salt for each password and the cost factor can also be adjusted. The use of a unique salt for each password makes it difficult for an attacker to use precomputed tables, such as rainbow tables, to crack the password. Additionally, the cost factor can be adjusted to increase the computational expense of hashing the password, making it more difficult for an attacker to crack the password through a brute force attack. Therefore, even if the same password is used, the resulting hash will be different each time because of the unique salt and cost factor used for each password.';
+	'Bcrypt is also designed to be adaptive, which means that the computational expense of hashing a password can be increased as computers become faster. This makes it difficult for an attacker to use faster hardware and brute force to crack the hashed passwords.';
 
 export const hashingTxt5 =
-	'Bcrypt is also designed to be adaptive, which means that the computational expense of hashing a password can be increased as computers become faster. This makes it difficult for an attacker to use faster hardware to crack the hashed passwords.';
-
-export const hashingTxt6 =
 	'Below is a basic example of hashing a password using Bcrypt.';
 
 export const hungerGamesCode = `//SPDX-License-Identifier: GPL-3.0

@@ -1,317 +1,362 @@
 // import node module libraries
-import React, { Fragment, useEffect } from 'react';
-import { Col, Row, Container, Image } from 'react-bootstrap';
-import Header from '../../functions/Header';
+import React, { Fragment, useEffect } from "react";
+import { Col, Row, Container } from "react-bootstrap";
+import Header from "../../functions/Header";
+import ModalImage from "react-modal-image";
+import { CopyBlock, dracula } from "react-code-blocks";
+import CodeHeader from "../../functions/CodeHeader";
 
-import BackToTop from '../../functions/BackToTop';
-import vtHome from '../../../assets/images/video-tutorials/video-tutorials-home-loggedout.png';
-import vtHome2 from '../../../assets/images/video-tutorials/video-tutorials-home-loggedin.png';
-import vtReg from '../../../assets/images/video-tutorials/video-tutorials-reg.png';
-import vtSignin from '../../../assets/images/video-tutorials/video-tutorials-signin.png';
-import vtSearch from '../../../assets/images/video-tutorials/video-tutorials-search.png';
-import vtDetails from '../../../assets/images/video-tutorials/video-tutorials-details-unsubscribed.png';
-import vtDetails2 from '../../../assets/images/video-tutorials/video-tutorials-details-subscribed.png';
-import vtAccount from '../../../assets/images/video-tutorials/video-tutorials-account.png';
-import vtEdit from '../../../assets/images/video-tutorials/video-tutorials-edit.png';
-import vtCreate from '../../../assets/images/video-tutorials/video-tutorials-create.png';
-
+import BackToTop from "../../functions/BackToTop";
+import vtHome from "../../../assets/images/video-tutorials/video-tutorials-home-loggedout.png";
+import vtHome2 from "../../../assets/images/video-tutorials/video-tutorials-home-loggedin.png";
+import vtReg from "../../../assets/images/video-tutorials/video-tutorials-reg.png";
+import vtSignin from "../../../assets/images/video-tutorials/video-tutorials-signin.png";
+import vtSearch from "../../../assets/images/video-tutorials/video-tutorials-search.png";
+import vtDetails from "../../../assets/images/video-tutorials/video-tutorials-details-unsubscribed.png";
+import vtDetails2 from "../../../assets/images/video-tutorials/video-tutorials-details-subscribed.png";
+import vtAccount from "../../../assets/images/video-tutorials/video-tutorials-account.png";
+import vtEdit from "../../../assets/images/video-tutorials/video-tutorials-edit.png";
+import vtCreate from "../../../assets/images/video-tutorials/video-tutorials-create.png";
+import {
+  vtTxt1,
+  vtTxt2,
+  vtTxt3,
+  vtTxt4,
+  vtTxt5,
+  vtTxt6,
+  vtTxt7,
+  vtExample1,
+  vtExample2,
+  vtExample3,
+  vtExample4,
+  vtExample5,
+  vtExample6,
+  vtExample7,
+  vtExample8,
+  vtExample9,
+  vtExample10,
+} from "data/projectTxt";
 const PizzaKing = (props) => {
-	useEffect(() => {
-		document.title = 'Blockchain Trucker - Video Tutorials';
-	}, []);
-	return (
-		<Fragment>
-			<div className='py-4 py-lg-8 pb-14 bg-white '>
-				<Container>
-					<Fragment>
-						<Header
-							title='Video Tutorials'
-							github='https://github.com/jwachtel96/Video-Tutorials'
-						/>
-						<Row className='justify-content-center'>
-							<Col
-								xl={10}
-								lg={10}
-								md={12}
-								sm={12}
-								className='mb-2'>
-								<div>
-									<p>
-										The Video Tutorials app was my module 5
-										project and the focus was on the
-										backend. I used Node.js, Express.js, and
-										MongoDB to create it. All of the CSS is
-										custom.
-									</p>
-								</div>
-							</Col>
-						</Row>
-						<Row className='justify-content-center'>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={vtHome}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={vtHome2}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
-						<Row className='justify-content-center'>
-							<Col
-								xl={10}
-								lg={10}
-								md={12}
-								sm={12}
-								className='mb-10'>
-								<div>
-									<p>
-										This app has two Home pages, one for
-										guest users and one for authenticated
-										users. When the user reaches the guest
-										Home page, a query is sent to the
-										database for the tutorials, and the
-										response is sorted by subscribed users.
-										The top three tutorials are displayed.
-										When the user clicks a tutorial, they
-										are routed to the Login page.
-									</p>
-								</div>
-							</Col>
-						</Row>
-						<Row className='justify-content-center'>
-							<Col xl={10} lg={10} md={12} sm={12}>
-								<div>
-									<p>
-										The Login and Registration pages are
-										created similarly, and have client-side
-										as well as server-side and database
-										validation. They use Bcrypt for password
-										encryption and authentication. JSON Web
-										Token was used for user information
-										encoding and decoding. The user
-										information is then stored as a cookie.
-									</p>
-								</div>
-							</Col>
-						</Row>
-						<Row className='justify-content-center mb-3'>
-							<Col xl={5} lg={5} md={5} sm={12} xs={12}>
-								<Image
-									src={vtReg}
-									alt=''
-									className='img-fluid rounded-3 mb-2'
-								/>
-							</Col>
-							<Col xl={5} lg={5} md={5} sm={12} xs={12}>
-								<Image
-									src={vtSignin}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
-						<Row className='justify-content-center mb-10'>
-							<Col xl={10} lg={10} md={12} sm={12}>
-								<div>
-									<p>
-										After logging in, the user is routed to
-										the Home page for authenticated users.
-										This page shows all of the public
-										tutorials sorted by subscribers. The
-										user can click on a tutorial to be
-										brought to the Details page.
-									</p>
-								</div>
-							</Col>
-						</Row>
-						<Row className='justify-content-center mb-10'>
-							<Col
-								xl={5}
-								lg={5}
-								md={12}
-								sm={12}
-								className='mb-2 py-xl-10 py-lg-7'>
-								{/* Blog Content */}
-								<div>
-									<p>
-										The user has the option to search for a
-										tutorial. The algorithm is simple and
-										searches by title and then user.
-									</p>
-								</div>
-							</Col>
-							<Col xl={5} lg={5} md={5} sm={12} xs={12}>
-								<Image
-									src={vtSearch}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
-						<Row className='justify-content-center'>
-							<Col
-								xl={10}
-								lg={10}
-								md={12}
-								sm={12}
-								className='mb-2'>
-								<div className='text-center'>
-									<p>
-										The Details page has an image for the
-										tutorial short description.
-									</p>
-								</div>
-							</Col>
-						</Row>
-						<Row className='justify-content-center'>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={vtDetails}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-							<Col
-								xl={5}
-								lg={5}
-								md={6}
-								sm={8}
-								xs={10}
-								className='mb-6'>
-								<Image
-									src={vtDetails2}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
-						<Row className='justify-content-center'>
-							<Col
-								xl={10}
-								lg={10}
-								md={10}
-								sm={10}
-								className='mb-10 text-center'>
-								<div>
-									<p>
-										Once the user is subscribed to the
-										tutorial, the embeded video will load
-										and they will be able to watch the
-										tutorial.
-									</p>
-								</div>
-							</Col>
-						</Row>
-						<Row className='justify-content-center mb-10'>
-							<Col
-								xl={5}
-								lg={5}
-								md={5}
-								sm={10}
-								className='py-xl-10 py-lg-7'>
-								{/* Blog Content */}
-								<div>
-									<p>
-										On the navigation bar, if the user
-										clicks the welcome message with their
-										name, they will be routed to the Profile
-										page. The user's information will be
-										displayed, as well as all tutorials the
-										user uploaded.
-									</p>
-								</div>
-							</Col>
-							<Col xl={5} lg={5} md={5} sm={10} xs={10}>
-								<Image
-									src={vtAccount}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
-						<Row className='justify-content-center mb-10'>
-							<Col xl={5} lg={5} md={12} sm={12} xs={12}>
-								<Image
-									src={vtEdit}
-									alt=''
-									className='img-fluid rounded-3 mb-2'
-								/>
-							</Col>
-							<Col
-								xl={5}
-								lg={5}
-								md={12}
-								sm={12}
-								className='py-xl-10 py-lg-7'>
-								{/* Blog Content */}
-								<div className='text-center'>
-									<p>
-										The user will have the option to delete
-										or edit any tutorial previously
-										uploaded.
-									</p>
-								</div>
-							</Col>
-						</Row>
-						<Row className='justify-content-center'>
-							<Col
-								xl={5}
-								lg={5}
-								md={12}
-								sm={12}
-								className='py-xl-8 py-lg-7'>
-								{/* Blog Content */}
-								<div>
-									<p>
-										By clicking Creat a Tutorial on the
-										navigation bar, the user will be brought
-										to the Create Tutorial page. This page
-										uses client-side as well as server-side
-										and database validation to ensure valid
-										data is entered. The user also has the
-										option to make the tutorial public or
-										private. Public is the default option.
-									</p>
-								</div>
-							</Col>
-							<Col xl={5} lg={5} md={12} sm={12} xs={12}>
-								<Image
-									src={vtCreate}
-									alt=''
-									className='img-fluid rounded-3'
-								/>
-							</Col>
-						</Row>
-						<BackToTop />
-					</Fragment>
-				</Container>
-			</div>
-		</Fragment>
-	);
+  useEffect(() => {
+    document.title = "Blockchain Trucker - Video Tutorials";
+  }, []);
+  return (
+    <Fragment>
+      <div className="py-4 py-lg-8 pb-14 bg-white ">
+        <Container>
+          <Fragment>
+            <Header
+              title="Video Tutorials"
+              description="Click here to see the full repository"
+              github="https://github.com/jwachtel96/Video-Tutorials"
+            />
+            <Row className="justify-content-center">
+              <Col xl={10} lg={10} md={10} sm={12} xs={12} className="mb-3">
+                <p>{vtTxt1}</p>
+                <p>{vtTxt2}</p>
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtHome}
+                  large={vtHome}
+                  alt="Video Tutorials guest Home"
+                />
+              </Col>
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtHome2}
+                  large={vtHome2}
+                  alt="Video Tutorials authenticated user Home"
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="home backend code" />
+                <CopyBlock
+                  text={vtExample1}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="home frontend code" />
+                <CopyBlock
+                  text={vtExample2}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center">
+              <Col xl={10} lg={10} md={10} sm={12} xs={12} className="mb-3">
+                <p>{vtTxt3}</p>
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtReg}
+                  large={vtReg}
+                  alt="Video Tutorials guest Home"
+                />
+              </Col>
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtSignin}
+                  large={vtSignin}
+                  alt="Video Tutorials authenticated user Home"
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="registration backend code" />
+                <CopyBlock
+                  text={vtExample3}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="registration frontend code" />
+                <CopyBlock
+                  text={vtExample4}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center">
+              <Col xl={10} lg={10} md={10} sm={12} xs={12} className="mb-3">
+                <p>{vtTxt4}</p>
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtDetails}
+                  large={vtDetails}
+                  alt="Video Tutorials guest Home"
+                />
+              </Col>
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtDetails2}
+                  large={vtDetails2}
+                  alt="Video Tutorials authenticated user Home"
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="tutorial details backend code" />
+                <CopyBlock
+                  text={vtExample5}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="tutorial details frontend code" />
+                <CopyBlock
+                  text={vtExample6}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center">
+              <Col xl={10} lg={10} md={10} sm={12} xs={12} className="mb-3">
+                <p>{vtTxt5}</p>
+                <p>{vtTxt6}</p>
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtAccount}
+                  large={vtAccount}
+                  alt="Video Tutorials guest Home"
+                />
+              </Col>
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtSearch}
+                  large={vtSearch}
+                  alt="Video Tutorials authenticated user Home"
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="profile backend code" />
+                <CopyBlock
+                  text={vtExample7}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="search function backend code" />
+                <CopyBlock
+                  text={vtExample8}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center">
+              <Col xl={10} lg={10} md={10} sm={12} xs={12} className="mb-3">
+                <p>{vtTxt7}</p>
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtCreate}
+                  large={vtCreate}
+                  alt="Video Tutorials guest Home"
+                />
+              </Col>
+              <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <ModalImage
+                  className="pop corners"
+                  small={vtEdit}
+                  large={vtEdit}
+                  alt="Video Tutorials authenticated user Home"
+                />
+              </Col>
+            </Row>
+            <Row className="justify-content-center mb-5">
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="create backend code" />
+                <CopyBlock
+                  text={vtExample9}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+                <CodeHeader header="create frontend code" />
+                <CopyBlock
+                  text={vtExample10}
+                  language={"jsx"}
+                  showLineNumbers={false}
+                  theme={dracula}
+                  customStyle={{
+                    height: "400px",
+                    overflowY: "scroll",
+                    margin: "0px 0.75rem",
+                    borderRadius: "5px",
+                    boxShadow: "1px 2px 3px rgba(0,0,0,0.35)",
+                    fontSize: "0.75rem",
+                  }}
+                />
+              </Col>
+            </Row>
+            <Header
+              description="Click here to see the full repository"
+              github="https://github.com/jwachtel96/Video-Tutorials"
+            />
+            <BackToTop />
+          </Fragment>
+        </Container>
+      </div>
+    </Fragment>
+  );
 };
 
 export default PizzaKing;

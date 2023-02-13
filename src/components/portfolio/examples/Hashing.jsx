@@ -13,7 +13,6 @@ import {
 	hashingTxt3,
 	hashingTxt4,
 	hashingTxt5,
-	hashingTxt6,
 } from '../../../data/exampleTxt';
 
 const PasswordHashing = (props) => {
@@ -38,7 +37,6 @@ const PasswordHashing = (props) => {
 									<p>{hashingTxt3}</p>
 									<p>{hashingTxt4}</p>
 									<p>{hashingTxt5}</p>
-									<p>{hashingTxt6}</p>
 								</div>
 							</Col>
 						</Row>

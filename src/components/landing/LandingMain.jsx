@@ -92,7 +92,7 @@ const MainLanding = () => {
 
 					{/* Trusted By logo */}
 					<FrameworkLogos
-						title='BELOW ARE THE ENVIRONMENTS FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH'
+						title='BELOW ARE THE ENVIRONMENTS AND FRAMEWORKS I AM MOST COMFORTABLE WITH'
 						logos={LogoList1}
 						limit={6}
 					/>

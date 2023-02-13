@@ -17,7 +17,7 @@ const Contact = () => {
 		<Container fluid className='bg-white'>
 			<Row className='align-items-center'>
 				<Col lg={6} md={12} sm={12}>
-					<div className='px-xl-20 px-md-8 px-4 py-8 py-lg-0 pb-lg-20'>
+					<div className='px-xl-15 px-md-8 px-4 py-8 py-lg-0 pb-lg-20'>
 						<div>
 							<h1 className='display-5 fw-bold text-primary'>
 								Get In Touch

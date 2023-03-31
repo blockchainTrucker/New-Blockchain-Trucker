@@ -256,6 +256,26 @@ export default function Menu(props) {
 	);
 }`;
 
+export const homeExample = `import { useEffect } from "react";
+import Logo from "./Logo";
+import Info from "./Info";
+import Alert from "./Alert";
+
+export default function Main(props) {
+	useEffect(() => {
+		document.title = "Pizza King - Home";
+	}, []);
+
+	return (
+		<div className="container">
+			<Alert />
+			<Logo />
+			<Info />
+		</div>
+	);
+}
+`;
+
 export const cartExample = `import { useCookies } from "react-cookie";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -504,6 +524,170 @@ export default function Registration(props) {
 	);
 }`;
 
+export const registrationBackend = `const saltConfig = require("../config/config").saltRounds;
+let bcrypt = require("bcrypt");
+const User = require("../models/User");
+
+module.exports = function registerUser(req, res, next) {
+	let email = req.body.email.toLowerCase().trim();
+	let firstName = req.body.firstName;
+	let lastName = req.body.lastName;
+	let password = req.body.password;
+	let emailRegex = new RegExp(/[a-z0-9]+[a-z0-9]*@[a-z0-9]*.\w\w\w/i);
+	let nameRegex = new RegExp(/[a-zA-Z]{2,24}/);
+	let passRegex = new RegExp(/[\S+]{6,24}/);
+	let firstGood = false;
+	let lastGood = false;
+	let emailGood = false;
+	let passGood = false;
+	if (!nameRegex.test(firstName)) {
+		firstGood = false;
+	} else {
+		firstGood = true;
+	}
+	if (!nameRegex.test(lastName)) {
+		lastGood = false;
+	} else {
+		lastGood = true;
+	}
+	if (!emailRegex.test(email)) {
+		emailGood = false;
+	} else {
+		emailGood = true;
+	}
+	if (!passRegex.test(password)) {
+		passGood = false;
+	} else {
+		passGood = true;
+	}
+	if (
+		firstGood === false ||
+		lastGood === false ||
+		emailGood === false ||
+		passGood === false
+	) {
+		res.status(401);
+		res.send(JSON.stringify("validation failed"));
+		return;
+	} else {
+		User.find({ email: email }).then((users) => {
+			if (users.length > 0) {
+				emailGood = false;
+				console.log("Email is already in use");
+				let error = JSON.stringify("Email is already in use");
+				res.send(error);
+				return;
+			}
+			if (emailGood && firstGood && lastGood && passGood) {
+				bcrypt.hash(password, saltConfig, function (err, hash) {
+					new User({ firstName, lastName, email, password: hash })
+						.save()
+						.then((createdUser) =>
+							res.send(JSON.stringify("success"))
+						)
+						.catch((err) => {
+							console.log(err);
+						});
+				});
+			} else {
+				res.status(401);
+				res.send(JSON.stringify("validation failed"));
+			}
+		});
+	}
+};
+`;
+
+export const pastOrders = `import { useCookies } from "react-cookie";
+import { useEffect } from "react";
+const jwt = require("jsonwebtoken");
+
+export default function PastOrders(props) {
+	const [cookies, setCookies] = useCookies();
+	let token = cookies.user;
+	let user = jwt.decode(token);
+	let pastOrders = [];
+
+	useEffect(() => {
+		function pastOrdersGetter(id) {
+			const url = "http://localhost:9999/api/past-orders";
+			let data = JSON.stringify({
+				userID: id,
+			});
+			let resources = {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: data,
+			};
+
+			return fetch(url, resources).then((res) => res.json());
+		}
+		pastOrdersGetter(user.id).then((res) => {
+			setCookies("pastOrders", res);
+			return;
+		});
+	}, [user.id, setCookies]);
+
+	if (cookies.pastOrders !== undefined) {
+		for (let i = 0; i < cookies.pastOrders.length; i++) {
+			pastOrders.push(jwt.decode(cookies.pastOrders[i]));
+		}
+	}
+
+	return (
+		<div>
+			<h3>Recent Orders</h3>
+			<div className="container">
+				{pastOrders.map((order, index) => {
+					return (
+						<div key={index} className="pastOrders">
+							<p>{order.dateTime}</p>
+							<table>
+								<tbody>
+									{order.items.map((item, index2) => {
+										return (
+											<tr>
+												<td	className="item">
+													{item.name}
+												</td>
+												<td	className="price">
+													{item.price}
+												</td>
+											</tr>
+										);
+									})}
+									<tr>
+										<td className="item-total">
+											<h4>Total w/ tax:</h4>
+										</td>
+										<td className="item-total">
+											<h4>{order.total}</h4>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button
+								onClick={() => {
+									setCookies("cart", order.items);
+									setCookies(
+										"cartCount",
+										cookies.cart.length
+									);
+								}}
+							>
+								Order Again
+							</button>
+						</div>
+					);
+				})}
+			</div>
+		</div>
+	);
+}
+`;
+
 export const pkTxt1 =
   "The Pizza King app was my final project for my Full Stack Developer bootcamp. It was my first React application and the first time I used MongoDB in an application. I hadn't taught myself Bootstrap yet when I made this application, but I did continue to expand my knowledge base with CSS on this project. The backend is a Node.js environment with an Express server.";
 
@@ -514,7 +698,7 @@ export const pkTxt3 =
   "The home and menu pages are the only pages that guest users can access. Since this was my first time using React, I did not know how to transfer state or hoist so the Menu component uses cookies to store the cart data as an array. The cart icon in the navigation bar displays how many items are in the cart using the length of the cart.";
 
 export const pkTxt4 =
-  "When the user clicks the Review Order button, they are routed to the login page. If the user does not have an account set up yet, there is a link to the registration page. Both pages are similar in layout and functionality. They have full client-side as well as server-side and database validation. User context is kept using the state. Password encryption and validation is completed using Bcrypt. The user context is then encoded on the backend with JSON Web Token and sent to the frontend as a cookie.";
+  "When the user clicks the Review Order button, they are routed to the login page. If the user does not have an account set up yet, there is a link to the registration page. Both pages are similar in layout and functionality. They have full client-side as well as server-side and database validation. User context is kept using the state. Password hashing and verification is completed using Bcrypt. The user context is then encoded on the backend with JSON Web Token and sent to the frontend as a cookie.";
 
 export const pkTxt5 =
   "When login is completed, the user is routed to the My Account page. On this page, the user can review and remove items from the cart, continue to checkout, or review the past three orders and choose to order them again. There is client-side validation as well as server-side and database validation to ensure empty orders are not placed.";
@@ -1095,3 +1279,403 @@ export const vtExample10 = `<div class="container">
 </div>`;
 
 //CookUni
+export const cuTxt1 = `The CookUni app was my module 4 project and also my first project as a developer. It's focus was the on the frontend and showing an understanding of REST and CRUD. My school provided a template to use for this project since our main focus was on JavaScript, but I decided to build it from scratch to give myself an opportunity to really play around with CSS and HTML for the first time as well. I used, Sammy.js for the routing, Webpack for the server, Handlebars for the view engine, and Firebase Realtime database.`;
+
+export const cuTxt2 = `When the user reaches the Recipes page, a querry is sent to the Firebase Realtime Database and receives the array of recepies. The map function is used to restructure the array and then it is added to the page's context. It is then displayed using the Handlebars #each function with the template I designed.`;
+
+export const cuTxt3 = `When the user reaches the Details page, the request for the recepie is sent to the database and it is received as an object. It is then destructured by name, description, image, and ingredients and then they are added to the page's context. Then everything is displayed using the template. The ingredients are in an array and they are displayed in a list using the Handlebars #each function.`;
+
+export const cuTxt4 = `I created the Registration and Sign In pages are created similarly. The were my my first time creating validation for forms. In projects I completed later, I go deeper into validation and sanitization. For this project I only used simple REGEX for the validation. Each line is checked by character type and length. Each section of the form has it's own error message available. Upon successful registration, the user is routed to the sign in page. Once signed in, they are routed to the My Proile page.`;
+
+export const cuTxt5 = `There are two sections in the My Profile page. The first section displays the user's name, username, and has a button to create a new recepie. The second section is titled My Recepies and displays all the recepies the user has uploaded using the Handlebars #each function. This is done by using Javascript's native filter function on the array of recepies to only keep the ones created by the user. A button was added to each recepie to allow them to delete it.`;
+
+export const cuTxt6 = `The Add a Recipe page was developed similarly to the Registration and Sign In pages with it's layout. When the user submits the form, the data is put together within an object, and then it is sent in a post request to the database. I did not add any validation or sanitization to this part of the project do to time limitations, but a full check of all of the incoming data would be ideal for this kind of form.
+`;
+
+export const cuExample1 = `this.get("#/home", function (context) {
+	if (user.firstName != "") {
+		context.loggedIn = true;
+	} else {
+		context.loggedIn = false;
+	}
+	context.user = user;
+
+	context
+		.loadPartials({
+			header: "../views/header.hbs",
+			footer: "../views/footer.hbs",
+		})
+		.then(function () {
+			this.partial("../views/home.hbs");
+		});
+});`;
+
+export const cuExample2 = `{{>header}}
+<section class="homeMain">
+	<div>
+		<img id="homeImg" src="images/bmk-img.png" />
+		<h2>Cooking University</h2>
+		<p>
+		 They say food passes through the stomach, we say that food passes through CookUni...
+		</p>
+		<a 
+		 href="#/recipes"><button id="showRecipes">SEE OUR RECIPES</button>
+		</a>
+	</div>
+</section>
+{{>footer}}`;
+
+export const cuExample3 = `{{>header}}
+<div class="container">
+	{{#each recipes}}
+		<div id="{{id}}" class="recipes">
+			<h2>{{name}}</h2>
+			<img src="{{imageURL}}" />
+			<a href="#/details/{{id}}"><button>DETAILS</button></a>
+		</div>
+	{{/each}}
+</div>
+{{>footer}}`;
+
+export const cuExample4 = `this.get("#/recipes", function (context) {
+	fetch("https://cookuni96-default-rtdb.firebaseio.com/recipes.json")
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (data) {
+			let recipesArray = Object.entries(data);
+
+			recipesArray = recipesArray.map(function (innerArray) {
+				let [recipesID, recipesObject] = innerArray;
+				recipesObject.id = recipesID;
+				return recipesObject;
+			});
+			context.recipes = recipesArray;
+			if (user.firstName != "") {
+				context.loggedIn = true;
+			} else {
+				context.loggedIn = false;
+			}
+			context.user = user;
+
+			context
+				.loadPartials({
+					header: "../views/header.hbs",
+					footer: "../views/footer.hbs",
+				})
+				.then(function () {
+					this.partial("../views/recipes.hbs");
+				});
+		})
+		.catch((err) => {
+			console.error(err);
+		});
+});`;
+
+export const cuExample5 = `this.get("#/details/:id", function (context) {
+		let recipeID = this.params.id;
+		fetch(
+			"https://cookuni96-default-rtdb.firebaseio.com/recipes/" + recipeID + ".json"
+		)
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (data) {
+				let recipe = data;
+				context.recipe = recipe;
+
+				if (user.firstName != "") {
+					context.loggedIn = true;
+				} else {
+					context.loggedIn = false;
+				}
+				context.user = user;
+
+				context.name = recipe.name;
+				context.description = recipe.description;
+				context.imageURL = recipe.imageURL;
+				context.ingredients = recipe.ingredients;
+				context
+					.loadPartials({
+						header: "../views/header.hbs",
+						footer: "../views/footer.hbs",
+					})
+					.then(function () {
+						this.partial("../views/details.hbs");
+					});
+			})
+			.catch((err) => {
+				console.error(err);
+			});
+});`;
+
+export const cuExample6 = `{{>header}}
+<div id="details">
+	<div class="container">
+		<h2>{{name}}</h2>
+		<div>
+			<img id="detailsImage" src="{{imageURL}}" />
+		</div>
+		<div class="ingredients">
+			<div>
+				<h3>Ingredients</h3>
+				<ul>
+					{{#each ingredients}}
+						<li>{{this}}</li>
+					{{/each}}
+				</ul>
+			</div>
+			<br />
+			<div>
+				<h3>Instructions</h3>
+				<p>{{description}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+{{>footer}}`;
+
+export const cuExample7 = `this.post("#/register", function (context) {
+		let userRegex = new RegExp(/[A-z]{1}[A-z0-9_]{2,24}/);
+		let nameRegex = new RegExp(/[a-zA-Z]{2,24}/);
+		let passRegex = new RegExp(/[\S+]{6,24}/);
+		let firstName = document.getElementById("regFirst");
+		let lastName = document.getElementById("regLast");
+		let user = document.getElementById("regUser");
+		let pass = document.getElementById("regPass");
+		let passRep = document.getElementById("regPassRep");
+		let firstGood = false;
+		let lastGood = false;
+		let userGood = false;
+		let passGood = false;
+		let passRepGood = false;
+
+		if (nameRegex.test(firstName.value) == false) {
+			let fnError = document.getElementById("fnError");
+			fnError.style.display = "block";
+		} else {
+			let fnError = document.getElementById("fnError");
+			fnError.style.display = "none";
+			firstGood = true;
+		}
+
+		if (nameRegex.test(lastName.value) == false) {
+			let lnError = document.getElementById("lnError");
+			lnError.style.display = "block";
+		} else {
+			let lnError = document.getElementById("lnError");
+			lnError.style.display = "none";
+			lastGood = true;
+		}
+
+		if (userRegex.test(user.value) == false) {
+			let usernameError = document.getElementById("usernameError");
+			usernameError.style.display = "block";
+		} else {
+			let usernameError = document.getElementById("usernameError");
+			usernameError.style.display = "none";
+			userGood = true;
+		}
+
+		if (passRegex.test(pass.value) == false) {
+			let passError = document.getElementById("passError");
+			passError.style.display = "block";
+		} else {
+			let passError = document.getElementById("passError");
+			passError.style.display = "none";
+			passGood = true;
+		}
+		if (passRep.value !== pass.value) {
+			let passRep = document.getElementById("passRepError");
+			passRep.style.display = "block";
+		} else {
+			let passRep = document.getElementById("passRepError");
+			passRep.style.display = "none";
+			passRepGood = true;
+		}
+
+		let data = {
+			firstName: this.params.regFirst,
+			lastName: this.params.regLast,
+			username: this.params.regUser,
+			password: this.params.regPass,
+		};
+		let url = "https://cookuni96-default-rtdb.firebaseio.com/users.json";
+		let headers = {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		};
+		if (firstGood && lastGood && userGood && passGood && passRepGood) {
+			fetch(url, headers)
+				.then(function (response) {
+					if (response.status == 200) {
+						user.firstName = data.firstName;
+						user.lastName = data.lastName;
+						user.username = data.username;
+						login = true;
+						let message = document.getElementById("alertMessage");
+						message.innerHTML = "Welcome + user.firstName + ", you are registered!";
+						let alert = document.getElementById("alert");
+						alert.style.display = "block";
+						window.location.hash = "#/profile";
+					} else {
+						console.error(response.status);
+					}
+				})
+				.catch((error) => {
+					console.error(error);
+				});
+		}
+});`;
+
+export const cuExample8 = `{{>header}}
+<section class="homeMain">
+	<form method="POST" action="#/register">
+		<h3>Sign up</h3>
+		<p id="fnError">First name must be at least 2 characters</p>
+		<input name="regFirst" id="regFirst" placeholder="First name" />
+		<p id="lnError">Last name must be at least 2 characters</p>
+		<input name="regLast" id="regLast" placeholder="Last name" />
+		<p id="usernameError">Username must be at least 3 characters</p>
+		<input name="regUser" id="regUser" placeholder="Create a username" />
+		<p id="passError">Password must be at least 6 characters</p>
+		<input name="regPass" type="password" id="regPass" placeholder="Create a password" />
+		<p id="passRepError">Passwords do not match</p>
+		<input name="regPassRep" type="password" id="regPassRep" placeholder="Repeat password" />
+		<button id="regButton">Submit</button>
+	</form>
+</section>
+{{>footer}}`;
+
+export const cuExample9 = `this.post("#/create", function (context) {
+		let data = {
+			name: this.params.name,
+			imageURL: this.params.imageURL,
+			description: this.params.description,
+			ingredients: this.params.ingredients,
+			user: this.params.user,
+		};
+		let url = "https://cookuni96-default-rtdb.firebaseio.com/recipes.json";
+		let headers = {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		};
+		if (
+			data.name !== "" &&
+			data.imageURL !== "" &&
+			data.description !== "" &&
+			data.ingredients !== ""
+		) {
+			fetch(url, headers)
+				.then(function (response) {
+					if (response.status == 200) {
+						window.location.hash = "#/profile";
+						let message = document.getElementById("alertMessage");
+						message.innerHTML = "Recipe Created!";
+						let alert = document.getElementById("alert");
+						alert.style.display = "block";
+					} else {
+						console.error(response.status);
+					}
+				})
+				.catch((error) => {
+					console.error(error);
+				});
+		} else {
+			console.error("Form Incomplete");
+		}
+});`;
+
+export const cuExample10 = `{{>header}}
+<section class="homeMain">
+	<form method="post" action="#/create" id="createForm">
+		<h3>Add a Recipe</h3>
+		<input name="user" value={{user.username}} style="display: none"/>
+		<input name="name" id="dishName" placeholder="Dish Name" />
+		<input name="imageURL" id="createImageURL" placeholder="Enter Image URL" />
+		<input name="description" id="createDescrition" placeholder="Enter Cooking Instructions" />
+        <area id="createIngredients">
+            <input name="ingredients" id="regPass" placeholder="Enter Ingredients" />
+        </area>
+		<button id="regButton">Submit</button>
+	</form>
+</section>
+{{>footer}}`;
+
+export const cuExample11 = `this.get("#/profile", function (context) {
+		if (user.firstName == "") {
+			context.redirect("#/login");
+		} else {
+			context.loggedIn = login;
+			fetch("https://cookuni96-default-rtdb.firebaseio.com/recipes.json")
+				.then(function (response) {
+					return response.json();
+				})
+				.then(function (data) {
+					let recipesArray = Object.entries(data);
+					recipesArray = recipesArray
+						.map(function (innerArray) {
+							let [recipeID, recipeObject] = innerArray;
+							recipeObject.id = recipeID;
+							return recipeObject;
+						})
+						.filter(function (recipe) {
+							return user.username == recipe.user;
+						});
+					context.recipes = recipesArray;
+					context.firstName = user.firstName;
+					context.lastName = user.lastName;
+					context.username = user.username;
+					if (user.firstName != "") {
+						context.loggedIn = true;
+					} else {
+						context.loggedIn = false;
+					}
+					context.user = user;
+
+					context
+						.loadPartials({
+							header: "../views/header.hbs",
+							footer: "../views/footer.hbs",
+						})
+						.then(function () {
+							this.partial("../views/profile.hbs");
+						});
+				});
+		}
+});`;
+
+export const cuExample12 = `{{>header}}
+<section class="profile">
+	<h2>My Profile</h2>
+	<div>
+		<h3>Name</h3>
+		<p>{{firstName}} {{lastName}}</p>
+		<h3>Username</h3>
+		<p>{{username}}</p>
+		<a href="#/create"><button>NEW RECIPE</button></a>
+	</div>
+</section>
+
+<h2 style="text-align: center;">My Recipes</h2>
+<div class="container">
+	{{#each recipes}}
+		<div id="{{id}}" class="recipes">
+			<h2>{{name}}</h2>
+			<img src="{{imageURL}}" />
+			<a href="#/delete/{{id}}"><button>DELETE</button></a>
+		</div>
+	{{else}}
+		<div class="container">
+			<h4 style="width:100%">No recipes to show...</h4>
+			<img style="width:250px" src="../images/404.jpg" />
+		</div>
+	{{/each}}
+</div>
+{{>footer}}`;

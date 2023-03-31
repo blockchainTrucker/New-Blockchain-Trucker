@@ -4,8 +4,7 @@ import { Col, Row, Container } from "react-bootstrap";
 import Header from "../../functions/Header";
 import ModalImage from "react-modal-image";
 import { CopyBlock, dracula } from "react-code-blocks";
-import CodeHeader from "../../functions/CodeHeader";
-
+import SmallHeader from "../../functions/SmallHeader";
 import BackToTop from "../../functions/BackToTop";
 import vtHome from "../../../assets/images/video-tutorials/video-tutorials-home-loggedout.png";
 import vtHome2 from "../../../assets/images/video-tutorials/video-tutorials-home-loggedin.png";
@@ -36,7 +35,7 @@ import {
   vtExample9,
   vtExample10,
 } from "data/projectTxt";
-const PizzaKing = (props) => {
+const PizzaKing = () => {
   useEffect(() => {
     document.title = "Blockchain Trucker - Video Tutorials";
   }, []);
@@ -58,6 +57,7 @@ const PizzaKing = (props) => {
             </Row>
             <Row className="justify-content-center mb-5">
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="home page" />
                 <ModalImage
                   className="pop corners"
                   small={vtHome}
@@ -66,6 +66,7 @@ const PizzaKing = (props) => {
                 />
               </Col>
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="authenticated home page" />
                 <ModalImage
                   className="pop corners"
                   small={vtHome2}
@@ -76,7 +77,7 @@ const PizzaKing = (props) => {
             </Row>
             <Row className="justify-content-center mb-5">
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="home backend code" />
+                <SmallHeader header="home backend code" />
                 <CopyBlock
                   text={vtExample1}
                   language={"jsx"}
@@ -93,7 +94,7 @@ const PizzaKing = (props) => {
                 />
               </Col>
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="home frontend code" />
+                <SmallHeader header="home frontend code" />
                 <CopyBlock
                   text={vtExample2}
                   language={"jsx"}
@@ -117,25 +118,27 @@ const PizzaKing = (props) => {
             </Row>
             <Row className="justify-content-center mb-5">
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="registration page" />
                 <ModalImage
                   className="pop corners"
                   small={vtReg}
                   large={vtReg}
-                  alt="Video Tutorials guest Home"
+                  alt="Video Tutorials Registration page"
                 />
               </Col>
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="sign in page" />
                 <ModalImage
                   className="pop corners"
                   small={vtSignin}
                   large={vtSignin}
-                  alt="Video Tutorials authenticated user Home"
+                  alt="Video Tutorials Sign In page"
                 />
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="registration backend code" />
+                <SmallHeader header="registration backend code" />
                 <CopyBlock
                   text={vtExample3}
                   language={"jsx"}
@@ -152,7 +155,7 @@ const PizzaKing = (props) => {
                 />
               </Col>
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="registration frontend code" />
+                <SmallHeader header="registration frontend code" />
                 <CopyBlock
                   text={vtExample4}
                   language={"jsx"}
@@ -176,25 +179,27 @@ const PizzaKing = (props) => {
             </Row>
             <Row className="justify-content-center mb-5">
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="tutorial details page" />
                 <ModalImage
                   className="pop corners"
                   small={vtDetails}
                   large={vtDetails}
-                  alt="Video Tutorials guest Home"
+                  alt="Video Tutorials Details page"
                 />
               </Col>
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="subscribed tutorial details page" />
                 <ModalImage
                   className="pop corners"
                   small={vtDetails2}
                   large={vtDetails2}
-                  alt="Video Tutorials authenticated user Home"
+                  alt="Video Tutorials Details page when subscribed"
                 />
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="tutorial details backend code" />
+                <SmallHeader header="tutorial details backend code" />
                 <CopyBlock
                   text={vtExample5}
                   language={"jsx"}
@@ -211,7 +216,7 @@ const PizzaKing = (props) => {
                 />
               </Col>
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="tutorial details frontend code" />
+                <SmallHeader header="tutorial details frontend code" />
                 <CopyBlock
                   text={vtExample6}
                   language={"jsx"}
@@ -236,25 +241,27 @@ const PizzaKing = (props) => {
             </Row>
             <Row className="justify-content-center mb-5">
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="profile page" />
                 <ModalImage
                   className="pop corners"
                   small={vtAccount}
                   large={vtAccount}
-                  alt="Video Tutorials guest Home"
+                  alt="Video Tutorials Profile page"
                 />
               </Col>
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="search results page" />
                 <ModalImage
                   className="pop corners"
                   small={vtSearch}
                   large={vtSearch}
-                  alt="Video Tutorials authenticated user Home"
+                  alt="Video Tutorials Search function"
                 />
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="profile backend code" />
+                <SmallHeader header="profile backend code" />
                 <CopyBlock
                   text={vtExample7}
                   language={"jsx"}
@@ -271,7 +278,7 @@ const PizzaKing = (props) => {
                 />
               </Col>
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="search function backend code" />
+                <SmallHeader header="search function backend code" />
                 <CopyBlock
                   text={vtExample8}
                   language={"jsx"}
@@ -295,25 +302,27 @@ const PizzaKing = (props) => {
             </Row>
             <Row className="justify-content-center mb-5">
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="create tutorial page" />
                 <ModalImage
                   className="pop corners"
                   small={vtCreate}
                   large={vtCreate}
-                  alt="Video Tutorials guest Home"
+                  alt="Video Tutorials Create Tutorial page"
                 />
               </Col>
               <Col className="mx-3" xl={5} lg={5} md={5} sm={12} xs={12}>
+                <SmallHeader header="edit tutorial page" />
                 <ModalImage
                   className="pop corners"
                   small={vtEdit}
                   large={vtEdit}
-                  alt="Video Tutorials authenticated user Home"
+                  alt="Video Tutorials Edit Tutorial page"
                 />
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="create backend code" />
+                <SmallHeader header="create backend code" />
                 <CopyBlock
                   text={vtExample9}
                   language={"jsx"}
@@ -330,7 +339,7 @@ const PizzaKing = (props) => {
                 />
               </Col>
               <Col xl={6} lg={6} md={12} sm={12} xs={12}>
-                <CodeHeader header="create frontend code" />
+                <SmallHeader header="create frontend code" />
                 <CopyBlock
                   text={vtExample10}
                   language={"jsx"}

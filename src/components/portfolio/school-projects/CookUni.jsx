@@ -65,7 +65,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="home route" />
                 <CopyBlock
                   text={cuExample1}
@@ -82,7 +82,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="home frontend" />
                 <CopyBlock
                   text={cuExample2}
@@ -117,7 +117,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="recepies route" />
                 <CopyBlock
                   text={cuExample4}
@@ -134,7 +134,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="recepies frontend" />
                 <CopyBlock
                   text={cuExample3}
@@ -169,7 +169,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="recepie details route" />
                 <CopyBlock
                   text={cuExample5}
@@ -186,7 +186,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="recepie details frontend" />
                 <CopyBlock
                   text={cuExample6}
@@ -230,7 +230,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="registration route" />
                 <CopyBlock
                   text={cuExample7}
@@ -247,7 +247,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="registration frontend" />
                 <CopyBlock
                   text={cuExample8}
@@ -282,7 +282,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="my profile route" />
                 <CopyBlock
                   text={cuExample11}
@@ -299,7 +299,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="my profile frontend" />
                 <CopyBlock
                   text={cuExample12}
@@ -334,7 +334,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="add recepie route" />
                 <CopyBlock
                   text={cuExample9}
@@ -351,7 +351,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="add recepie frontend" />
                 <CopyBlock
                   text={cuExample10}

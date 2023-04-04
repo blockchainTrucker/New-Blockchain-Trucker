@@ -392,7 +392,6 @@ export default function Cart(props) {
 	);
 }`;
 export const registrationExample = `import { Link } from "react-router-dom";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -691,11 +690,8 @@ export default function PastOrders(props) {
 export const pkTxt1 =
   "The Pizza King app was my final project for my Full Stack Developer bootcamp. It was my first React application and the first time I used MongoDB in an application. I hadn't taught myself Bootstrap yet when I made this application, but I did continue to expand my knowledge base with CSS on this project. The backend is a Node.js environment with an Express server.";
 
-export const pkTxt2 =
-  "Throughout this example, I will show images of the frontend of the section being discussed as well as the relevant code.";
-
 export const pkTxt3 =
-  "The home and menu pages are the only pages that guest users can access. Since this was my first time using React, I did not know how to transfer state or hoist so the Menu component uses cookies to store the cart data as an array. The cart icon in the navigation bar displays how many items are in the cart using the length of the cart.";
+  "The home and menu pages are the only pages that guest users can access. Since this was my first time using React, I did not know how to transfer state or hoist so the Menu component uses cookies to store the cart data as an array. The cart icon in the navigation bar displays how many items are in the cart using the length of the cart within a useEffect hook inside the Nav component.";
 
 export const pkTxt4 =
   "When the user clicks the Review Order button, they are routed to the login page. If the user does not have an account set up yet, there is a link to the registration page. Both pages are similar in layout and functionality. They have full client-side as well as server-side and database validation. User context is kept using the state. Password hashing and verification is completed using Bcrypt. The user context is then encoded on the backend with JSON Web Token and sent to the frontend as a cookie.";

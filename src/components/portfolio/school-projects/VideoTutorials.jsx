@@ -76,7 +76,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="home backend code" />
                 <CopyBlock
                   text={vtExample1}
@@ -93,7 +93,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="home frontend code" />
                 <CopyBlock
                   text={vtExample2}
@@ -137,7 +137,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="registration backend code" />
                 <CopyBlock
                   text={vtExample3}
@@ -154,7 +154,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="registration frontend code" />
                 <CopyBlock
                   text={vtExample4}
@@ -198,7 +198,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="tutorial details backend code" />
                 <CopyBlock
                   text={vtExample5}
@@ -215,7 +215,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="tutorial details frontend code" />
                 <CopyBlock
                   text={vtExample6}
@@ -260,7 +260,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="profile backend code" />
                 <CopyBlock
                   text={vtExample7}
@@ -277,7 +277,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="search function backend code" />
                 <CopyBlock
                   text={vtExample8}
@@ -321,7 +321,7 @@ const PizzaKing = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-5">
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="create backend code" />
                 <CopyBlock
                   text={vtExample9}
@@ -338,7 +338,7 @@ const PizzaKing = () => {
                   }}
                 />
               </Col>
-              <Col xl={6} lg={6} md={12} sm={12} xs={12}>
+              <Col xl={6} lg={6} md={12} sm={12} xs={12} className="p-0">
                 <SmallHeader header="create frontend code" />
                 <CopyBlock
                   text={vtExample10}

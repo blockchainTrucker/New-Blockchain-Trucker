@@ -1,14 +1,10 @@
 // import node module libraries
 import { Fragment, useEffect } from "react";
 import { Col, Row, Container, Image, ListGroup } from "react-bootstrap";
-import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
-
 import FrameworkLogos from "components/landing/FrameworkLogos";
-
 import Icon from "@mdi/react";
 import { mdiCheckCircle } from "@mdi/js";
-
 import LogoList1 from "routes/frameworkLogos/logoList";
 import truckimg from "assets/images/about/truckimg.jpg";
 
@@ -30,7 +26,6 @@ const MainLanding = () => {
               xs={{ span: 12 }}
               className="mt-lg-10 mt-6 order-md-1 mb-10"
             >
-              {/* Heading */}
               <h1 className="display-2 ms-1 mb-5 fw-bold">
                 <span className="text-primary">Full Stack</span> web apps with a
                 hint of <span className="text-primary">Web 3.0</span>
@@ -97,7 +92,9 @@ const MainLanding = () => {
                       TO READ ABOUT MY JOURNEY
                     </span>
                   </div>
-                  <Image className="corners" src={truckimg}></Image>
+                  <div>
+                    <Image className="corners fitter" src={truckimg}></Image>
+                  </div>
                 </Link>
               </div>
             </Col>

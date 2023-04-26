@@ -38,7 +38,6 @@ const portfolioData = [
   {
     id: 4,
     image: pizzaKing,
-    backgroundColor: "#00000",
     category: "School Project",
     title: "Pizza King",
     details:

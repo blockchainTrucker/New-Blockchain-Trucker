@@ -73,29 +73,29 @@ const NavbarDefaultRoutes = [
       },
     ],
   },
+  // {
+  //   id: uuid(),
+  //   menuitem: "About Me",
+  //   link: "#",
+  //   children: [
   {
     id: uuid(),
     menuitem: "About Me",
-    link: "#",
-    children: [
-      {
-        id: uuid(),
-        menuitem: "About Me",
-        link: `/about-me`,
-      },
-    ],
+    link: `/about-me`,
   },
+  //   ],
+  // },
+  // {
+  //   id: uuid(),
+  //   menuitem: "Contact Me",
+  //   children: [
   {
     id: uuid(),
     menuitem: "Contact Me",
-    children: [
-      {
-        id: uuid(),
-        menuitem: "Contact Me",
-        link: "/contact-me",
-      },
-    ],
+    link: "/contact-me",
   },
+  //   ],
+  // },
 ];
 
 export default NavbarDefaultRoutes;

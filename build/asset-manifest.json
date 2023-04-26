@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c9633eeb.css",
-    "main.js": "/static/js/main.88f7d5e8.js",
+    "main.css": "/static/css/main.006c3b79.css",
+    "main.js": "/static/js/main.e78e515b.js",
     "react-syntax-highlighter/refractor-core-import.js": "/static/js/react-syntax-highlighter/refractor-core-import.f2461969.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js",
@@ -162,10 +162,11 @@
     "static/media/cookuni-home.png": "/static/media/cookuni-home.68451c03ee7f8e28a9b8.png",
     "static/media/cookuni-signin.png": "/static/media/cookuni-signin.3c9a79d2afe8f629d385.png",
     "static/media/fsCert.jpg": "/static/media/fsCert.b55024ae47053dc1d9b3.jpg",
-    "static/media/blockchainCert.jpg": "/static/media/blockchainCert.1e2ec52b4a198b75c248.jpg",
+    "static/media/blockchainCert.jpg": "/static/media/blockchainCert.1602dc0abd147350ce4b.jpg",
     "static/media/pizzaKingHomeLarge.jpg": "/static/media/pizzaKingHomeLarge.25c1bf78b15c121ab48a.jpg",
     "static/media/video-tutorials-home-loggedin.png": "/static/media/video-tutorials-home-loggedin.25d8864bbefe068d1e0f.png",
     "static/media/video-tutorials-account.png": "/static/media/video-tutorials-account.f67aee486129b0869faa.png",
+    "static/media/explorer.png": "/static/media/explorer.bee09d4744aff00cb9c2.png",
     "static/media/video-tutorials-home-loggedout.png": "/static/media/video-tutorials-home-loggedout.e6a4e02226b63c9907bb.png",
     "static/media/video-tutorials-details-subscribed.png": "/static/media/video-tutorials-details-subscribed.a583fc8bcb54a9c214cf.png",
     "static/media/pizzaKingMenuLarge.jpg": "/static/media/pizzaKingMenuLarge.aa2eb748773a47463eab.jpg",
@@ -177,12 +178,13 @@
     "static/media/balance.jpg": "/static/media/balance.74e8bf96b35bda0ca430.jpg",
     "static/media/PizzaKingSigninLarge.jpg": "/static/media/PizzaKingSigninLarge.b30e5f05d011424a0040.jpg",
     "static/media/pizza-king-checkout.png": "/static/media/pizza-king-checkout.f6c6c4f76599179025ae.png",
+    "static/media/truckimg.jpg": "/static/media/truckimg.c33de5846731a0e9d6a2.jpg",
     "static/media/video-tutorials-edit.png": "/static/media/video-tutorials-edit.6a4cea0367b5e4dc4b3d.png",
     "static/media/video-tutorials-create.png": "/static/media/video-tutorials-create.58b566889ef576cf1b3a.png",
     "static/media/feather.woff?sdxovp": "/static/media/feather.eb9822a3be07c5110df9.woff",
     "static/media/feather.ttf?sdxovp": "/static/media/feather.b2469c88d8944b230519.ttf",
     "static/media/video-tutorials-reg.png": "/static/media/video-tutorials-reg.2f4d785db83178a86763.png",
-    "static/media/welcome.jpg": "/static/media/welcome.f47b6fa4ec8e9a71ca20.jpg",
+    "static/media/welcome.jpg": "/static/media/welcome.bf0ecaf267ead2235c0d.jpg",
     "static/media/hunger-games.jpg": "/static/media/hunger-games.a230f5b9b53e4aa66b82.jpg",
     "static/media/load.jpg": "/static/media/load.2dfc15aa2659f43791ab.jpg",
     "static/media/pizza-king-account.png": "/static/media/pizza-king-account.c354003dad5627a82541.png",
@@ -196,8 +198,8 @@
     "static/media/funding-chain.png": "/static/media/funding-chain.60d8cdba9ddb1e0f9f23.png",
     "static/media/dots-pattern.svg": "/static/media/dots-pattern.58f3b03e401a0591814f.svg",
     "index.html": "/index.html",
-    "main.c9633eeb.css.map": "/static/css/main.c9633eeb.css.map",
-    "main.88f7d5e8.js.map": "/static/js/main.88f7d5e8.js.map",
+    "main.006c3b79.css.map": "/static/css/main.006c3b79.css.map",
+    "main.e78e515b.js.map": "/static/js/main.e78e515b.js.map",
     "refractor-core-import.f2461969.chunk.js.map": "/static/js/react-syntax-highlighter/refractor-core-import.f2461969.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js.map",
@@ -352,7 +354,7 @@
     "react-syntax-highlighter_languages_refractor_yaml.59f3db7d.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_yaml.59f3db7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9633eeb.css",
-    "static/js/main.88f7d5e8.js"
+    "static/css/main.006c3b79.css",
+    "static/js/main.e78e515b.js"
   ]
 }

@@ -3,6 +3,7 @@
   "version": "2.0.2",
   "private": true,
   "main": "index.js",
+  "homepage": "https://blockchaintrucker.com",
   "engines": {
     "node": "16.19.0",
     "npm": "8.19.3"

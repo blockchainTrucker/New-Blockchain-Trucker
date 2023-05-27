@@ -1,4 +1,3 @@
-// ** Import from react dom
 import { Routes, Route, Navigate } from "react-router-dom";
 import "assets/scss/theme.scss";
 
@@ -27,14 +26,14 @@ export default function AllRoutes(login) {
   return (
     <div>
       <Routes>
-        //Landing
+        {/* Landing */}
         <Route exact path="/" element={<MainLanding />} />
-        //Portfolio
+        {/* Portfolio */}
         <Route exact path="/portfolio" element={<Portfolio />} />
         <Route
           exact
           path="/portfolio/funding-chain"
-          element={<Redirect to="https://www.funding-chain.com" />}
+          element={<Redirect to="https://www.fundingchain.io" />}
         />
         <Route
           exact
@@ -60,11 +59,11 @@ export default function AllRoutes(login) {
           path="/portfolio/custom-blockchain"
           element={<Blockchain />}
         />
-        //Contact
+        {/* Contact */}
         <Route exact path="/contact-me" element={<Contact />} />
-        //About
+        {/* About */}
         <Route exact path="/about-me" element={<About />} />
-        //Catch
+        {/* Catch */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>

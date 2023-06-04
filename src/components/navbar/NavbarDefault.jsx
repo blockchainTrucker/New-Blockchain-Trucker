@@ -22,7 +22,9 @@ import NavbarDefaultRoutes from "routes/navbar/navbarDefaultRoutes";
 const NavbarDefault = ({ headerstyle, login }) => {
   useEffect(() => {
     publicIp.v4().then((ipAddress) => {
-      const url = "https://blockchain-trucker-api.herokuapp.com/counter";
+      // const url = "https://blockchain-trucker-api.herokuapp.com/counter";
+      const url = "http://localhost:5000/counter";
+
       let data = JSON.stringify({
         ipAddress,
       });

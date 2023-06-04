@@ -21,23 +21,14 @@ import NavbarDefaultRoutes from "routes/navbar/navbarDefaultRoutes";
 
 const NavbarDefault = ({ headerstyle, login }) => {
   useEffect(() => {
-    publicIp.v4().then((ipAddress) => {
-      // const url = "https://blockchain-trucker-api.herokuapp.com/counter";
-      const url = "http://localhost:5000/counter";
-
-      let data = JSON.stringify({
-        ipAddress,
-      });
-
-      let resources = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: data,
-      };
-      fetch(url, resources);
-    });
+    const url = "https://blockchain-trucker-api.herokuapp.com/counter";
+    let resources = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    fetch(url, resources);
   }, []);
   const isDesktop = useMediaQuery({
     query: "(min-width: 1224px)",

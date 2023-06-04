@@ -42,18 +42,27 @@ const About = () => {
                     <a
                       href="https://www.decentralized-ventures.com"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       Decentralized Ventures
                     </a>
                     , and have started working on my first DApp called{" "}
-                    <a href="https://www.funding-chain.com" target="_blank">
+                    <a
+                      href="https://www.funding-chain.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Funding Chain
                     </a>
                     . It will be a crowd funding platform that uses smart
                     contracts to collect and distribute contributions. I began
                     working on my Blockchain Engineer certification while
                     building{" "}
-                    <a href="https://www.funding-chain.com" target="_blank">
+                    <a
+                      href="https://www.funding-chain.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Funding Chain
                     </a>{" "}
                     and have incorporated some of what I learned from school

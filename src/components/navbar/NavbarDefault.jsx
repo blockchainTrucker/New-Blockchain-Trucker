@@ -113,6 +113,7 @@ const NavbarDefault = ({ headerstyle, login }) => {
                     href="https://github.com/jwachtel96"
                     target="_blank"
                     className="text-muted text-primary-hover me-3  "
+                    rel="noreferrer"
                   >
                     <Icon path={mdiGithub} size={1.5} />
                   </a>
@@ -120,6 +121,7 @@ const NavbarDefault = ({ headerstyle, login }) => {
                     href="https://www.linkedin.com/in/jesse-wachtel/"
                     target="_blank"
                     className="text-muted text-primary-hover me-3"
+                    rel="noreferrer"
                   >
                     <Icon path={mdiLinkedin} size={1.5} />
                   </a>

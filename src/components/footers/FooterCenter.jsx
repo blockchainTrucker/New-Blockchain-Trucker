@@ -30,7 +30,7 @@ const FooterCenter = () => {
           </Col>
           <Col lg={8} md={12} sm={12}>
             <span>
-              {`${new Date().getFullYear()} `}
+              {`© ${new Date().getFullYear()} `}
               <a
                 href="https://www.linkedin.com/in/jesse-wachtel"
                 target="_blank"

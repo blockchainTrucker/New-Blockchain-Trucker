@@ -47,7 +47,7 @@ const PizzaKing = () => {
             <Header
               title="Video Tutorials"
               description="Click here to see the full repository"
-              github="https://github.com/jwachtel96/Video-Tutorials"
+              github="https://github.com/blockchaintrucker/Video-Tutorials"
             />
             <Row className="justify-content-center">
               <Col xl={10} lg={10} md={10} sm={12} xs={12} className="mb-3">
@@ -358,7 +358,7 @@ const PizzaKing = () => {
             </Row>
             <Header
               description="Click here to see the full repository"
-              github="https://github.com/jwachtel96/Video-Tutorials"
+              github="https://github.com/blockchaintrucker/Video-Tutorials"
             />
             <BackToTop />
           </Fragment>

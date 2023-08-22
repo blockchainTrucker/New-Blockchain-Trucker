@@ -22,7 +22,7 @@ const Blockchain = () => {
             <Header
               title="Custom Blockchain"
               description="Click here to view the full repository"
-              github="https://github.com/jwachtel96/Blockchain-Project"
+              github="https://github.com/blockchaintrucker/Blockchain-Project"
             />
           </Fragment>
         </Container>

@@ -32,7 +32,7 @@ const EthereumWallet = (props) => {
           <Fragment>
             <Header
               title="Etherium Wallet Using Ethers.js"
-              github="https://github.com/jwachtel96/Assignments/tree/main/ethereum-wallet-ethersjs"
+              github="https://github.com/blockchaintrucker/Assignments/tree/main/ethereum-wallet-ethersjs"
             />
             <Row className="justify-content-center">
               <Col xl={10} lg={10} md={10} sm={10} xs={10} className="mb-2">
@@ -159,7 +159,7 @@ const EthereumWallet = (props) => {
             <Row>
               <Header
                 description="Click here to view the full repository"
-                github="https://github.com/jwachtel96/Assignments/tree/main/ethereum-wallet-ethersjs"
+                github="https://github.com/blockchaintrucker/Assignments/tree/main/ethereum-wallet-ethersjs"
               />
             </Row>
             <BackToTop />

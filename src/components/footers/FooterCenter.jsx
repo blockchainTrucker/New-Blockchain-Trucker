@@ -9,7 +9,7 @@ const FooterCenter = () => {
           <Col lg={8} md={12} sm={12}>
             <div className="mt-6 mb-1">
               <a
-                href="https://github.com/jwachtel96"
+                href="https://github.com/blockchaintrucker"
                 target="_blank"
                 className="text-muted me-2"
                 rel="noreferrer"

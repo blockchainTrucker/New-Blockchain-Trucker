@@ -110,7 +110,7 @@ const NavbarDefault = ({ headerstyle, login }) => {
                   className="d-flex align-items-center"
                 >
                   <a
-                    href="https://github.com/jwachtel96"
+                    href="https://github.com/blockchaintrucker"
                     target="_blank"
                     className="text-muted text-primary-hover me-3  "
                     rel="noreferrer"

@@ -26,7 +26,7 @@ const About = () => {
               </Col>
             </Row>
             <Row className="justify-content-center">
-              <Col xl={9} lg={9} md={12} sm={12}>
+              <Col xl={12} lg={12} md={12} sm={12}>
                 <div>
                   <p>
                     My name is Jesse Wachtel. Over the past two years, I have
@@ -80,7 +80,7 @@ const About = () => {
               </Col>
             </Row>
             <Row className="justify-content-center mb-3">
-              <Col className="mx-3 mt-3" xl={3} lg={3} md={3} sm={12} xs={12}>
+              <Col className="mx-3 mt-3" xl={4} lg={4} md={4} sm={12} xs={12}>
                 <ModalImage
                   className="pop corners"
                   small={fsCert}
@@ -88,7 +88,7 @@ const About = () => {
                   alt="Pizza King homepage"
                 />
               </Col>
-              <Col className="mx-3 mt-3" xl={3} lg={3} md={3} sm={12} xs={12}>
+              <Col className="mx-3 mt-3" xl={4} lg={4} md={4} sm={12} xs={12}>
                 <ModalImage
                   className="pop corners"
                   small={blockchainCert}
@@ -97,8 +97,8 @@ const About = () => {
                 />
               </Col>
             </Row>
-            <Row className="justify-content-center">
-              <Col xl={9} lg={9} md={12} sm={12}>
+            <Row className="d-flex justify-content-center">
+              <Col xl={12} lg={12} md={12} sm={12} className="mx-3 mt-3">
                 <FrameworkLogos
                   title="BELOW ARE THE ENVIRONMENTS FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH"
                   logos={LogoList}
@@ -107,7 +107,7 @@ const About = () => {
               </Col>
             </Row>
             <Row className="justify-content-center">
-              <Col xl={9} lg={9} md={12} sm={12}>
+              <Col xl={12} lg={12} md={12} sm={12} className="mx-3 mt-3 mb-3">
                 <div>
                   <p>
                     You may be wondering why I chose the name Blockchain
@@ -137,15 +137,8 @@ const About = () => {
                 </div>
               </Col>
             </Row>
-            <Row className="justify-content-center">
-              <Col
-                xl={3}
-                lg={3}
-                md={3}
-                sm={5}
-                xs={6}
-                className="fw-bold justify-content-center px-7"
-              >
+            <Row className="d-flex justify-content-center">
+              <Col xl={3} lg={4} md={5} sm={6} xs={6} className="fw-bold px-7">
                 <ul>
                   <li>Smart Contracts</li>
                   <li>DApps</li>
@@ -163,9 +156,9 @@ const About = () => {
               </Col>
               <Col
                 xl={3}
-                lg={3}
-                md={3}
-                sm={5}
+                lg={4}
+                md={5}
+                sm={6}
                 xs={6}
                 className="mb-2 fw-bold px-5"
               >
@@ -186,7 +179,7 @@ const About = () => {
               </Col>
             </Row>
             <Row className="justify-content-center">
-              <Col xl={9} lg={9} md={12} sm={12} className="mb-2">
+              <Col xl={12} lg={12} md={12} sm={12} className="mb-2">
                 <div>
                   <p>
                     My professional life began when I joined the US Army at

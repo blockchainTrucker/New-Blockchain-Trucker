@@ -1,21 +1,21 @@
 // import node module libraries
-import { BrowserRouter as Router } from 'react-router-dom';
-import ScrollToTop from 'components/functions/ScrollToTop';
-import NavbarDefault from 'components/navbar/NavbarDefault';
-import Footer from 'components/footers/FooterCenter';
-import AllRoutes from 'routes/AllRoutes';
+import { BrowserRouter as Router } from "react-router-dom";
+import ScrollToTop from "components/functions/ScrollToTop";
+import NavbarDefault from "components/navbar/NavbarDefault";
+import Footer from "components/footers/FooterCenter";
+import AllRoutes from "routes/AllRoutes";
 
 function App() {
-	return (
-		<Router>
-			<div className='App'>
-				<ScrollToTop />
-				<NavbarDefault />
-				<AllRoutes />
-				<Footer />
-			</div>
-		</Router>
-	);
+  return (
+    <Router>
+      <div className="App">
+        <ScrollToTop />
+        <NavbarDefault />
+        <AllRoutes />
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;

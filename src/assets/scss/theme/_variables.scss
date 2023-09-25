@@ -227,7 +227,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px // xxl: 1320px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  xl: 1140px // xxl: 1320px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -461,3 +461,10 @@ $popover-header-bg: $gray-100;
 // blockquote
 
 $blockquote-font-size: 1.25rem;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 650px,
+  md: 900px,
+  lg: 1150px,
+  xl: 1350px,
+);

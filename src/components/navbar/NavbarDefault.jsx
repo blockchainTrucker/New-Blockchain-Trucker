@@ -13,12 +13,13 @@ import {
 
 import { useMediaQuery } from "react-responsive";
 import publicIp from "public-ip";
-import Icon from "@mdi/react";
-import { mdiGithub, mdiLinkedin } from "@mdi/js";
 import logo from "assets/images/brand/logo/logo-nobackground-200.png";
 import NavDropdownMain from "./NavDropdownMain";
 import NavbarDefaultRoutes from "routes/navbar/navbarDefaultRoutes";
-
+import linkedin from "assets/images/icons/linkedin-icon.png";
+import medium from "assets/images/icons/medium-icon.png";
+import github from "assets/images/icons/github-icon.png";
+import PriceTicker from "./PriceTicker";
 const NavbarDefault = ({ headerstyle, login }) => {
   useEffect(() => {
     const url = "https://blockchain-trucker-api.herokuapp.com/counter";
@@ -100,6 +101,9 @@ const NavbarDefault = ({ headerstyle, login }) => {
                 }
               })}
             </Nav>
+            <Nav className="mx-auto pt-1 d-flex justify-content-center">
+              <PriceTicker />
+            </Nav>
             <Nav className="navbar-nav navbar-right-wrap ms-auto d-flex">
               <Row>
                 <Col
@@ -115,7 +119,7 @@ const NavbarDefault = ({ headerstyle, login }) => {
                     className="text-muted text-primary-hover me-3  "
                     rel="noreferrer"
                   >
-                    <Icon path={mdiGithub} size={1.5} />
+                    <Image src={github} height={40} />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/jesse-wachtel/"
@@ -123,7 +127,15 @@ const NavbarDefault = ({ headerstyle, login }) => {
                     className="text-muted text-primary-hover me-3"
                     rel="noreferrer"
                   >
-                    <Icon path={mdiLinkedin} size={1.5} />
+                    <Image src={linkedin} height={40} />
+                  </a>
+                  <a
+                    href="https://medium.com/@blockchainTrucker"
+                    target="_blank"
+                    className="text-muted text-primary-hover me-3"
+                    rel="noreferrer"
+                  >
+                    <Image src={medium} height={40} />
                   </a>
                 </Col>
               </Row>

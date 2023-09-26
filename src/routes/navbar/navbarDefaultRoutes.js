@@ -23,6 +23,11 @@ const NavbarDefaultRoutes = [
           },
           {
             id: uuid(),
+            menuitem: "Smart Contract Verifier",
+            link: "/portfolio/smart-contract-verifier",
+          },
+          {
+            id: uuid(),
             menuitem: "Decentralized Ventures",
             link: "/portfolio/decentralized-ventures",
           },

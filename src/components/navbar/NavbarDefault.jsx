@@ -10,10 +10,7 @@ import {
   Container,
   Dropdown,
 } from "react-bootstrap";
-
-import { useMediaQuery } from "react-responsive";
-import publicIp from "public-ip";
-import logo from "assets/images/brand/logo/logo-nobackground-200.png";
+import logo from "assets/images/logo/logo-nobackground.png";
 import NavDropdownMain from "./NavDropdownMain";
 import NavbarDefaultRoutes from "routes/navbar/navbarDefaultRoutes";
 import linkedin from "assets/images/icons/linkedin-icon.png";
@@ -31,25 +28,9 @@ const NavbarDefault = ({ headerstyle, login }) => {
     };
     fetch(url, resources);
   }, []);
-  const isDesktop = useMediaQuery({
-    query: "(min-width: 1224px)",
-  });
-  const isLaptop = useMediaQuery({
-    query: "(min-width: 1024px)",
-  });
 
   const [expandedMenu, setExpandedMenu] = useState(false);
 
-  const QuickMenu = () => {
-    return (
-      <Fragment>
-        <Dropdown
-          as={Nav.Item}
-          className={`${isDesktop || isLaptop ? "mt-2 me-0" : "mt-2 me-2"}`}
-        ></Dropdown>
-      </Fragment>
-    );
-  };
   return (
     <Fragment>
       <Navbar
@@ -62,15 +43,8 @@ const NavbarDefault = ({ headerstyle, login }) => {
       >
         <Container fluid className="px-0 ps-2">
           <Navbar.Brand as={Link} to="/">
-            <Image src={logo} alt="Blockchain Trucker Logo" />
+            <Image height={115} src={logo} alt="Blockchain Trucker Logo" />
           </Navbar.Brand>
-          <div
-            className={`navbar-nav navbar-right-wrap ms-auto d-lg-none nav-top-wrap ${
-              login ? (isDesktop || isLaptop ? "d-none" : "d-flex") : "d-none"
-            }`}
-          >
-            <QuickMenu />
-          </div>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="icon-bar top-bar mt-0"></span>
             <span className="icon-bar middle-bar"></span>
@@ -101,10 +75,10 @@ const NavbarDefault = ({ headerstyle, login }) => {
                 }
               })}
             </Nav>
-            <Nav className="mx-auto pt-1 d-flex justify-content-center">
-              <PriceTicker />
+            <Nav className="pt-1 text-center mx-auto">
+              <PriceTicker className="" />
             </Nav>
-            <Nav className="navbar-nav navbar-right-wrap ms-auto d-flex">
+            <Nav className="navbar-nav navbar-right-wrap d-flex">
               <Row>
                 <Col
                   md={6}

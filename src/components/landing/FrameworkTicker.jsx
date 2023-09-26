@@ -12,14 +12,14 @@ import { Row, Image } from "react-bootstrap";
 const CryptoBrandTicker = () => {
   return (
     <Row className="bg-gradient-mix-shade d-flex text-center text-nowrap py-5 shadow text-nowrap">
-      <Ticker direction="toRight" nextOffset={100}>
+      <Ticker direction="toRight" speed={10} nextOffset={100}>
         {({ index }) => (
           <div>
             <a href="https://nodejs.org" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
-                height={70}
-                width={90}
+                height={55}
+                width={80}
                 src={node}
                 alt="Node.js icon"
               />
@@ -27,8 +27,8 @@ const CryptoBrandTicker = () => {
             <a href="https://reactjs.org" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
-                height={70}
-                width={70}
+                height={50}
+                width={50}
                 src={react}
                 alt="React icon"
               />
@@ -36,17 +36,17 @@ const CryptoBrandTicker = () => {
             <a href="https://www.mongodb.com" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
-                height={80}
-                width={90}
+                height={50}
+                width={25}
                 src={mongodb}
                 alt="MongoDB icon"
               />
             </a>
-            <a to="https://soliditylang.org" target="_blank" rel="noreferrer">
+            <a href="https://soliditylang.org" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
-                height={60}
-                width={60}
+                height={50}
+                width={50}
                 src={solidity}
                 alt="Solidity icon"
               />
@@ -54,30 +54,30 @@ const CryptoBrandTicker = () => {
             <a href="expressjs.com" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
-                height={50}
+                height={35}
                 width={110}
                 src={express}
                 alt="Express icon"
               />
             </a>
             <a
-              to="https://developer.mozilla.org"
+              href="https://developer.mozilla.org"
               target="_blank"
               rel="noreferrer"
             >
               <Image
                 className="mx-10"
-                height={60}
-                width={60}
+                height={50}
+                width={50}
                 src={js}
                 alt="Javascript icon"
               />
-            </a>{" "}
+            </a>
             <a href="https://sass-lang.com" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
-                height={60}
-                width={60}
+                height={50}
+                width={50}
                 src={scss}
                 alt="SCSS icon"
               />
@@ -85,8 +85,8 @@ const CryptoBrandTicker = () => {
             <a href="https://www.json.org" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
-                height={60}
-                width={60}
+                height={50}
+                width={50}
                 src={json}
                 alt="JSON icon"
               />

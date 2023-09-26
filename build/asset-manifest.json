@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cb368b20.css",
-    "main.js": "/static/js/main.945283c6.js",
+    "main.css": "/static/css/main.5a1c4828.css",
+    "main.js": "/static/js/main.3c3a80f6.js",
     "react-syntax-highlighter/refractor-core-import.js": "/static/js/react-syntax-highlighter/refractor-core-import.f2461969.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js",
@@ -177,10 +177,12 @@
     "static/media/loading.gif": "/static/media/loading.45dec5c5c911393f54ca.gif",
     "static/media/balance.jpg": "/static/media/balance.74e8bf96b35bda0ca430.jpg",
     "static/media/PizzaKingSigninLarge.jpg": "/static/media/PizzaKingSigninLarge.b30e5f05d011424a0040.jpg",
+    "static/media/scv-1000.png": "/static/media/scv-1000.f53592193be199fcaa79.png",
     "static/media/pizza-king-checkout.png": "/static/media/pizza-king-checkout.f6c6c4f76599179025ae.png",
     "static/media/truckimg.jpg": "/static/media/truckimg.c33de5846731a0e9d6a2.jpg",
     "static/media/fc-icon.png": "/static/media/fc-icon.0389eb3375a996df7b92.png",
     "static/media/video-tutorials-edit.png": "/static/media/video-tutorials-edit.6a4cea0367b5e4dc4b3d.png",
+    "static/media/logo-nobackground.png": "/static/media/logo-nobackground.2d26c8abd4cfff246578.png",
     "static/media/video-tutorials-create.png": "/static/media/video-tutorials-create.58b566889ef576cf1b3a.png",
     "static/media/feather.woff?sdxovp": "/static/media/feather.eb9822a3be07c5110df9.woff",
     "static/media/feather.ttf?sdxovp": "/static/media/feather.b2469c88d8944b230519.ttf",
@@ -189,22 +191,23 @@
     "static/media/hunger-games.jpg": "/static/media/hunger-games.a230f5b9b53e4aa66b82.jpg",
     "static/media/load.jpg": "/static/media/load.2dfc15aa2659f43791ab.jpg",
     "static/media/pizza-king-account.png": "/static/media/pizza-king-account.c354003dad5627a82541.png",
+    "static/media/react-icon.png": "/static/media/react-icon.dd5147a0baaa83e43d72.png",
     "static/media/send.jpg": "/static/media/send.5824f4e2c7c90e6b436b.jpg",
     "static/media/video-tutorials-signin.png": "/static/media/video-tutorials-signin.f1c01561e799e900ff6b.png",
     "static/media/recover.jpg": "/static/media/recover.ebc0282d9a08692b3c76.jpg",
     "static/media/create.jpg": "/static/media/create.03b74265d8e6dfa230a8.jpg",
-    "static/media/pizza-king-home-top.png": "/static/media/pizza-king-home-top.82d5992af4fbb140fdab.png",
     "static/media/decentralized-ventures.png": "/static/media/decentralized-ventures.b027540fa133a284c906.png",
-    "static/media/react-icon.png": "/static/media/react-icon.70c7de2463e76898acbe.png",
+    "static/media/pizza-king-logo.png": "/static/media/pizza-king-logo.ee759fdaf5459d16e5c4.png",
     "static/media/arbitrum-icon.png": "/static/media/arbitrum-icon.80c991337d57f339e5fa.png",
-    "static/media/scss-icon.png": "/static/media/scss-icon.ab7211af67621ee56618.png",
+    "static/media/scss-icon.png": "/static/media/scss-icon.3dad68acab32af7d2643.png",
     "static/media/bcrypt1.png": "/static/media/bcrypt1.5b8edeba71267866c4c1.png",
     "static/media/funding-chain.png": "/static/media/funding-chain.60d8cdba9ddb1e0f9f23.png",
+    "static/media/node-icon.png": "/static/media/node-icon.0b87423796664d3e5f5e.png",
     "static/media/xrp-icon.png": "/static/media/xrp-icon.2cb35f1565c7accd7faf.png",
     "static/media/dots-pattern.svg": "/static/media/dots-pattern.58f3b03e401a0591814f.svg",
     "index.html": "/index.html",
-    "main.cb368b20.css.map": "/static/css/main.cb368b20.css.map",
-    "main.945283c6.js.map": "/static/js/main.945283c6.js.map",
+    "main.5a1c4828.css.map": "/static/css/main.5a1c4828.css.map",
+    "main.3c3a80f6.js.map": "/static/js/main.3c3a80f6.js.map",
     "refractor-core-import.f2461969.chunk.js.map": "/static/js/react-syntax-highlighter/refractor-core-import.f2461969.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.cd1490c9.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.6b5c0d4f.chunk.js.map",
@@ -359,7 +362,7 @@
     "react-syntax-highlighter_languages_refractor_yaml.59f3db7d.chunk.js.map": "/static/js/react-syntax-highlighter_languages_refractor_yaml.59f3db7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb368b20.css",
-    "static/js/main.945283c6.js"
+    "static/css/main.5a1c4828.css",
+    "static/js/main.3c3a80f6.js"
   ]
 }

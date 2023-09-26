@@ -7,6 +7,7 @@ import linkLogo from "../../assets/images/icons/link-icon.png";
 import maticLogo from "../../assets/images/icons/matic-icon.png";
 import solLogo from "../../assets/images/icons/sol-icon.png";
 import xrpLogo from "../../assets/images/icons/xrp-icon.png";
+import btcLogo from "../../assets/images/icons/bitcoin-icon.png";
 import { Image } from "react-bootstrap";
 import CountUp from "react-countup";
 import VerticalTicker from "../tickers/vertical/VerticalTicker.jsx";
@@ -24,6 +25,7 @@ const PriceTicker = () => {
     linkPrice,
     solPrice,
     xrpPrice,
+    btcPrice,
   } = usePrices();
   const currentPriceRef = useRef("eth");
   const [showTicker, setShowTicker] = useState(false);
@@ -31,6 +33,8 @@ const PriceTicker = () => {
   const lastEthPriceRef = useRef(0);
   const formattedHbarPriceRef = useRef(0);
   const lastHbarPriceRef = useRef(0);
+  const formattedBtcPriceRef = useRef(0);
+  const lastBtcPriceRef = useRef(0);
   const formattedAdaPriceRef = useRef(0);
   const lastAdaPriceRef = useRef(0);
   const formattedSolPriceRef = useRef(0);
@@ -57,6 +61,13 @@ const PriceTicker = () => {
       lastHbarPriceRef.current = formattedHbarPriceRef.current * 0.99;
     }
   }, [hbarPrice]);
+
+  useEffect(() => {
+    formattedBtcPriceRef.current = parseFloat(btcPrice).toFixed(5);
+    if (lastBtcPriceRef.current === 0) {
+      lastBtcPriceRef.current = formattedBtcPriceRef.current * 0.999;
+    }
+  }, [btcPrice]);
 
   useEffect(() => {
     formattedAdaPriceRef.current = parseFloat(adaPrice).toFixed(5);
@@ -106,6 +117,9 @@ const PriceTicker = () => {
       currentPriceRef.current = "hbar";
     } else if (currentPriceRef.current === "hbar") {
       lastHbarPriceRef.current = formattedHbarPriceRef.current;
+      currentPriceRef.current = "btc";
+    } else if (currentPriceRef.current === "btc") {
+      lastBtcPriceRef.current = formattedBtcPriceRef.current;
       currentPriceRef.current = "ada";
     } else if (currentPriceRef.current === "ada") {
       lastAdaPriceRef.current = formattedAdaPriceRef.current;
@@ -161,6 +175,24 @@ const PriceTicker = () => {
             duration={5}
             separator=","
             decimals={5}
+            decimal="."
+          />
+        </p>
+      </div>
+    );
+  };
+
+  const Btc = () => {
+    return (
+      <div className="d-flex">
+        <p className="align-middle pt-2 nladj">
+          BTC Price: <Image height={14} src={btcLogo} alt="Bitcoin Icon" />1 = $
+          <CountUp
+            start={lastBtcPriceRef.current}
+            end={formattedBtcPriceRef.current}
+            duration={5}
+            separator=","
+            decimals={2}
             decimal="."
           />
         </p>
@@ -303,6 +335,7 @@ const PriceTicker = () => {
           >
             <Eth />
             <Hbar />
+            <Btc />
             <Ada />
             <Sol />
             <Matic />

@@ -17,7 +17,7 @@ import { Row, Image } from "react-bootstrap";
 const CryptoBrandTicker = () => {
   return (
     <Row className="bg-gradient-mix-shade d-flex text-center text-nowrap py-5 shadow text-nowrap">
-      <Ticker nextOffset={100}>
+      <Ticker speed={10} nextOffset={100}>
         {({ index }) => (
           <div>
             <a href="https://ethereum.org/" target="_blank" rel="noreferrer">

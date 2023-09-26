@@ -1,6 +1,6 @@
 // import node module libraries
 import { Fragment, useEffect } from "react";
-import { Col, Row, Card, Image, ListGroup } from "react-bootstrap";
+import { Col, Row, Image, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Icon from "@mdi/react";
 import { mdiCheckCircle } from "@mdi/js";
@@ -76,7 +76,7 @@ const MainLanding = () => {
           </Col>
         </Row>
         <CryptoBrandTicker />
-        <Row className="d-flex justify-content-center py-10 px-md-5 bg-gray-400">
+        <Row className="d-flex justify-content-center py-10 px-md-5 px-lg-15 px-xl-20 bg-gray-400">
           <MediumFeed />
         </Row>
         <FrameworkTicker />

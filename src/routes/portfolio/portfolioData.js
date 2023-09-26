@@ -1,6 +1,7 @@
 // import media files
-import pizzaKing from "assets/images/pizza-king/pizza-king-home-top.png";
+import pizzaKing from "assets/images/portfolio/logos/pizza-king-logo.png";
 import fundingChain from "assets/images/portfolio/logos/funding-chain.png";
+import scv from "assets/images/portfolio/logos/scv-1000.png";
 import decentralizedVentures from "assets/images/portfolio/logos/decentralized-ventures.png";
 import videoTutorials from "assets/images/video-tutorials/video-tutorials-home-loggedin.png";
 import cookUni from "assets/images/cookuni/cookuni-home.png";
@@ -8,10 +9,19 @@ import bcrypt from "assets/images/bcrypt/bcrypt1.png";
 import ethers from "assets/images/ethereumWallet/welcome.jpg";
 import hgames from "assets/images/hunger-games/hunger-games.jpg";
 import blockchain from "assets/images/blockchain/explorer.png";
-
+import { v4 as uuid } from "uuid";
 const portfolioData = [
   {
-    id: 1,
+    id: uuid(),
+    image: scv,
+    category: "Personal Project",
+    title: "Smart Contract Verifier",
+    details:
+      "A smart contract verification tool that is currently running on Ethereum Mainnet as an MVP.",
+    link: "/portfolio/smart-contract-verifier",
+  },
+  {
+    id: uuid(),
     image: fundingChain,
     category: "Personal Project",
     title: "Funding Chain",
@@ -20,7 +30,7 @@ const portfolioData = [
     link: "/portfolio/funding-chain",
   },
   {
-    id: 2,
+    id: uuid(),
     image: decentralizedVentures,
     category: "Personal Project",
     title: "Decentralized Ventures",
@@ -28,7 +38,7 @@ const portfolioData = [
     link: "/portfolio/decentralized-ventures",
   },
   {
-    id: 3,
+    id: uuid(),
     image: blockchain,
     category: "School Project",
     title: "Custom Blockchain",
@@ -36,7 +46,7 @@ const portfolioData = [
     link: "/portfolio/custom-blockchain",
   },
   {
-    id: 4,
+    id: uuid(),
     image: pizzaKing,
     category: "School Project",
     title: "Pizza King",
@@ -45,7 +55,7 @@ const portfolioData = [
     link: "/portfolio/pizza-king",
   },
   {
-    id: 5,
+    id: uuid(),
     image: videoTutorials,
     category: "School Project",
     title: "Video Tutorials",
@@ -54,7 +64,7 @@ const portfolioData = [
     link: "/portfolio/video-tutorials",
   },
   {
-    id: 6,
+    id: uuid(),
     image: cookUni,
     category: "School Project",
     title: "CookUni",
@@ -63,7 +73,7 @@ const portfolioData = [
     link: "/portfolio/cookuni",
   },
   {
-    id: 7,
+    id: uuid(),
     image: hgames,
     category: "Example",
     title: "Hunger Games Solidity Example",
@@ -72,7 +82,7 @@ const portfolioData = [
     link: "/portfolio/hunger-games",
   },
   {
-    id: 8,
+    id: uuid(),
     image: bcrypt,
     category: "Example",
     title: "Hashing Example",
@@ -81,7 +91,7 @@ const portfolioData = [
     link: "/portfolio/hashing",
   },
   {
-    id: 9,
+    id: uuid(),
     image: ethers,
     category: "Example",
     title: "Etherium Wallet Using Ethers.js",

@@ -9,6 +9,7 @@ const usePrices = () => {
   const [linkPrice, setLinkPrice] = useState(0);
   const [solPrice, setSolPrice] = useState(0);
   const [xrpPrice, setXrpPrice] = useState(0);
+  const [btcPrice, setBtcPrice] = useState(0);
 
   useEffect(() => {
     priceFetch();
@@ -28,6 +29,11 @@ const usePrices = () => {
       .then((response) => response.json())
       .then((data) => {
         setHbarPrice(data.data.amount);
+      });
+    fetch("https://api.coinbase.com/v2/prices/btc-usd/spot")
+      .then((response) => response.json())
+      .then((data) => {
+        setBtcPrice(data.data.amount);
       });
     fetch("https://api.coinbase.com/v2/prices/matic-usd/spot")
       .then((response) => response.json())
@@ -64,6 +70,7 @@ const usePrices = () => {
   return {
     ethPrice,
     hbarPrice,
+    btcPrice,
     maticPrice,
     adaPrice,
     dotPrice,

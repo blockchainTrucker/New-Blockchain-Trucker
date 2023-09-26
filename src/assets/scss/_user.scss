@@ -135,3 +135,7 @@ input:active {
     color: $secondary;
   }
 }
+
+.dropdown-toggle {
+  border-bottom: none !important;
+}

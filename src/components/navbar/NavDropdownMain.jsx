@@ -37,7 +37,7 @@ const NavDropdownMain = (props) => {
                 title={submenu.menuitem}
                 key={submenuindex}
                 bsPrefix="dropdown-item d-block"
-                className={`dropdown-submenu dropend py-0 `}
+                className={`dropdown-submenu dropend py-0`}
               >
                 {submenu.children.map((submenuitem, submenuitemindex) => {
                   if (submenuitem.divider || submenuitem.header) {

@@ -32,6 +32,11 @@ export default function AllRoutes(login) {
         <Route exact path="/portfolio" element={<Portfolio />} />
         <Route
           exact
+          path="/portfolio/smart-contract-verifier"
+          element={<Redirect to="https://www.smartcontractverifier.com" />}
+        />
+        <Route
+          exact
           path="/portfolio/funding-chain"
           element={<Redirect to="https://www.fundingchain.io" />}
         />

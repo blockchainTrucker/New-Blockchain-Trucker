@@ -51,7 +51,7 @@ const CryptoBrandTicker = () => {
                 alt="Solidity icon"
               />
             </a>
-            <a href="expressjs.com" target="_blank" rel="noreferrer">
+            <a href="https://expressjs.com" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
                 height={35}

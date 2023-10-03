@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Row, Image, Table, Card } from "react-bootstrap";
+import { Row, Image, Table } from "react-bootstrap";
 
 const MediumFeed = () => {
   const [feedData, setFeedData] = useState([]);
@@ -18,10 +18,18 @@ const MediumFeed = () => {
       (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
 
-    if (daysAgo > 0) {
+    if (daysAgo > 365) {
+      const yearsAgo = Math.floor(daysAgo / 365);
+      return `${yearsAgo} ${yearsAgo === 1 ? "year" : "years"} ago`;
+    } else if (daysAgo > 30) {
+      const monthsAgo = Math.floor(daysAgo / 30);
+      return `${monthsAgo} ${monthsAgo === 1 ? "month" : "months"} ago`;
+    } else if (daysAgo > 0) {
       return `${daysAgo} ${daysAgo === 1 ? "day" : "days"} ago`;
-    } else {
+    } else if (hoursAgo > 0) {
       return `${hoursAgo} ${hoursAgo === 1 ? "hour" : "hours"} ago`;
+    } else {
+      return "Just now";
     }
   }
 

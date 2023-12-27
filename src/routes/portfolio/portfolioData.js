@@ -17,7 +17,7 @@ const portfolioData = [
     category: "Personal Project",
     title: "Smart Contract Verifier",
     details:
-      "A smart contract verification tool that is currently running on Ethereum Mainnet as an MVP.",
+      "A smart contract verification tool that is currently running on Ethereum and Hedera Mainnets as an MVP. It was made with Next.js.",
     link: "/portfolio/smart-contract-verifier",
   },
   {
@@ -26,7 +26,7 @@ const portfolioData = [
     category: "Personal Project",
     title: "Funding Chain",
     details:
-      "A crowd funding platform that uses smart contracts currently in development.",
+      "A platform that uses smart contracts for faster, more transparent, and censorship free crowdfunding. Currently running on Ethereum and Hedera mainnets.",
     link: "/portfolio/funding-chain",
   },
   {

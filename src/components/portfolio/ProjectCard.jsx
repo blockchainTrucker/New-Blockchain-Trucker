@@ -18,10 +18,11 @@ const ProjectCard = ({ item }) => {
   };
 
   return (
-    <Card className="mb-4 shadow-lg">
+    <Card className="shadow-lg mx-4 h-100">
       <Link to={`${item.link}`}>
         <Image
           fluid
+          width={""}
           variant="top"
           src={item.image}
           className="rounded-top-md"

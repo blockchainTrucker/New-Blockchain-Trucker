@@ -29,7 +29,7 @@ const About = () => {
               <Col xl={12} lg={12} md={12} sm={12}>
                 <div>
                   <p>
-                    My name is Jesse Wachtel. Over the past two years, I have
+                    My name is Jesse Wachtel. From the beginning of 2021, I had
                     been working to complete the Zero to Blockchain program at{" "}
                     <a href="https://kingslanduniversity.com/zero-to-blockchain-developer-program/">
                       Kingsland University
@@ -38,7 +38,7 @@ const About = () => {
                     nine month Full Stack Developer bootcamp. It was JavaScript
                     focused and had an emphasis on the MERN stack. I received my
                     certification as a Full Stack Developer in December of 2021.
-                    After graduating, I began my own business,{" "}
+                    After graduating, I started my own business,{" "}
                     <a
                       href="https://www.decentralized-ventures.com"
                       target="_blank"
@@ -46,55 +46,109 @@ const About = () => {
                     >
                       Decentralized Ventures
                     </a>
-                    , and have started working on my first DApp called{" "}
+                    , and have started working on my first two decentralized
+                    applications called{" "}
                     <a
-                      href="https://www.funding-chain.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Funding Chain
-                    </a>
-                    . It will be a crowd funding platform that uses smart
-                    contracts to collect and distribute contributions. I began
-                    working on my Blockchain Engineer certification while
-                    building{" "}
-                    <a
-                      href="https://www.funding-chain.com"
+                      href="https://www.fundingchain.io"
                       target="_blank"
                       rel="noreferrer"
                     >
                       Funding Chain
                     </a>{" "}
-                    and have incorporated some of what I learned from school
-                    into it. The Blockchain Engineer portion of the program
-                    covered a wide range of topics such as cryptography and
-                    elliptic curves, public and private blockchain devopment,
-                    mining, DApp development, smart contract development
-                    including ERC20 and ERC721. There was an emphasis on the
-                    Ethereum blockchain. There were two advanced projects
-                    required in order to graduate, a DApp that deployed smart
-                    contracts and a custom blockchain network. I received my
-                    certification as a Blockchain Engineer in January of 2023.
+                    and{" "}
+                    <a
+                      href="https://www.smartcontractverifier.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Smart Contract Verifier
+                    </a>
+                    . I simultaneously began working on my Blockchain Engineer
+                    certification while working building the two projects. The
+                    Blockchain Engineer portion of the program covered a wide
+                    range of topics such as cryptography and elliptic curves,
+                    public and private blockchain devopment, mining, DApp
+                    development, smart contract development including ERC20 and
+                    ERC721. There was an emphasis on the Ethereum blockchain,
+                    although a lot of that transfers to any EVM chain. There
+                    were two advanced projects required in order to graduate, a
+                    decentralized application that deployed smart contracts and
+                    a custom blockchain network. I received my certification as
+                    a Blockchain Engineer in January of 2023. Keep in mind, all
+                    of this happened during my down time from the back of a
+                    tractor-trailer. Honestly, at times, it felt like I was
+                    solving coding problem in my head while driving down the
+                    interstate.
+                  </p>
+                  <Row className="justify-content-center mb-5">
+                    <Col
+                      className="mx-3 mt-3"
+                      xl={4}
+                      lg={4}
+                      md={4}
+                      sm={12}
+                      xs={12}
+                    >
+                      <ModalImage
+                        fulid
+                        className="pop corners"
+                        small={fsCert}
+                        large={fsCert}
+                        alt="Pizza King homepage"
+                      />
+                    </Col>
+                    <Col
+                      fulid
+                      className="mx-3 mt-3"
+                      xl={4}
+                      lg={4}
+                      md={4}
+                      sm={12}
+                      xs={12}
+                    >
+                      <ModalImage
+                        className="pop corners"
+                        small={blockchainCert}
+                        large={blockchainCert}
+                        alt="Pizza King menu "
+                      />
+                    </Col>
+                  </Row>
+
+                  <p>
+                    Circling back to{" "}
+                    <a
+                      href="https://www.fundingchain.io"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Funding Chain
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="https://www.smartcontractverifier.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Smart Contract Verifier
+                    </a>
+                    , they are both fully functional MVPs running on both the
+                    Ethereum and Hedera networks. Funding Chain is a crowd
+                    funding platform that uses smart contracts to orchestrate
+                    the fundraisers. This will give users full transparancy,
+                    autonomy, and instant access to funds. Smart Contract
+                    Verifier is to verify the contracts deployed by Funding
+                    Chain and any other company or developer that would like to
+                    use its services. It specializes not not only verifying that
+                    the bytecode on an address is what it is supposed to be. We
+                    take it another step further. We ensure that key signatures
+                    that would only be there if the smart contract is authentic
+                    are there. Smart Contract Verifier looks for the
+                    authenticity. That is why one of it's trademarks are "We put
+                    the trust in trustless." We have figured out a way and now
+                    it is time for us to build a community that believes in us.
                   </p>
                 </div>
-              </Col>
-            </Row>
-            <Row className="justify-content-center mb-3">
-              <Col className="mx-3 mt-3" xl={4} lg={4} md={4} sm={12} xs={12}>
-                <ModalImage
-                  className="pop corners"
-                  small={fsCert}
-                  large={fsCert}
-                  alt="Pizza King homepage"
-                />
-              </Col>
-              <Col className="mx-3 mt-3" xl={4} lg={4} md={4} sm={12} xs={12}>
-                <ModalImage
-                  className="pop corners"
-                  small={blockchainCert}
-                  large={blockchainCert}
-                  alt="Pizza King menu "
-                />
               </Col>
             </Row>
             <Row className="d-flex justify-content-center">
@@ -138,43 +192,59 @@ const About = () => {
               </Col>
             </Row>
             <Row className="d-flex justify-content-center">
-              <Col xl={3} lg={4} md={5} sm={6} xs={6} className="fw-bold px-7">
-                <ul>
-                  <li>Smart Contracts</li>
-                  <li>DApps</li>
-                  <li>Remix</li>
-                  <li>Truffle/Ganache</li>
-                  <li>Unit Testing</li>
-                  <li>JSON Web Token</li>
-                  <li>Reusable Code</li>
-                  <li>User Management</li>
-                  <li>Encryption</li>
-                  <li>Hashing</li>
-                  <li>Validation</li>
-                  <li>Sanitization</li>
-                </ul>
-              </Col>
               <Col
                 xl={3}
                 lg={4}
                 md={5}
                 sm={6}
-                xs={6}
-                className="mb-2 fw-bold px-5"
+                xs={9}
+                className="mx-auto me-lg-n10 me-xl-n20"
               >
                 <ul>
-                  <li>API Development</li>
-                  <li>Database Design</li>
+                  <p className="mb-0 fw-bolder">Web 3.0</p>
+                  <li>Solidity Smart Contracts</li>
+                  <li>Full Stack DApps</li>
+                  <li>Remix</li>
+                  <li>Truffle/Ganache</li>
+                  <li>Smart Contract Unit Testing</li>
+                  <li>Ethers</li>
+                  <li>Hedera SDK</li>
+                  <p className="mb-0 fw-bolder mt-2">Security</p>
+                  <li>Data Sharding</li>
+                  <li>JSON Web Token</li>
+                  <li>Two Factor Methods</li>
+                  <li>Rate Limiting</li>
+                  <li>Time Limiting</li>
+                  <li>User Management</li>
+                  <li>Encryption</li>
+                  <li>Hashing</li>
+                  <li>Validation</li>
+                  <li>Sanitization</li>
+                  <li>Escaping</li>
+                </ul>
+              </Col>
+              <Col xl={3} lg={4} md={5} sm={6} xs={9} className="mb-2 mx-auto">
+                <ul>
+                  <p className="mb-0 fw-bolder">Backend</p>
+                  <li>API Architecture</li>
+                  <li>Database Architecture</li>
+                  <li>Schema Design</li>
+                  <li>Tracking and Reporting</li>
                   <li>Express</li>
-                  <li>Webpack</li>
+                  <p className="mb-0 fw-bolder mt-2">Frontend</p>
+                  <li>SEO</li>
+                  <li>Custom Hooks</li>
                   <li>Templating</li>
                   <li>Cookies</li>
+                  <li>Reusable Code</li>
                   <li>SCSS</li>
-                  <li>CSS</li>
-                  <li>HTML</li>
+                  <li>Mild Animations</li>
+                  <p className="mb-0 fw-bolder mt-2">Services</p>
                   <li>AWS Amplify</li>
                   <li>Heroku</li>
                   <li>Atlas</li>
+                  <li>cPanel</li>
+                  <li>Go Daddy</li>
                 </ul>
               </Col>
             </Row>
@@ -215,9 +285,9 @@ const About = () => {
                 </div>
               </Col>
             </Row>
-            <Row className="justify-content-center">
+            <Row className="d-flex justify-content-center mb-10">
               <Col xl={9} lg={9} md={12} sm={12} className="mb-2">
-                <div className="mb-8 mb-lg-0">
+                <div className="mb-8 mb-lg-0 text-center">
                   <Link
                     to="/portfolio"
                     className="btn btn-primary me-3 mb-3 mb-lg-0"

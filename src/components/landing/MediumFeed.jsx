@@ -1,13 +1,34 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Row, Image, Table } from "react-bootstrap";
-
+import ReactPaginate from "react-paginate";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { ChevronLeft, ChevronRight } from "react-feather";
+import { v4 } from "uuid";
 const MediumFeed = () => {
   const [feedData, setFeedData] = useState([]);
+  const [parent] = useAutoAnimate();
+  const itemsPerPage = 4;
+  const pageCount = Math.ceil(feedData.length / itemsPerPage);
+  const [hideChevron, setHideChevron] = useState("");
+  const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
     fetchMediumFeed();
   }, []);
+
+  useEffect(() => {
+    if (pageCount < 2) {
+      setHideChevron("hide-chevron");
+    } else {
+      setHideChevron("");
+    }
+  }, [pageCount]);
+
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected);
+    // window.scrollTo(0, 250);
+  };
 
   function calculateTimeAgo(datetimeString) {
     const mediumDate = new Date(datetimeString);
@@ -40,7 +61,23 @@ const MediumFeed = () => {
       )
       .then((response) => {
         if (response.data.status === "ok") {
-          setFeedData(response.data.items);
+          // Create a temporary div element
+          let feed = [];
+          response.data.items.forEach((item) => {
+            const htmlContent = item.content;
+            const tempDiv = document.createElement("div");
+            tempDiv.innerHTML = htmlContent;
+            const imgElement = tempDiv.querySelector("img");
+            const imageUrl = imgElement ? imgElement.getAttribute("src") : null;
+            feed.push({
+              key: v4(),
+              title: item.title,
+              link: item.link,
+              imageUrl: imageUrl,
+              pubDate: item.pubDate,
+            });
+          });
+          setFeedData(feed);
         }
       });
   };
@@ -54,22 +91,26 @@ const MediumFeed = () => {
           rel="noreferrer"
         >
           <span className="ls-md fs-5 text-primary text-uppercase fw-bold">
-            My Articles on Medium
+            Articles by Jesse Wachtel on Medium
           </span>
         </a>
       </Row>
-      <Row>
-        <div className="table-responsive overflow-auto">
-          <Table>
-            <tbody>
-              {feedData.map((item, index) => (
+      <Row className="justify-content-center mx-sm-2">
+        <Table>
+          <tbody>
+            {feedData
+              .slice(
+                currentPage * itemsPerPage,
+                (currentPage + 1) * itemsPerPage
+              )
+              .map((item, index) => (
                 <tr className="align-middle">
                   <td className="py-3">
                     <a href={item.link} target="_blank" rel="noreferrer">
                       <Image
                         height={100}
                         width={150}
-                        src={item.thumbnail}
+                        src={item.imageUrl}
                         className="rounded"
                       />
                     </a>
@@ -84,9 +125,28 @@ const MediumFeed = () => {
                   </td>
                 </tr>
               ))}
-            </tbody>
-          </Table>
-        </div>
+          </tbody>
+        </Table>
+
+        <Row className="mt-2">
+          <ReactPaginate
+            ref={parent}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={1}
+            className={`${hideChevron}`}
+            previousLabel={<ChevronLeft size="14px" />}
+            nextLabel={<ChevronRight size="14px" />}
+            pageCount={pageCount}
+            onPageChange={handlePageChange}
+            containerClassName={"justify-content-center mb-0 pagination"}
+            previousLinkClassName={"page-link mx-1 rounded"}
+            nextLinkClassName={"page-link mx-1 rounded"}
+            pageClassName={"page-item"}
+            pageLinkClassName={"page-link mx-1 rounded"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"active"}
+          />
+        </Row>
       </Row>
     </div>
   );

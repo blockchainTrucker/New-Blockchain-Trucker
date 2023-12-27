@@ -10,19 +10,19 @@ bcrypt.hash(passwordTxt, costFactor, function (err, passwordHash) {
 // Hashed password: $2b$11$NzAKDgnwvcrxYbp6lQYWIubTfUMk3Z9rkvTdhFE5fOXvhXqPC.R7G`;
 
 export const hashingTxt1 =
-	'Hashing is a process of taking an input and converting it into a fixed-size string of characters, which is a hash value. The process is designed to be a one-way function, meaning that it is computationally infeasible to recreate the original input from the hash value.';
+  "Hashing is a process of taking an input and converting it into a fixed-size string of characters, which is a hash value. The process is designed to be a one-way function, meaning that it is computationally infeasible to recreate the original input from the hash value.";
 
 export const hashingTxt2 =
-	'Hashing is used in many fields, such as data indexing, data integrity, and digital signature. The most commonly used Hash functions are MD5, SHA1, SHA256 and SHA3. The most secure and recommended for password hashing are Bcrypt, Scrypt, Argon2 and PBKDF2.';
+  "Hashing is used in many fields, such as data indexing, data integrity, and digital signature. The most commonly used Hash functions are MD5, SHA1, SHA256 and SHA3. The most secure and recommended for password hashing are Bcrypt, Scrypt, Argon2 and PBKDF2.";
 
 export const hashingTxt3 =
-	'Bcrypt is a widely used and well-regarded password hashing algorithm. It is considered to be one of the best choices for hashing passwords because it is designed to be slow and computationally expensive, making it difficult for an attacker to crack hashed passwords through a brute force attack. Additionally, it uses a unique salt for each password and automatically handles the process of salting and hashing the password, which helps protect against attacks that use precomputed tables such as rainbow tables. Therefore, even if the same password is used, the resulting hash will be different each time because of the unique salt used for each password.';
+  "Bcrypt is a widely used and well-regarded password hashing algorithm. It is considered to be one of the best choices for hashing passwords because it is designed to be slow and computationally expensive, making it difficult for an attacker to crack hashed passwords through a brute force attack. Additionally, it uses a unique salt for each password and automatically handles the process of salting and hashing the password, which helps protect against attacks that use precomputed tables such as rainbow tables. Therefore, even if the same password is used, the resulting hash will be different each time because of the unique salt used for each password.";
 
 export const hashingTxt4 =
-	'Bcrypt is also designed to be adaptive, which means that the computational expense of hashing a password can be increased as computers become faster. This makes it difficult for an attacker to use faster hardware and brute force to crack the hashed passwords.';
+  "Bcrypt is also designed to be adaptive, which means that the computational expense of hashing a password can be increased as computers become faster. This makes it difficult for an attacker to use faster hardware and brute force to crack the hashed passwords.";
 
 export const hashingTxt5 =
-	'Below is a basic example of hashing a password using Bcrypt.';
+  "Below is a basic example of hashing a password using Bcrypt.";
 
 export const hungerGamesCode = `//SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.7;
@@ -415,4 +415,4 @@ export const walletSend = `app.post('/send', (req, res) => {
 	});
  });`;
 
-export const ewTxt1 = `In this example, I used Ethers.js within an Embedded JavaScript single page application to create a simple Etherium wallet that uses encrypted keystore files. The wallet is capable of creating a new wallet, loading an existing wallet from a file, recovering a wallet using the mnemonic phrase, showing the balance of a wallet, and sending Etherium tokens. Below is the code for each route and an image of that route's frontend.`;
+export const ewTxt1 = `In this example, I used Ethers.js within an Embedded JavaScript single page application to create a simple Ethereum wallet that uses encrypted keystore files. The wallet is capable of creating a new wallet, loading an existing wallet from a file, recovering a wallet using the mnemonic phrase, showing the balance of a wallet, and sending Etherium tokens. Below is the code for each route and an image of that route's frontend.`;

@@ -1,5 +1,7 @@
 import node from "../../assets/images/icons/node-icon.png";
 import react from "../../assets/images/icons/react-icon.png";
+import next from "../../assets/images/icons/next-icon.png";
+import heroku from "../../assets/images/icons/heroku-icon.png";
 import express from "../../assets/images/icons/expressjs-icon.png";
 import mongodb from "../../assets/images/icons/mongodb-icon.png";
 import solidity from "../../assets/images/icons/solidity-icon.png";
@@ -33,6 +35,15 @@ const CryptoBrandTicker = () => {
                 alt="React icon"
               />
             </a>
+            <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+              <Image
+                className="mx-10"
+                height={50}
+                width={50}
+                src={next}
+                alt="Next.js icon"
+              />
+            </a>
             <a href="https://www.mongodb.com" target="_blank" rel="noreferrer">
               <Image
                 className="mx-10"
@@ -40,6 +51,15 @@ const CryptoBrandTicker = () => {
                 width={25}
                 src={mongodb}
                 alt="MongoDB icon"
+              />
+            </a>
+            <a href="https://www.heroku.com/" target="_blank" rel="noreferrer">
+              <Image
+                className="mx-10"
+                height={50}
+                width={50}
+                src={heroku}
+                alt="Heroku icon"
               />
             </a>
             <a href="https://soliditylang.org" target="_blank" rel="noreferrer">

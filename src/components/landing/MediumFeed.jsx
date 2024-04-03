@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Row, Image, Table } from "react-bootstrap";
+import { Row, Image, Table, Col } from "react-bootstrap";
 import ReactPaginate from "react-paginate";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { ChevronLeft, ChevronRight } from "react-feather";
@@ -90,45 +90,46 @@ const MediumFeed = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <span className="ls-md fs-5 text-primary text-uppercase fw-bold">
+          <h3 className="text-primary display-5 text-uppercase fw-bold">
             Articles by Jesse Wachtel on Medium
-          </span>
+          </h3>
         </a>
       </Row>
       <Row className="justify-content-center mx-sm-2">
-        <Table>
-          <tbody>
-            {feedData
-              .slice(
-                currentPage * itemsPerPage,
-                (currentPage + 1) * itemsPerPage
-              )
-              .map((item, index) => (
-                <tr className="align-middle">
-                  <td className="py-3">
-                    <a href={item.link} target="_blank" rel="noreferrer">
-                      <Image
-                        height={100}
-                        width={150}
-                        src={item.imageUrl}
-                        className="rounded"
-                      />
-                    </a>
-                  </td>
-                  <td style={{ minWidth: "400px" }}>
-                    <a href={item.link} target="_blank" rel="noreferrer">
-                      <h2>{item.title}</h2>
-                    </a>
-                  </td>
-                  <td style={{ minWidth: "200px" }}>
-                    <p className="mb-0">{calculateTimeAgo(item.pubDate)}</p>
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </Table>
-
-        <Row className="mt-2">
+        <div className="table-responsive">
+          <Table>
+            <tbody>
+              {feedData
+                .slice(
+                  currentPage * itemsPerPage,
+                  (currentPage + 1) * itemsPerPage
+                )
+                .map((item, index) => (
+                  <tr className="align-middle">
+                    <td className="py-3">
+                      <a href={item.link} target="_blank" rel="noreferrer">
+                        <Image
+                          height={100}
+                          width={150}
+                          src={item.imageUrl}
+                          className="rounded"
+                        />
+                      </a>
+                    </td>
+                    <td style={{ minWidth: "400px" }}>
+                      <a href={item.link} target="_blank" rel="noreferrer">
+                        <h2>{item.title}</h2>
+                      </a>
+                    </td>
+                    <td style={{ minWidth: "200px" }}>
+                      <p className="mb-0">{calculateTimeAgo(item.pubDate)}</p>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </Table>
+        </div>
+        <Row className="my-5">
           <ReactPaginate
             ref={parent}
             marginPagesDisplayed={2}

@@ -22,7 +22,7 @@ import ModalImage from "react-modal-image";
 
 const EthereumWallet = (props) => {
   useEffect(() => {
-    document.title = "Blockchain Trucker - Etherium Wallet Example";
+    document.title = "Blockchain Trucker - Ethereum Wallet Example";
   }, []);
 
   return (
@@ -31,7 +31,7 @@ const EthereumWallet = (props) => {
         <Container>
           <Fragment>
             <Header
-              title="Etherium Wallet Using Ethers.js"
+              title="Ethereum Wallet Using Ethers.js"
               github="https://github.com/blockchaintrucker/Assignments/tree/main/ethereum-wallet-ethersjs"
             />
             <Row className="justify-content-center">

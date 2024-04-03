@@ -7,7 +7,7 @@ const LogosTopHeadingInverseDark = ({ logos, title, limit }) => {
       <Col>
         <div>
           <a href={link} target="_blank" rel="noreferrer">
-            <Image src={logo} alt={alt} />
+            <Image className="my-3" src={logo} alt={alt} />
           </a>
         </div>
       </Col>

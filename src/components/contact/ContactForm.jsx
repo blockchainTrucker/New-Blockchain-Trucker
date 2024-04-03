@@ -38,7 +38,7 @@ const ContactForm = () => {
   }
 
   function sendForm(firstName, lastName, email, phoneNumber, message) {
-    const url = "https://blockchain-trucker-api.herokuapp.com/contact-form";
+    const url = "https://dv-api-e55b1e7a73db.herokuapp.com/contact-form";
     let data = JSON.stringify({
       firstName,
       lastName,

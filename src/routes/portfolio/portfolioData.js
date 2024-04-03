@@ -94,9 +94,9 @@ const portfolioData = [
     id: uuid(),
     image: ethers,
     category: "Example",
-    title: "Etherium Wallet Using Ethers.js",
+    title: "Ethereum Wallet Using Ethers.js",
     details:
-      "A single page application where you can create, recover, and use an Etherium wallet.",
+      "A single page application where you can create, recover, and use an Ethereum wallet.",
     link: "/portfolio/ethereum-wallet",
   },
 ];

@@ -425,3 +425,14 @@ input:active {
     background-position: 50px 50px;
   }
 }
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mask-image: linear-gradient(transparent 20%, rgba(0, 0, 0, 0.8) 100%);
+}

@@ -21,7 +21,9 @@ const About = () => {
             <Row className="justify-content-center">
               <Col className="mb-2">
                 <div className="text-center mb-4">
-                  <h1 className="display-4 fw-bold mb-4">About Me</h1>
+                  <h1 className="display-4 text-primary fw-bold mb-4">
+                    About Me
+                  </h1>
                 </div>
               </Col>
             </Row>
@@ -94,7 +96,7 @@ const About = () => {
                         className="pop corners"
                         small={fsCert}
                         large={fsCert}
-                        alt="Pizza King homepage"
+                        alt="Jesse Wachtel's Full Stack Developer Certification Certificte"
                       />
                     </Col>
                     <Col
@@ -110,7 +112,7 @@ const About = () => {
                         className="pop corners"
                         small={blockchainCert}
                         large={blockchainCert}
-                        alt="Pizza King menu "
+                        alt="Jesse Wachtel's Blockchain Engineer Certification Certificte"
                       />
                     </Col>
                   </Row>
@@ -133,20 +135,20 @@ const About = () => {
                       Smart Contract Verifier
                     </a>
                     , they are both fully functional MVPs running on both the
-                    Ethereum and Hedera networks. Funding Chain is a crowd
-                    funding platform that uses smart contracts to orchestrate
-                    the fundraisers. This will give users full transparancy,
-                    autonomy, and instant access to funds. Smart Contract
-                    Verifier is to verify the contracts deployed by Funding
-                    Chain and any other company or developer that would like to
-                    use its services. It specializes not not only verifying that
-                    the bytecode on an address is what it is supposed to be. We
-                    take it another step further. We ensure that key signatures
-                    that would only be there if the smart contract is authentic
-                    are there. Smart Contract Verifier looks for the
-                    authenticity. That is why one of it's trademarks are "We put
-                    the trust in trustless." We have figured out a way and now
-                    it is time for us to build a community that believes in us.
+                    Ethereum and Hedera networks. Funding Chain is a
+                    crowdfunding platform that uses smart contracts to
+                    orchestrate the fundraisers. This will give users full
+                    transparancy, autonomy, and instant access to funds. Smart
+                    Contract Verifier is to verify the contracts deployed by
+                    Funding Chain and any other company or developer that would
+                    like to use its services. It specializes not only in
+                    verifying that the bytecode on an address is what it is
+                    supposed to be. It take it another step further. It ensures
+                    that key signatures that would only be there if the smart
+                    contract is authentic are actually there. Smart Contract
+                    Verifier looks for the authenticity which no other product
+                    on the market does. That is why one of it's trademarks is
+                    "We put the trust in trustless."
                   </p>
                 </div>
               </Col>
@@ -154,7 +156,7 @@ const About = () => {
             <Row className="d-flex justify-content-center">
               <Col xl={12} lg={12} md={12} sm={12} className="mx-3 mt-3">
                 <FrameworkLogos
-                  title="BELOW ARE THE ENVIRONMENTS FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH"
+                  title="THESE ARE THE ENVIRONMENTS AND FRAMEWORKS I AM CURRENTLY MOST COMFORTABLE WITH"
                   logos={LogoList}
                   limit={6}
                 />
@@ -165,15 +167,16 @@ const About = () => {
                 <div>
                   <p>
                     You may be wondering why I chose the name Blockchain
-                    Trucker. It has to do with where I'm currently at and where
-                    I'm heading. I currently work as a Tractor Trailer Driver
-                    and have been doing that for the past 7 years. I've always
-                    been into technology and had been following the uprising of
-                    various blockchains. As I read about them, I started
-                    understanding the ways they can change how we go about our
-                    daily tasks personally and professionally in the future. I
-                    started having ideas and looked into how I could build
-                    decentralized apps. That is where{" "}
+                    Trucker. It has to do with where I started this journey and
+                    where I'm heading. Until May of 2023, I worked as a Tractor
+                    Trailer Driver in the United States and had been doing that
+                    for the past 7 years. I've always been into technology and
+                    had been following the uprising of various blockchains and
+                    other decentralized networks. As I read about them, I
+                    started understanding the ways they could change how we go
+                    about our daily tasks personally and professionally in the
+                    future. I started having ideas and looked into how I could
+                    build decentralized application. That is where{" "}
                     <a href="https://kingslanduniversity.com/zero-to-blockchain-developer-program/">
                       Kingsland University
                     </a>{" "}
@@ -186,7 +189,7 @@ const About = () => {
               <Col className="mb-2">
                 <div className="text-center mb-2">
                   <span className="ls-md fs-5 text-primary fw-bold">
-                    BELOW ARE SOME OF THE OTHER SKILLS I HAVE DEVELOPED
+                    THESE ARE SOME OF THE OTHER SKILLS I HAVE DEVELOPED
                   </span>
                 </div>
               </Col>
@@ -204,11 +207,42 @@ const About = () => {
                   <p className="mb-0 fw-bolder">Web 3.0</p>
                   <li>Solidity Smart Contracts</li>
                   <li>Full Stack DApps</li>
+                  <li>Wallet Management</li>
+                  <li>Private Key Sharding</li>
+                  <li>Web3 Integrations</li>
+                  <li>Payment Integrations</li>
+                  <li>InterPlanetary File System</li>
+                  <li>Staking</li>
                   <li>Remix</li>
                   <li>Truffle/Ganache</li>
                   <li>Smart Contract Unit Testing</li>
                   <li>Ethers</li>
                   <li>Hedera SDK</li>
+                  <p className="mb-0 fw-bolder mt-2">Frontend</p>
+                  <li>Custom UX/UI</li>
+                  <li>Responsive Design</li>
+                  <li>Dynamic Components</li>
+                  <li>Search Engine Optimization</li>
+                  <li>Custom Hooks</li>
+                  <li>Templating</li>
+                  <li>Image Upload Handling</li>
+                  <li>Platform Development</li>
+                  <li>Cookies</li>
+                  <li>Reusable Code</li>
+                  <li>SCSS</li>
+                  <li>Animations</li>
+                  <li>AI Detection Tools</li>
+                </ul>
+              </Col>
+              <Col xl={3} lg={4} md={5} sm={6} xs={9} className="mb-2 mx-auto">
+                <ul>
+                  <p className="mb-0 fw-bolder">Backend</p>
+                  <li>API Architecture</li>
+                  <li>Database Architecture</li>
+                  <li>Schema Design</li>
+                  <li>Tracking and Reporting</li>
+                  <li>Express</li>
+                  <li>Cron</li>
                   <p className="mb-0 fw-bolder mt-2">Security</p>
                   <li>Data Sharding</li>
                   <li>JSON Web Token</li>
@@ -221,30 +255,15 @@ const About = () => {
                   <li>Validation</li>
                   <li>Sanitization</li>
                   <li>Escaping</li>
-                </ul>
-              </Col>
-              <Col xl={3} lg={4} md={5} sm={6} xs={9} className="mb-2 mx-auto">
-                <ul>
-                  <p className="mb-0 fw-bolder">Backend</p>
-                  <li>API Architecture</li>
-                  <li>Database Architecture</li>
-                  <li>Schema Design</li>
-                  <li>Tracking and Reporting</li>
-                  <li>Express</li>
-                  <p className="mb-0 fw-bolder mt-2">Frontend</p>
-                  <li>SEO</li>
-                  <li>Custom Hooks</li>
-                  <li>Templating</li>
-                  <li>Cookies</li>
-                  <li>Reusable Code</li>
-                  <li>SCSS</li>
-                  <li>Mild Animations</li>
                   <p className="mb-0 fw-bolder mt-2">Services</p>
                   <li>AWS Amplify</li>
                   <li>Heroku</li>
+                  <li>MoonPay</li>
+                  <li>PayPal</li>
                   <li>Atlas</li>
                   <li>cPanel</li>
                   <li>Go Daddy</li>
+                  <li>Github</li>
                 </ul>
               </Col>
             </Row>

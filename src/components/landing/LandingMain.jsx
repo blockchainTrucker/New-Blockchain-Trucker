@@ -40,7 +40,7 @@ const MainLanding = () => {
                   path={mdiCheckCircle}
                   size={0.9}
                   className="text-primary mt-1 me-2"
-                />{" "}
+                />
                 Equal focus on the frontend and backend design
               </ListGroup.Item>
               <ListGroup.Item bsPrefix="mb-1" className="d-flex mb-2">
@@ -48,32 +48,32 @@ const MainLanding = () => {
                   path={mdiCheckCircle}
                   size={0.9}
                   className="text-primary mt-1 me-2"
-                />{" "}
+                />
                 Applications designed to interact with blockchains
               </ListGroup.Item>
-              <ListGroup.Item bsPrefix="mb-1" className="d-flex">
+              <ListGroup.Item bsPrefix="mb-1" className="d-flex mb-2">
                 <Icon
                   path={mdiCheckCircle}
                   size={0.9}
                   className="text-primary mt-1 me-2"
-                />{" "}
+                />
                 Focused on bringing decentralization to market
               </ListGroup.Item>
-              <ListGroup.Item bsPrefix="mb-1" className="d-flex">
+              <ListGroup.Item bsPrefix="mb-1" className="d-flex mb-2">
                 <Icon
                   path={mdiCheckCircle}
                   size={0.9}
                   className="text-primary mt-1 me-2"
-                />{" "}
-                Responsive designs that work seamlessly on any size screen
+                />
+                Responsive designs that work seamlessly on any device
               </ListGroup.Item>
-              <ListGroup.Item bsPrefix="mb-1" className="d-flex">
+              <ListGroup.Item bsPrefix="mb-1" className="d-flex mb-2">
                 <Icon
                   path={mdiCheckCircle}
                   size={0.9}
                   className="text-primary mt-1 me-2"
-                />{" "}
-                Security in mind from start to finish
+                />
+                Security in mind from start to finish every time
               </ListGroup.Item>
             </ListGroup>
 
@@ -97,26 +97,29 @@ const MainLanding = () => {
         </Row>
         <FrameworkTicker />
         <div className="animatedLinesBGContainer">
-          <div className="animatedLinesBG text-center shadow-lg py-5">
-            <Col xl={12} lg={12} md={12} sm={12} className="mb-2 mt-10">
-              <div className="mb-8">
+          <div className="animatedLinesBG text-center shadow-lg">
+            <Col xl={12} lg={12} md={12} sm={12} xs={12} className="mt-10">
+              <div>
                 <Link to="/about-me">
-                  <div className="mb-3">
-                    <span
-                      style={{ position: "relative", zIndex: 9999 }}
-                      className="ls-md fs-5 text-primary fw-bold"
+                  <div>
+                    <h3
+                      style={{
+                        zIndex: 9999,
+                        width: "50%",
+                      }}
+                      className="d-flex display-5 mx-6 text-primary fw-bold text-center mx-auto"
                     >
-                      FROM TRACTOR TRAILER DRIVER TO WEB DEVELOPER, CLICK HERE
-                      TO READ ABOUT MY JOURNEY
-                    </span>
+                      FROM TRACTOR TRAILER DRIVER TO WEB 3.0 DEVELOPER, CLICK
+                      HERE TO READ ABOUT MY JOURNEY
+                    </h3>
                   </div>
                   <div>
-                    <Image
-                      fluid
-                      style={{ position: "relative", zIndex: 9999 }}
-                      className="corners mx-auto"
-                      src={truckimg}
-                    ></Image>
+                    <div className="image-container">
+                      <Image
+                        className="mt-xs-n5 mt-sm-n10 mt-md-n15 mt-lg-n17 mt-xl-n20"
+                        src={truckimg}
+                      ></Image>
+                    </div>
                   </div>
                 </Link>
               </div>

@@ -1,104 +1,82 @@
 // import media files
-import pizzaKing from "assets/images/portfolio/logos/pizza-king-logo.png";
 import fundingChain from "assets/images/portfolio/logos/funding-chain.png";
 import scv from "assets/images/portfolio/logos/scv-1000.png";
 import decentralizedVentures from "assets/images/portfolio/logos/decentralized-ventures.png";
-import videoTutorials from "assets/images/video-tutorials/video-tutorials-home-loggedin.png";
-import cookUni from "assets/images/cookuni/cookuni-home.png";
-import bcrypt from "assets/images/bcrypt/bcrypt1.png";
-import ethers from "assets/images/ethereumWallet/welcome.jpg";
-import hgames from "assets/images/hunger-games/hunger-games.jpg";
-import blockchain from "assets/images/blockchain/explorer.png";
+import rraft from "assets/images/portfolio/logos/rraft-logo-400.png";
+import gnus from "assets/images/portfolio/logos/gnus-logo.png";
+import qec from "assets/images/portfolio/logos/qecoin-black.png";
+import hf from "assets/images/portfolio/logos/hfFull.png";
+import thrilld from "assets/images/portfolio/logos/thrilld.png";
 import { v4 as uuid } from "uuid";
 const portfolioData = [
-  {
-    id: uuid(),
-    image: scv,
-    category: "Personal Project",
-    title: "Smart Contract Verifier",
-    details:
-      "A smart contract verification tool that is currently running on Ethereum and Hedera Mainnets as an MVP. It was made with Next.js.",
-    link: "/portfolio/smart-contract-verifier",
-  },
-  {
-    id: uuid(),
-    image: fundingChain,
-    category: "Personal Project",
-    title: "Funding Chain",
-    details:
-      "A platform that uses smart contracts for faster, more transparent, and censorship free crowdfunding. Currently running on Ethereum and Hedera mainnets.",
-    link: "/portfolio/funding-chain",
-  },
-  {
-    id: uuid(),
-    image: decentralizedVentures,
-    category: "Personal Project",
-    title: "Decentralized Ventures",
-    details: `My company's main customer facing website made using React.`,
-    link: "/portfolio/decentralized-ventures",
-  },
-  {
-    id: uuid(),
-    image: blockchain,
-    category: "School Project",
-    title: "Custom Blockchain",
-    details: `A custom blockchain that was my final project for my Blockchain Engineer certification.`,
-    link: "/portfolio/custom-blockchain",
-  },
-  {
-    id: uuid(),
-    image: pizzaKing,
-    category: "School Project",
-    title: "Pizza King",
-    details:
-      "The final project for my Full Stack Developer certification made using the MERN stack.",
-    link: "/portfolio/pizza-king",
-  },
-  {
-    id: uuid(),
-    image: videoTutorials,
-    category: "School Project",
-    title: "Video Tutorials",
-    details:
-      "Module 5 backend project at Kingsland University using Express and Handlebars.",
-    link: "/portfolio/video-tutorials",
-  },
-  {
-    id: uuid(),
-    image: cookUni,
-    category: "School Project",
-    title: "CookUni",
-    details:
-      "Module 4 frontend project at Kingsland University using Sammy and Handlebars.",
-    link: "/portfolio/cookuni",
-  },
-  {
-    id: uuid(),
-    image: hgames,
-    category: "Example",
-    title: "Hunger Games Solidity Example",
-    details:
-      "An example of a timed game that selects a random winner using Solidity.",
-    link: "/portfolio/hunger-games",
-  },
-  {
-    id: uuid(),
-    image: bcrypt,
-    category: "Example",
-    title: "Hashing Example",
-    details:
-      "An example of using Bcrypt to hash a password and then compare it in an API.",
-    link: "/portfolio/hashing",
-  },
-  {
-    id: uuid(),
-    image: ethers,
-    category: "Example",
-    title: "Ethereum Wallet Using Ethers.js",
-    details:
-      "A single page application where you can create, recover, and use an Ethereum wallet.",
-    link: "/portfolio/ethereum-wallet",
-  },
+  [
+    {
+      id: uuid(),
+      image: fundingChain,
+      title: "Funding Chain",
+      details:
+        "A platform that uses smart contracts for faster, more transparent, and censorship free crowdfunding. Currently running on Ethereum and Hedera mainnets.",
+      link: "/portfolio/funding-chain",
+    },
+    {
+      id: uuid(),
+      image: scv,
+      title: "Smart Contract Verifier",
+      details:
+        "A smart contract verification tool that is currently running on Ethereum and Hedera Mainnets as an MVP. It was made with Next.js.",
+      link: "/portfolio/smart-contract-verifier",
+    },
+
+    {
+      id: uuid(),
+      image: decentralizedVentures,
+      title: "Decentralized Ventures",
+      details: `My company's main customer facing website made using React.`,
+      link: "/portfolio/decentralized-ventures",
+    },
+  ],
+  [
+    {
+      id: uuid(),
+      image: rraft,
+      title: "Rraft",
+      details:
+        "A gamified platform that rewards behaviors promoting care and investment in one’s living space, that is currently in development.",
+      link: "/portfolio/rraft",
+    },
+    {
+      id: uuid(),
+      image: gnus,
+      title: "GNUS.AI",
+      details:
+        "An open source DEPIN system that processes Artificial Intelligence and Machine Learning data on an end-user device that is in development.",
+      link: "/portfolio/gnus",
+    },
+    {
+      id: uuid(),
+      image: qec,
+      title: "QE Coin",
+      details:
+        "A Universal reward token designated for equity crowdfunding and building a community to enhance everyday activities, from shopping, entertainment, giving, and beyond.",
+      link: "/portfolio/qe-coin",
+    },
+    {
+      id: uuid(),
+      image: hf,
+      title: "Hyper Future",
+      details:
+        "A web3 mobile gaming platform for hyper-casual games with AAA graphics currently in development.",
+      link: "/portfolio/hyper-future",
+    },
+    {
+      id: uuid(),
+      image: thrilld,
+      title: "Thrilld",
+      details:
+        "A free and open-access business app that allows Web3 projects, professional investors, developers, and Web3 service providers from around the world to find each other and talk synergies in a streamlined manner.",
+      link: "/portfolio/thrilld",
+    },
+  ],
 ];
 
 export default portfolioData;

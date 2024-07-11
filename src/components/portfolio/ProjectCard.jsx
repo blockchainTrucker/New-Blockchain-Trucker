@@ -4,41 +4,23 @@ import { Card, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ item }) => {
-  const CategoryColors = (category) => {
-    switch (category) {
-      case "School Project":
-        return "kingsland";
-      case "Personal Project":
-        return "primary";
-      case "Example":
-        return "secondary";
-      default:
-        return "primary";
-    }
-  };
-
   return (
-    <Card className="shadow-lg mx-4 h-100">
+    <Card className="shadow-lg card-hover" style={{ width: 400 }}>
       <Link to={`${item.link}`}>
-        <Image
-          fluid
-          width={""}
-          variant="top"
-          src={item.image}
-          className="rounded-top-md"
-        />
-
-        {/* Card body  */}
+        <Card.Header>
+          <div
+            style={{
+              height: "230px",
+              alignContent: "center",
+            }}>
+            <Image fluid style={{ maxHeight: "190px" }} src={item.image} />
+          </div>
+        </Card.Header>
         <Card.Body>
-          <span
-            className={`fs-5 fw-semi-bold d-block mb-3 text-${CategoryColors(
-              item.category
-            )}`}
-          >
-            {item.category}
-          </span>
-          <h3 className="text-inherit">{item.title}</h3>
-          <p className="text-inherit"> {item.details} </p>
+          <div>
+            <h3 className="text-inherit">{item.title}</h3>
+            <p className="text-start text-dark"> {item.details} </p>
+          </div>
         </Card.Body>
       </Link>
     </Card>

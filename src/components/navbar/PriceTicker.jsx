@@ -331,8 +331,7 @@ const PriceTicker = () => {
             rowHeight={50}
             speed={400}
             duration={6000}
-            maxRows={1}
-          >
+            maxRows={1}>
             <Eth />
             <Hbar />
             <Btc />

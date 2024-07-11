@@ -17,15 +17,12 @@ const MainLanding = () => {
   return (
     <Fragment>
       <div className="bg-infinite">
-        <Row className="d-flex justify-content-center mx-0">
-          <Col
-            xl={{ span: 5 }}
-            lg={{ span: 6 }}
-            md={{ span: 8 }}
-            sm={{ span: 10 }}
-            xs={{ span: 11 }}
-            className="mt-lg-10 mt-6 order-md-1 mb-10 ps-2 ps-sm-0"
-          >
+        <Row
+          className="d-flex justify-content-center mx-0"
+          style={{ minHeight: "85vh", alignContent: "center", height: "100%" }}>
+          <div
+            style={{ width: 650 }}
+            className="mt-lg-10 mt-6 order-md-1 mb-10 ps-2 ps-sm-0">
             <h1 className="text-start display-2 ms-1 mb-5 fw-bold">
               <span className="text-primary">Full Stack</span> web apps with a
               hint of <span className="text-primary">Web 3.0</span>
@@ -33,8 +30,7 @@ const MainLanding = () => {
             {/* list */}
             <ListGroup
               bsPrefix="list-unstyled"
-              className="text-start fs-3 text-dark mb-6 fw-medium"
-            >
+              className="text-start fs-3 text-dark mb-6 fw-medium">
               <ListGroup.Item bsPrefix="mb-1" className="d-flex mb-2">
                 <Icon
                   path={mdiCheckCircle}
@@ -81,15 +77,14 @@ const MainLanding = () => {
             <div className="text-start mb-5 mb-lg-0">
               <Link
                 to="/portfolio"
-                className="btn btn-primary me-3 mb-3 mb-lg-0"
-              >
+                className="btn btn-primary me-3 mb-3 mb-lg-0">
                 See My Portfolio
               </Link>
               <Link to="/contact-me" className="text-nowrap btn-link">
                 Want to chat? Click here
               </Link>
             </div>
-          </Col>
+          </div>
         </Row>
         <CryptoBrandTicker />
         <Row className="d-flex justify-content-center py-10 px-md-5 px-lg-15 px-xl-20 bg-grey-sq">
@@ -107,8 +102,7 @@ const MainLanding = () => {
                         zIndex: 9999,
                         width: "50%",
                       }}
-                      className="d-flex display-5 mx-6 text-primary fw-bold text-center mx-auto"
-                    >
+                      className="d-flex display-5 mx-6 text-primary fw-bold text-center mx-auto">
                       FROM TRACTOR TRAILER DRIVER TO WEB 3.0 DEVELOPER, CLICK
                       HERE TO READ ABOUT MY JOURNEY
                     </h3>
@@ -117,8 +111,7 @@ const MainLanding = () => {
                     <div className="image-container">
                       <Image
                         className="mt-xs-n5 mt-sm-n10 mt-md-n15 mt-lg-n17 mt-xl-n20"
-                        src={truckimg}
-                      ></Image>
+                        src={truckimg}></Image>
                     </div>
                   </div>
                 </Link>

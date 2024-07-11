@@ -7,7 +7,7 @@ const NavDropdownMain = (props) => {
   const { item, onClick } = props;
 
   return (
-    <NavDropdown title={item.menuitem} className="mt-1">
+    <NavDropdown title={item.menuitem} className="my-auto">
       {item.children.map((submenu, submenuindex) => {
         if (submenu.divider || submenu.header) {
           return submenu.divider ? (
@@ -25,8 +25,7 @@ const NavDropdownMain = (props) => {
                 key={submenuindex}
                 as={Link}
                 to={submenu.link}
-                onClick={(expandedMenu) => onClick(!expandedMenu)}
-              >
+                onClick={(expandedMenu) => onClick(!expandedMenu)}>
                 {/* Second level menu item without having sub menu items */}
                 {submenu.menuitem}
               </NavDropdown.Item>
@@ -37,8 +36,7 @@ const NavDropdownMain = (props) => {
                 title={submenu.menuitem}
                 key={submenuindex}
                 bsPrefix="dropdown-item d-block"
-                className={`dropdown-submenu dropend py-0`}
-              >
+                className={`dropdown-submenu dropend py-0`}>
                 {submenu.children.map((submenuitem, submenuitemindex) => {
                   if (submenuitem.divider || submenuitem.header) {
                     return submenuitem.divider ? (
@@ -65,8 +63,7 @@ const NavDropdownMain = (props) => {
                             {/* Third Level with button format menu item */}
                             <Link
                               to={submenuitem.link}
-                              className="btn-sm btn-primary text-center"
-                            >
+                              className="btn-sm btn-primary text-center">
                               {submenuitem.menuitem}
                             </Link>
                           </div>
@@ -74,8 +71,7 @@ const NavDropdownMain = (props) => {
                           <NavDropdown.Item
                             as={Link}
                             to={submenuitem.link}
-                            onClick={(expandedMenu) => onClick(!expandedMenu)}
-                          >
+                            onClick={(expandedMenu) => onClick(!expandedMenu)}>
                             {/* Third Level menu item */}
                             {submenuitem.menuitem}
                           </NavDropdown.Item>
